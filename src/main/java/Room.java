@@ -1,9 +1,12 @@
 public class Room
 {
-    private String name;
+    private String Name;
     private String description;
 
     public void addRoom (String direction, int roomID)
+    {
+        //Will connect rooms together.
+    }
 
     private static String description_text_file_name;
 

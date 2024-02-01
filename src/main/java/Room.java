@@ -1,9 +1,17 @@
+
 import java.util.HashMap;
 import java.util.Map;
-
-
 public class Room {
+    private String Name;
+    private String description = "Defualt";
 
+<<<<<<< HEAD
+=======
+    public void addRoom(String direction, int roomID) {
+        //Will connect rooms together.
+    }
+
+>>>>>>> 02934bf3310095dec9308eec3cbaddb123cdc004
     // TODO eventually rework direction to be decoupled and behind the scenes (no need to directly modify or set)
     // TODO it should be calculated automatically based on position of room.
     public enum Direction {
@@ -21,7 +29,7 @@ public class Room {
     // ---------- Member Variables: ---------- //
     private int ID = -1;
     private String name = "Default";
-    private String description = "Default";
+//    private String description = "Default";
 
     // TODO make more expandable and general for future updates
     // TODO ideally neighborID list only, and dynamically calculate all directions
@@ -67,7 +75,7 @@ public class Room {
     }
 
     private void generateID() {
-        this.ID = ID_TRACKER ++;
+        this.ID = ID_TRACKER++;
     }
 
     private void resetNeighbors() {

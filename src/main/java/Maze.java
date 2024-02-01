@@ -8,7 +8,8 @@ public class Maze {
 
     }
     private void connectRooms(int roomA, int roomB) {
-
+        int num_rooms;
+         ArrayList<Room> rooms;
     }
 
     public void GenerateRectangleMaze(int rows, int cols) {

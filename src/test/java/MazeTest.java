@@ -14,7 +14,7 @@ public class MazeTest {
     }
 
     @Test
-    public void RectangleMazeCreation() {
+    public void testRectangleMazeCreation() {
         Maze maze = new Maze();
         assertNotNull(maze);
 
@@ -34,12 +34,11 @@ public class MazeTest {
         Room swCorner = rectRoomArray.get(rectRoomArray.size()-cols);
         Room seCorner = rectRoomArray.get(rectRoomArray.size()-1);
 
-        System.out.println(nwCorner.neighbors);
-        System.out.println(neCorner.neighbors);
-        System.out.println(swCorner.neighbors);
-        System.out.println(seCorner.neighbors);
+        assertEquals(nwCorner.neighbors.toString(), "{WEST=null, EAST=1, NORTH=null, SOUTH=20}");
+        assertEquals(neCorner.neighbors.toString(), "{WEST=18, EAST=null, NORTH=null, SOUTH=39}");
+        assertEquals(swCorner.neighbors.toString(), "{WEST=null, EAST=181, NORTH=160, SOUTH=null}");
+        assertEquals(seCorner.neighbors.toString(), "{WEST=198, EAST=null, NORTH=179, SOUTH=null}");
 
-        // assertEquals(nwCorner.neighbors, 0);
 
 
     }

@@ -1,17 +1,15 @@
 
 import java.util.HashMap;
 import java.util.Map;
+
 public class Room {
     private String Name;
     private String description = "Defualt";
 
-<<<<<<< HEAD
-=======
     public void addRoom(String direction, int roomID) {
         //Will connect rooms together.
     }
 
->>>>>>> 02934bf3310095dec9308eec3cbaddb123cdc004
     // TODO eventually rework direction to be decoupled and behind the scenes (no need to directly modify or set)
     // TODO it should be calculated automatically based on position of room.
     public enum Direction {

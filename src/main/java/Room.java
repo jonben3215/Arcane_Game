@@ -4,7 +4,6 @@ import java.util.Map;
 
 public class Room {
 
-
     // TODO eventually rework direction to be decoupled and behind the scenes (no need to directly modify or set)
     // TODO it should be calculated automatically based on position of room.
     public enum Direction {

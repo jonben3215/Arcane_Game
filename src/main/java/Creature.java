@@ -1,13 +1,19 @@
 import java.util.Vector;
 
 public class Creature {
-    private String name;
-    private int pos[];
+    private String Name;
+    private int pos[];//Position for the crature on the map
     private double health;
 
     // On constructor, set random starting postion, name, health=5
 
-    public void move () {
-        // Choose random valid direction
+    public Creature(String name)
+    {
+        this.Name = name;
     }
+    public String getName()
+    {
+        return this.Name;
+    }
+
 }

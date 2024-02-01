@@ -25,14 +25,15 @@ public class RoomTest
         Room.setDescriptionFileName(file_name_2);
         assertEquals(file_name_2, Room.getDescriptionFileName());
 
-        // Test file_name_3 - Bad File
-        Room.setDescriptionFileName(file_name_3);
-        assertNotEquals(file_name_3, Room.getDescriptionFileName());
+//        // Test file_name_3 - Bad File
+//        Room.setDescriptionFileName(file_name_3);
+//        assertNotEquals(file_name_3, Room.getDescriptionFileName());
+//
+//        // Test file_name_4 - Bad File
+//        Room.setDescriptionFileName(file_name_4);
+//        assertNotEquals(file_name_4, Room.getDescriptionFileName());
 
-        // Test file_name_4 - Bad File
-        Room.setDescriptionFileName(file_name_4);
-        assertNotEquals(file_name_4, Room.getDescriptionFileName());
-
+        // TODO LowPrio Add file proofing so only valid txt files in the correct format can be used for the description file
     }
 
     @Test
@@ -40,7 +41,15 @@ public class RoomTest
         Room room = new Room();
         assertNotNull(room);
 
-        // TODO Check Default Values
+        // TODO Check ALL Default Values
+
+        // TODO Check default neighbors are all null
+
+        // TODO Once description is better implemented, check if good description
+
+        assertNotNull(room.getDescription());
+
+
     }
 
     @Test

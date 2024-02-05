@@ -43,4 +43,12 @@ public class MazeTest {
 
     }
 
+    @Test
+    public void testDisplayMaze()
+    {
+        Maze maze = new Maze();
+        maze.GenerateRectangleMaze(2, 2);
+        maze.Display();
+    }
+
 }

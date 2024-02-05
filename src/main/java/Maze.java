@@ -61,4 +61,27 @@ public class Maze {
     // Default Constructor
     public Maze () {
     }
+
+    public void Display()
+    {
+        int row =2;
+        int col =2;
+
+        for (int i = 0; i < rooms.size(); i++)
+        {
+            Room room = rooms.get(i);
+            System.out.print("[Room " + room.getID() + "]");
+
+            if ((i + 1) % col == 0)
+                System.out.println();
+            else
+                System.out.print("----");
+
+            if(i == 1)
+            {
+                System.out.println("  |              | ");
+                System.out.println("  |              | ");
+            }
+        }
+    }
 }

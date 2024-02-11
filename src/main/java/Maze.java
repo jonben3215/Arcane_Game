@@ -62,26 +62,52 @@ public class Maze {
     public Maze () {
     }
 
-    public void Display()
-    {
-        int row =2;
-        int col =2;
-
-        for (int i = 0; i < rooms.size(); i++)
-        {
-            Room room = rooms.get(i);
-            System.out.print("[Room " + room.getID() + "]");
-
-            if ((i + 1) % col == 0)
-                System.out.println();
-            else
-                System.out.print("----");
-
-            if(i == 1)
-            {
-                System.out.println("  |              | ");
-                System.out.println("  |              | ");
+    public boolean roomExists(int roomId,int rows, int cols) {
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                int roomIdx = r * cols + c;  // Calculate the index of the room
+                if (roomIdx < rooms.size()) {
+                    Room room = rooms.get(roomIdx);
+                    if (room.getID() == roomId) {
+                        return true;  // Room found
+                    }
+                }
             }
         }
+        return false;  // Room not found
+
+    }
+
+
+    //------- Displays the map -------
+    public void Display(int row, int col)
+    {
+        int roomIdx = 0;
+
+        System.out.println("    --------- MAP ---------  ");
+
+        for(int r = 0 ; r < row; r++)
+        {
+            for(int c = 0; c < col; c++)
+            {
+
+                Room room = rooms.get(roomIdx);
+                System.out.print("[Room " + room.getID() + "]");
+                roomIdx++;
+
+                if(c < col -1) {
+                    System.out.print("---");
+                }
+            }
+            System.out.println();
+            if(r < row - 1) { // Check if it's not the last row
+                for (int c = 0; c < col; c++) {
+                    System.out.print("     |    ");
+                }
+            }
+            System.out.println();
+
+        }
+
     }
 }

@@ -47,8 +47,8 @@ public class MazeTest {
     public void testDisplayMaze()
     {
         Maze maze = new Maze();
-        maze.GenerateRectangleMaze(2, 2);
-        maze.Display();
+        maze.GenerateRectangleMaze(3, 3);
+        maze.Display(3,3);
     }
 
 }

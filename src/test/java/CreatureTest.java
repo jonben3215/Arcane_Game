@@ -1,13 +1,22 @@
 import org.junit.jupiter.api.Test;
 
+<<<<<<< HEAD
 import static org.junit.jupiter.api.Assertions.*;
+=======
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+>>>>>>> largeD
 
 public class CreatureTest {
 
     @Test
     public void CreatureCreation()
     {
+<<<<<<< HEAD
         Creature Creature_1 = new Creature("Goblin", 10);
+=======
+        Creature Creature_1 = new Creature("Goblin");
+>>>>>>> largeD
         assertNotNull(Creature_1);
     }
 
@@ -15,6 +24,7 @@ public class CreatureTest {
 
     public void Test_getName()
     {
+<<<<<<< HEAD
 
         Creature Creature_1 = new Creature("Goblin", 10);
         assertEquals("Goblin", Creature_1.getName());
@@ -65,4 +75,10 @@ public class CreatureTest {
     }
 
 
+=======
+        Creature Creature_1 = new Creature("Goblin");
+        assertEquals("Goblin", Creature_1.getName());
+    }
+
+>>>>>>> largeD
 }

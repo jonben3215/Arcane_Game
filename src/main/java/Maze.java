@@ -76,17 +76,6 @@ public class Maze {
         return this.rooms;
     }
 
-    // Default Constructor
-    public boolean roomExists(int roomId) {
-        for (Room room : rooms) {
-            if (room.getID() == roomId) {
-                return true;  // Room found
-            }
-            System.out.println(room.getID() );
-        }
-        return false;  // Room not found
-    }
-
 
     //------- Displays the map -------
     public void Display(int row, int col) {

@@ -9,6 +9,17 @@ public class Maze {
 
     private ArrayList<Room> rooms = new ArrayList<>();
 
+<<<<<<< HEAD
+=======
+    private void ConnectRooms(Room roomA, Room roomB) {
+
+    }
+    private void connectRooms(int roomA, int roomB) {
+        int num_rooms;
+         ArrayList<Room> rooms;
+    }
+
+>>>>>>> largeD
     public void GenerateRectangleMaze(int rows, int cols) {
         // Rectangle grid approach to generate maze.
         row = rows;

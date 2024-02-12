@@ -1,19 +1,13 @@
 
 import java.util.HashMap;
 import java.util.Map;
-<<<<<<< HEAD
-=======
 
->>>>>>> largeD
 public class Room {
     private String Name;
     private String description = "Defualt";
 
-<<<<<<< HEAD
     private boolean hasFood = false;
 
-=======
->>>>>>> largeD
     public void addRoom(String direction, int roomID) {
         //Will connect rooms together.
     }

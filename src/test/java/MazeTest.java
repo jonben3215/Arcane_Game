@@ -49,6 +49,25 @@ public class MazeTest {
         Maze maze = new Maze();
         maze.GenerateRectangleMaze(3, 3);
         maze.Display(3,3);
+        maze.roomExists(10);
+    }
+    @Test
+    public void test_foodSpawn() {
+        Maze maze = new Maze();
+        int rows = 3; // Number of rows in the maze
+        int cols = 3; // Number of columns in the maze
+        int numFoodItems = 10; // Number of food items to spawn
+
+        // Generate the maze
+        maze.GenerateRectangleMaze(rows, cols);
+
+        // Spawn food items
+        maze.Spawn_Food(numFoodItems);
+
+        // Display the maze to inspect the distribution of food items
+        maze.Display(rows,cols);
+
+
     }
 
 }

@@ -32,7 +32,37 @@ public class CreatureTest {
         //assertTrue(player1.isAlive());
 
         assertFalse(creature1.isAlive());
-
     }
+
+    @Test
+    public void test_CreatureRoll()
+    {
+        Creature creature1 = new Creature ("Oger", 10);
+
+        int roll_Number = creature1.Creature_Roll();
+
+        //Making sure the Generated number is within 1 and 6
+        if(roll_Number >= 1 && roll_Number <= 6)
+            assert true;
+        else
+            assert false;
+    }
+    @Test
+    public void testSpawnAndDisplayCreaturePosition() {
+        // Create a maze
+        Maze maze = new Maze();
+        maze.GenerateRectangleMaze(3, 3); // Assuming a 3x3 maze
+
+        // Create a creature
+        Creature creature = new Creature("CreatureName", 10);
+
+        // Spawn creatures in the maze
+        creature.spawnCreature(maze);
+
+        // Display creature positions
+       // creature.displayCreaturePosition();
+        creature.checkIfCreature(5);
+    }
+
 
 }

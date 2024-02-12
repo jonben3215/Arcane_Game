@@ -1,9 +1,11 @@
+import java.util.Random;
+
 public class Player {
 
     private String userName;
     private int userHealth;
 
-    private int userPosition;
+    private int roomIdx = 0;
 
     public Player(String user_Name, int health)
     {
@@ -20,7 +22,7 @@ public class Player {
     }
     public int getPosition()
     {
-        return this.userPosition;
+        return this.roomIdx;
     }
     public void setHealth(int health)
     {
@@ -32,13 +34,54 @@ public class Player {
     }
     public void setPosition(int position)
     {
-        userPosition = position;
+        roomIdx = position;
     }
 
-    public void player_Movement(Room room,int North, int East, int South, int West)
-    {
 
-       System.out.println(room.getID());
+
+    public void player_Movement(Maze maze, int direction) {
+        int rows = maze.getRow();
+        int cols = maze.getCol();
+
+        switch (direction) {
+            case 1: //North
+                roomIdx -= cols;
+                break;
+            case 2: //East
+                roomIdx += 1;
+                break;
+            case 3: //south
+                roomIdx += cols;
+                break;
+            case 4: //west
+                roomIdx -= 1;
+                break;
+            default:
+                System.out.println("INVALID MOVE!");
+                return;
+        }
+
+        if (!maze.roomExists(roomIdx)) {
+            System.out.println("Out of bounds.");
+            System.out.println("Player trying to move to room: " + roomIdx);
+        } else {
+            System.out.println("Moving to room: " + roomIdx);
+            setPosition(roomIdx);
+        }
+    }
+
+
+    public int playerRoll()
+    {
+        Random numGenerator = new Random();
+
+        //Generates a number from 1 to 6 similar to a die
+        return numGenerator.nextInt(6)+1;
+    }
+
+    public boolean isHealthier(Player p1, Player p2) //For multi-Player only
+    {
+        return p1.getHealth()>p2.getHealth();
     }
 
     public boolean isAlive()

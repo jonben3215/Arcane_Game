@@ -76,12 +76,37 @@ public class PlayerTest {
     @Test
     public void test_player_Movement()
     {
+        String Name  = "Ben";
+        int health = 0;
+        // int health = 1;
+        int new_Health = 8;
 
-        int roomIdx= 200;
+        Player player1 = new Player(Name, health);
+
+        int roomIdx= 1;
         Maze m= new Maze();
         m.GenerateRectangleMaze(3, 3);
-        System.out.println(m.roomExists(roomIdx,3,3));
 
+        m.Display(3,3);
+        //System.out.println(m.roomExists(roomIdx,3,3));
+
+        player1.player_Movement(m, 2);
+        player1.player_Movement(m, 3);
+        System.out.println(player1.getPosition());
+    }
+
+    @Test
+    public void test_PlayerRoll()
+    {
+        Player player1 = new Player("Ben", 10);
+
+        int roll_Number = player1.playerRoll();
+
+        //Making sure the Generated number is within 1 and 6
+        if(roll_Number >= 1 && roll_Number <= 6)
+            assert true;
+        else
+            assert false;
     }
 
 }

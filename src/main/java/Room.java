@@ -5,6 +5,8 @@ public class Room {
     private String Name;
     private String description = "Defualt";
 
+    private boolean hasFood = false;
+
     public void addRoom(String direction, int roomID) {
         //Will connect rooms together.
     }
@@ -129,6 +131,13 @@ public class Room {
 
         // If filePath passes checks, update the filePath
         DESCRIPTION_FILE_NAME = filePath;
+    }
+    public boolean hasFood() {
+        return hasFood;
+    }
+
+    public void addFood() {
+        hasFood = true;
     }
 
     // TODO automatically open + handle file instance with static methods, called on program run and filePath update

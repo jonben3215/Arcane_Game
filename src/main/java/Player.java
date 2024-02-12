@@ -7,6 +7,8 @@ public class Player {
 
     private int roomIdx = 0;
 
+
+    // THIS IS ENCAPSULATION / INFORMATION HANDLING
     public Player(String user_Name, int health)
     {
         this.userName  = user_Name;
@@ -36,7 +38,9 @@ public class Player {
     {
         roomIdx = position;
     }
+    // THIS IS THE END OF ENCAPSULATION / INFORMATION HANDLING
 
+    //THIS IS COHESION
     public boolean isValidPosition(Maze maze) {
         int rows = maze.getRow();
         int cols = maze.getCol();
@@ -74,6 +78,8 @@ public class Player {
             setPosition(roomIdx);
         }
     }
+
+    //THIS IS THE END OF COHESION
 
 
     public int playerRoll()

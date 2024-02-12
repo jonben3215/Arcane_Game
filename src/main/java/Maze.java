@@ -9,17 +9,16 @@ public class Maze {
 
     private ArrayList<Room> rooms = new ArrayList<>();
 
-<<<<<<< HEAD
-=======
     private void ConnectRooms(Room roomA, Room roomB) {
 
     }
+
+    // Encapsulation / Information Hiding
     private void connectRooms(int roomA, int roomB) {
         int num_rooms;
          ArrayList<Room> rooms;
     }
 
->>>>>>> largeD
     public void GenerateRectangleMaze(int rows, int cols) {
         // Rectangle grid approach to generate maze.
         row = rows;
@@ -53,16 +52,21 @@ public class Maze {
         }
     }
 
+
+    // Encapsulation / Information Hiding
     public int getRow()
     {
         return row;
     }
 
+
+    // Encapsulation / Information Hiding
     public int getCol()
     {
         return col;
     }
 
+    // Encapsulation / Information Hiding
     public Room getRoomByID (int ID) {
         for (Room room : this.rooms) {
             if (room.getID() == ID) {
@@ -72,12 +76,14 @@ public class Maze {
         return null;
     }
 
+    // Encapsulation / Information Hiding
     public ArrayList<Room> getRooms () {
         return this.rooms;
     }
 
 
     //------- Displays the map -------
+    // Encapsulation / Information Hiding
     public void Display(int row, int col) {
         int roomIdx = 0;
 
@@ -102,6 +108,8 @@ public class Maze {
             System.out.println();
         }
     }
+
+    // Encapsulation / Information Hiding
     public void Spawn_Food (int numFoodItems) {
         Random random = new Random();
         int attempts = 0;
@@ -121,6 +129,8 @@ public class Maze {
         }
     }
 
+
+    // Encapsulation / Information Hiding
     public boolean foodExists()
     {
         for (Room room : rooms)

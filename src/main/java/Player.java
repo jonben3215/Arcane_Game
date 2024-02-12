@@ -37,10 +37,15 @@ public class Player {
         roomIdx = position;
     }
 
+    public boolean isValidPosition(Maze maze) {
+        int rows = maze.getRow();
+        int cols = maze.getCol();
+        return roomIdx >= 0 && roomIdx < rows * cols;
+    }
+
 
 
     public void player_Movement(Maze maze, int direction) {
-        int rows = maze.getRow();
         int cols = maze.getCol();
 
         switch (direction) {
@@ -61,7 +66,7 @@ public class Player {
                 return;
         }
 
-        if (!maze.roomExists(roomIdx)) {
+        if (!isValidPosition(maze)) {
             System.out.println("Out of bounds.");
             System.out.println("Player trying to move to room: " + roomIdx);
         } else {

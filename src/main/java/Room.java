@@ -23,7 +23,6 @@ public class Room {
 
     // Static Variables:
     private static String DESCRIPTION_FILE_NAME; // Put default descriptionFileName here
-
     private static int ID_TRACKER = 0;
 
     // ---------- Member Variables: ---------- //

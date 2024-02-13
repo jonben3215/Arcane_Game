@@ -1,22 +1,17 @@
 import java.util.Random;
 
 public class Creature {
-<<<<<<< HEAD
     private String CreatureName;
     private int creatureHealth;
     private int[] pos;//Position for the crature on the map
 
     private int roomIdx = 0;
     int number_creature = 5;
-=======
     private String Name;
-    private int pos[];//Position for the crature on the map
->>>>>>> largeD
     private double health;
 
     // On constructor, set random starting postion, name, health=5
 
-<<<<<<< HEAD
     public Creature(String Cname, int Chealth)
     {
         this.CreatureName = Cname;
@@ -92,15 +87,9 @@ public class Creature {
 
 
 
-=======
     public Creature(String name)
     {
         this.Name = name;
     }
-    public String getName()
-    {
-        return this.Name;
-    }
 
->>>>>>> largeD
 }

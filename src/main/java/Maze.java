@@ -2,9 +2,13 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Maze {
+
+
     private int num_rooms = 0;
     private int row;
     private int col;
+
+    // Get valid neighboring moves of space
 
 
     private ArrayList<Room> rooms = new ArrayList<>();
@@ -45,12 +49,20 @@ public class Maze {
             int west_idx = room_idx - 1;
 
             // Add neighbor if valid
-            if (north_idx >= 0) room.addNeighbor(Room.Direction.NORTH, north_idx);
-            if (south_idx <= num_rooms -1) room.addNeighbor(Room.Direction.SOUTH, south_idx);
-            if (room_idx%cols != 0) room.addNeighbor(Room.Direction.WEST, west_idx);
-            if (room_idx%cols != cols-1) room.addNeighbor(Room.Direction.EAST, east_idx);
+            if (north_idx >= 0) room.addNeighbor(Direction.N, rooms.get(north_idx));
+            if (south_idx <= num_rooms -1) room.addNeighbor(Direction.S, rooms.get(south_idx));
+            if (room_idx%cols != 0) room.addNeighbor(Direction.W, rooms.get(west_idx));
+            if (room_idx%cols != cols-1) room.addNeighbor(Direction.E, rooms.get(east_idx));
         }
     }
+
+
+    // Usage: center N north room (north room gets S join to center)
+    public void join(Room r1, Direction d, Room r2) {
+        r1.addNeighbor(d, r2);
+        r2.addNeighbor(d.getOpposite(), r1);
+    }
+
 
 
     // Encapsulation / Information Hiding
@@ -58,7 +70,6 @@ public class Maze {
     {
         return row;
     }
-
 
     // Encapsulation / Information Hiding
     public int getCol()
@@ -129,10 +140,8 @@ public class Maze {
         }
     }
 
-
     // Encapsulation / Information Hiding
-    public boolean foodExists()
-    {
+    public boolean foodExists() {
         for (Room room : rooms)
         {
             if (room.hasFood())

@@ -39,7 +39,7 @@ public class CreatureTest {
     @Test
     public void test_CreatureRoll()
     {
-        Creature creature1 = new Creature ("Oger", 10);
+        Creature creature1 = new Creature ("Ogre", 10);
 
         int roll_Number = creature1.Creature_Roll();
 
@@ -62,9 +62,9 @@ public class CreatureTest {
         creature.spawnCreature(maze);
 
         // Display creature positions
-       // creature.displayCreaturePosition();
+        // creature.displayCreaturePosition();
         creature.checkIfCreature(5);
     }
 
-
 }
+

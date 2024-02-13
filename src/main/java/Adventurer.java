@@ -1,15 +1,14 @@
 import java.util.Random;
 
-public class Player {
+public class Adventurer {
 
     private String userName;
     private int userHealth;
-
     private int roomIdx = 0;
 
 
     // THIS IS ENCAPSULATION / INFORMATION HANDLING
-    public Player(String user_Name, int health)
+    public Adventurer(String user_Name, int health)
     {
         this.userName  = user_Name;
         this.userHealth = health;
@@ -90,7 +89,7 @@ public class Player {
         return numGenerator.nextInt(6)+1;
     }
 
-    public boolean isHealthier(Player p1, Player p2) //For multi-Player only
+    public boolean isHealthier(Adventurer p1, Adventurer p2) //For multi-Player only
     {
         return p1.getHealth()>p2.getHealth();
     }

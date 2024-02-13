@@ -1,9 +1,190 @@
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 
 
 public class RoomTest
 {
+
+    // Test Rooms
+    Room default_room = new Room();
+
+    @Test
+    public void TestRoomDefaultConstructor() {
+        assertNotNull(default_room);
+    }
+
+    @Test
+    public void testRoomID() {
+        // Generate Sample Default Rooms
+        Room room1 = new Room();
+        Room room2 = new Room();
+        Room room3 = new Room();
+        Room room4 = new Room();
+
+        // Check that IDs are set (>0)
+        assertNotEquals(room1.getID(), -1);
+        assertNotEquals(room2.getID(), -1);
+        assertNotEquals(room3.getID(), -1);
+        assertNotEquals(room4.getID(), -1);
+
+        // Check that IDs are unique
+        assertNotEquals(room1.getID(), room2.getID());
+        assertNotEquals(room2.getID(), room3.getID());
+        assertNotEquals(room3.getID(), room4.getID());
+        assertNotEquals(room4.getID(), room1.getID());
+        assertNotEquals(room1.getID(), room3.getID());
+        assertNotEquals(room2.getID(), room4.getID());
+    }
+
+    @Test
+    public void TestRoomGetSetName() {
+
+        // .getName DEFAULT
+        Room r = new Room();
+        String default_name = r.getName();
+        int r_id = r.getID(); // Default name == ID
+        assertEquals(default_name, Integer.toString(r_id));
+
+        // .setName
+        String new_name = "North West";
+        r.setName(new_name);
+        assertEquals(r.getName(), new_name);
+
+        // Primitive Tests (legacy)
+        String room1ExpectedName = "Starting Room";
+        String room2ExpectedName = "Second Room";
+        String room3ExpectedName = "Third Room";
+        String room4ExpectedName = "Last Room";
+
+        Room room1 = new Room("Starting Room");
+        Room room2 = new Room("Second Room");
+        Room room3 = new Room("Third Room");
+        Room room4 = new Room("Last Room");
+
+        assertEquals(room1ExpectedName, room1.getName());
+        assertEquals(room2ExpectedName, room2.getName());
+        assertEquals(room3ExpectedName, room3.getName());
+        assertEquals(room4ExpectedName, room4.getName());
+
+    }
+
+    @Test
+    public void TestGetAddAdventurers() {
+
+        Room room = new Room();
+        List<Adventurer> expectedAdventurers = new ArrayList<>();
+        assertTrue(room.getAdventurers().isEmpty());
+
+        Adventurer a = new Adventurer("Bob", 5);
+        room.addAdventurer(a);
+        expectedAdventurers.add(a);
+        assertEquals(expectedAdventurers, room.getAdventurers());
+
+    }
+
+    @Test
+    public void TestAddSortAdventurers() {
+
+        Room room = new Room();
+
+        // Add adventurers in unsorted order
+        room.addAdventurer(new Adventurer("lower_quartile", 3));
+        room.addAdventurer(new Adventurer("low", 1));
+        room.addAdventurer(new Adventurer("high", 10));
+        room.addAdventurer(new Adventurer("upper_quartile", 8));
+        room.addAdventurer(new Adventurer("middle", 5));
+
+        // Check if they sorted by highest hp
+        String[] expected = {"high", "upper_quartile", "middle", "lower_quartile", "low"};
+        ArrayList<Adventurer> sorted_adventurers = (ArrayList<Adventurer>) room.getAdventurers();
+        boolean match = true;
+        for(int i=0; i< expected.length; i++) {
+            // If expected and sorted do not match, break and return false
+            if (!(expected[i].equals(sorted_adventurers.get(i).getName()))) {
+                match = false;
+                break;
+            }
+        }
+
+        // Assert check
+        assertTrue(match);
+    }
+
+    @Test
+    public void TestGetAddCreatures() {
+        Room room = new Room();
+        List<Creature> expectedCreatures = new ArrayList<>();
+        assertTrue(room.getCreatures().isEmpty());
+
+        Creature c = new Creature("Bob", 5);
+        room.addCreature(c);
+        expectedCreatures.add(c);
+        assertEquals(expectedCreatures, room.getCreatures());
+    }
+
+    @Test
+    public void TestAddSortCreatures() {
+
+        Room room = new Room();
+
+        // Add creatures in unsorted order
+        room.addCreature(new Creature("lower_quartile", 3));
+        room.addCreature(new Creature("low", 1));
+        room.addCreature(new Creature("high", 10));
+        room.addCreature(new Creature("upper_quartile", 8));
+        room.addCreature(new Creature("middle", 5));
+
+        // Check if they sorted by highest hp
+        String[] expected = {"high", "upper_quartile", "middle", "lower_quartile", "low"};
+        ArrayList<Creature> sorted_creatures = (ArrayList<Creature>) room.getCreatures();
+        boolean match = true;
+        for(int i=0; i< expected.length; i++) {
+            // If expected and sorted do not match, break and return false
+            if (!(expected[i].equals(sorted_creatures.get(i).getName()))) {
+                match = false;
+                break;
+            }
+        }
+
+        // Assert check
+        assertTrue(match);
+    }
+
+    @Test
+    public void TestGetAddFoods() {
+        Room room = new Room();
+        List<Food> expectedFood = new ArrayList<>();
+        assertTrue(room.getFoods().isEmpty());
+
+        Food f = new Food("Apple");
+        room.addFood(f);
+        expectedFood.add(f);
+        assertEquals(expectedFood, room.getFoods());
+    }
+
+    @Test
+    public void TestGetInfo () {
+        String expected = default_room.getName() + ":\n> Adventurers:\n> Creatures:\n> Food:";
+        assertEquals(default_room.getInfo(), expected);
+    }
+
+    @Test
+    public void testNameConstructor() {
+        Room room1 = new Room("Room1");
+        Room room2 = new Room("Room2");
+        Room room3 = new Room("Room3");
+        Room room4 = new Room("Room4");
+
+        assertNotNull(room1);
+        assertNotNull(room2);
+        assertNotNull(room3);
+        assertNotNull(room4);
+    }
 
     @Test
     public void DescriptionTest () {
@@ -36,75 +217,4 @@ public class RoomTest
         // TODO LowPrio Add file proofing so only valid txt files in the correct format can be used for the description file
     }
 
-    @Test
-    public void DefaultRoomCreation() {
-        Room room = new Room();
-        assertNotNull(room);
-
-        // TODO Check ALL Default Values
-
-        // TODO Check default neighbors are all null
-
-        // TODO Once description is better implemented, check if good description
-
-        assertNotNull(room.getDescription());
-
-
-    }
-
-    @Test
-    public void testRoomIDGeneration() {
-
-        // Generate Sample Default Rooms
-        Room room1 = new Room();
-        Room room2 = new Room();
-        Room room3 = new Room();
-        Room room4 = new Room();
-
-        // Check that IDs are set (>0)
-        assertNotEquals(room1.getID(), -1);
-        assertNotEquals(room2.getID(), -1);
-        assertNotEquals(room3.getID(), -1);
-        assertNotEquals(room4.getID(), -1);
-
-        // Check that IDs are unique
-        assertNotEquals(room1.getID(), room2.getID());
-        assertNotEquals(room2.getID(), room3.getID());
-        assertNotEquals(room3.getID(), room4.getID());
-        assertNotEquals(room4.getID(), room1.getID());
-        assertNotEquals(room1.getID(), room3.getID());
-        assertNotEquals(room2.getID(), room4.getID());
-    }
-
-    @Test
-    public void testRoomCreation()
-    {
-        Room room1 = new Room("Room1");
-        Room room2 = new Room("Room2");
-        Room room3 = new Room("Room3");
-        Room room4 = new Room("Room4");
-
-        assertNotNull(room1);
-        assertNotNull(room2);
-        assertNotNull(room3);
-        assertNotNull(room4);
-    }
-    @Test
-    public void testRoomName()
-    {
-        String room1ExpectedName = "Starting Room";
-        String room2ExpectedName = "Second Room";
-        String room3ExpectedName = "Third Room";
-        String room4ExpectedName = "Last Room";
-
-        Room room1 = new Room("Starting Room");
-        Room room2 = new Room("Second Room");
-        Room room3 = new Room("Third Room");
-        Room room4 = new Room("Last Room");
-
-        assertEquals(room1ExpectedName, room1.getName());
-        assertEquals(room2ExpectedName, room2.getName());
-        assertEquals(room3ExpectedName, room3.getName());
-        assertEquals(room4ExpectedName, room4.getName());
-    }
 }

@@ -18,10 +18,7 @@ public class Maze {
         int num_rooms;
          ArrayList<Room> rooms;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin
     public void GenerateRectangleMaze(int rows, int cols) {
         // Rectangle grid approach to generate maze.
         row = rows;

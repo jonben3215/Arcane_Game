@@ -1,12 +1,17 @@
-
 import java.util.HashMap;
 import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Room {
     private String Name;
-    private String description = "Defualt";
+    private String description = "";
 
-    private boolean hasFood = false;
+    private final List<Adventurer> adventurers = new ArrayList<>();
+    private final List<Creature> creatures = new ArrayList<>();
+    private final List<Food> foods = new ArrayList<>();
 
     public void addRoom(String direction, int roomID) {
         //Will connect rooms together.
@@ -20,6 +25,7 @@ public class Room {
         EAST,
         WEST
     }
+
 
     // Static Variables:
     private static String DESCRIPTION_FILE_NAME; // Put default descriptionFileName here
@@ -35,14 +41,14 @@ public class Room {
     Map<Direction, Integer> neighbors = new HashMap<>();
     // ---------- Constructors: ---------- //
 
-    // Default Constructor
+    // Constructors
     public Room() {
         generateID();
         generateDescription();
         resetNeighbors();
+        this.name = Integer.toString(this.ID);
     }
 
-    // Constructor
     public Room(String name) {
         // All constructors implement setup, this is done using 'this()' TODO make less shitty
         this();
@@ -52,40 +58,29 @@ public class Room {
     // ---------- Public Methods ---------- //
 
 
-    //THIS IS ENCAPSULATION
     public void addNeighbor(Direction d, int roomID) {
         neighbors.put(d, roomID);
     }
-
-    //THIS IS ENCAPSULATION
     public void removeNeighbor(Direction d) {
         neighbors.put(d, null);
     }
-
-    // TODO once there is better neighbor setup, (or a need for it) remove neighbor with roomID
-
-    //THIS IS COHESION
     public void removeNeighbor(int roomID) {
         // TODO not implemented yet, waiting to see how bad or good the implementation of the maze room system is
         // neighbors.put(d, roomID);
-        return;
-    }
+   }
 
     // ---------- Helpers ---------- //
 
     // TODO make this function get a random description from the description file
 
-    //THIS IS COHESION
     private void generateDescription() {
         this.description = "This is the default description";
     }
 
-    //THIS IS COHESION
     private void generateID() {
         this.ID = ID_TRACKER++;
     }
 
-    //THIS IS COHESION
     private void resetNeighbors() {
         this.neighbors.clear();
         for (Direction d : Direction.values()) {
@@ -99,25 +94,81 @@ public class Room {
         return this.neighbors;
     }
 
-    //THIS IS ENCAPSULATION / INFORMATION HANDLING
     public String getName() {
         return this.name;
     }
 
-
-    //THIS IS ENCAPSULATION / INFORMATION HANDLING
     public void setName(String name) {
         if (name == null) return;
         this.name = name;
     }
-
-    //THIS IS ENCAPSULATION / INFORMATION HANDLING
     public int getID() {
         return this.ID;
     }
 
+    public String getInfo() {
 
-    //THIS IS ENCAPSULATION / INFORMATION HANDLING
+        StringBuilder info_string = new StringBuilder(this.name + ":");
+
+        info_string.append("\n> Adventurers:");
+        for (Adventurer a : this.adventurers) {
+            info_string.append(" ").append(a.getName());
+        }
+
+        info_string.append("\n> Creatures:");
+        for (Creature c : this.creatures) {
+            info_string.append(" ").append(c.getName());
+        }
+
+        info_string.append("\n> Food:");
+        for (Food f : this.foods) {
+            info_string.append(" ").append(f.getName());
+        }
+
+        return info_string.toString();
+
+    }
+
+    public List<Adventurer> getAdventurers() {
+        return this.adventurers;
+    }
+    public void addAdventurer(Adventurer a) {
+        this.adventurers.add(a);
+        this.adventurers.sort(Comparator.comparingInt(Adventurer::getHealth).reversed());
+    }
+
+    public List<Creature> getCreatures() {
+        return this.creatures;
+    }
+
+    public void addCreature(Creature c) {
+        this.creatures.add(c);
+        this.creatures.sort(Comparator.comparingInt(Creature::getHealth).reversed());
+    }
+
+    public boolean hasFood() {
+        return this.foods.isEmpty();
+    }
+
+    public void addFood() {
+        this.foods.add(new Food());
+    }
+
+    public void addFood(Food food) {
+        this.foods.add(food);
+    }
+
+    public List<Food> getFoods() {
+        return this.foods;
+    }
+
+
+
+
+
+
+    // Description - Extra Future Feature TODO
+    // TODO automatically open + handle file instance with static methods, called on program run and filePath update
     public String getDescription() {
         return this.description;
     }
@@ -127,7 +178,6 @@ public class Room {
      * WARNING: Will return 'null' if fileName is undefined
      * (fileName is undefined by default, assign it with Room.setDescriptionTextFile)
      */
-    //THIS IS ENCAPSULATION / INFORMATION HANDLING
     public static String getDescriptionFileName() {
         return DESCRIPTION_FILE_NAME;
     }
@@ -139,8 +189,6 @@ public class Room {
      *
      * @param filePath A valid file path
      */
-
-    //THIS IS ENCAPSULATION / INFORMATION HANDLING
     public static void setDescriptionFileName(String filePath) {
         // Do not update if null filePath
         if (filePath == null || filePath.isEmpty()) return;
@@ -150,18 +198,5 @@ public class Room {
         // If filePath passes checks, update the filePath
         DESCRIPTION_FILE_NAME = filePath;
     }
-
-    //THIS IS ENCAPSULATION / INFORMATION HANDLING
-    public boolean hasFood() {
-        return hasFood;
-    }
-
-    //THIS IS ENCAPSULATION / INFORMATION HANDLING
-    public void addFood() {
-        hasFood = true;
-    }
-
-    // TODO automatically open + handle file instance with static methods, called on program run and filePath update
-
 }
 

@@ -77,9 +77,7 @@ public class Adventurer {
             setPosition(roomIdx);
         }
     }
-
-    //THIS IS THE END OF COHESION
-
+    
 
     public int playerRoll()
     {

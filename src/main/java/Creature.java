@@ -3,7 +3,7 @@ import java.util.Random;
 public class Creature {
     private String CreatureName;
     private int creatureHealth;
-    private int[] pos;//Position for the crature on the map
+    private int[] pos;//Position for the creature on the map
 
     private int roomIdx = 0;
     int number_creature = 5;
@@ -11,32 +11,39 @@ public class Creature {
     private double health;
 
     // On constructor, set random starting postion, name, health=5
-
     public Creature(String Cname, int Chealth)
     {
         this.CreatureName = Cname;
         this.creatureHealth = Chealth;
         pos = new int[number_creature];
     }
+
+    // THIS IS ENCAPSULATION
     public String getName()
     {
         return this.CreatureName;
     }
+
+    // THIS IS ENCAPSULATION
     public int getCreatureHealth()
     {
         return this.creatureHealth;
     }
 
+    // THIS IS ENCAPSULATION
     public void setCreatureHealth(int Chealth )
     {
         this.creatureHealth = Chealth;
     }
 
+    // THIS IS COHESION
     public boolean isAlive()
     {
         return creatureHealth > 0;
     }
 
+
+    // THIS IS COHESION
     public int Creature_Roll()
     {
         Random numGenerator = new Random();
@@ -55,6 +62,7 @@ public class Creature {
     }
 
 
+    // THIS IS COHESION
     public void spawnCreature(Maze maze)
     {
         Random random = new Random();
@@ -70,12 +78,9 @@ public class Creature {
         }
     }
 
-//    public void displayCreaturePosition()
-//    {
-//        for (int po : pos) System.out.println(po);
-//    }
-
-    public boolean checkIfCreature(int newRoomIdx) {
+    // THIS IS COHESION
+    public boolean checkIfCreature(int newRoomIdx)
+    {
         for (int existingRoomIdx : pos) {
             if (existingRoomIdx == newRoomIdx) {
                 System.out.println("Creature Found");
@@ -84,8 +89,6 @@ public class Creature {
         }
         return false;
     }
-
-
 
     public Creature(String name)
     {

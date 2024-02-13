@@ -1,5 +1,7 @@
 public class Arcane {
 
+
+    //THIS IS COHESION
     public void Fight(Player player, Creature creature)
     {
         int playerNumber = player.playerRoll();

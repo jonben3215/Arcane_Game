@@ -2,7 +2,7 @@ public class Arcane {
 
 
     //THIS IS COHESION
-    public void Fight(Player player, Creature creature)
+    public void Fight(Adventurer player, Creature creature)
     {
         int playerNumber = player.playerRoll();
         int creatureNumber = creature.Creature_Roll();
@@ -22,7 +22,7 @@ public class Arcane {
         }
         else{
             System.out.println("Player Won battle.");
-            int creatureHealth = creature.getCreatureHealth() -  (playerNumber-creatureNumber);
+            int creatureHealth = creature.getHealth() -  (playerNumber-creatureNumber);
             player.setHealth(creatureHealth);
         }
     }

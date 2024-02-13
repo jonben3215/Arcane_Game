@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MazeTest {
+
+    // TODO: Make constructor test for food and whatever else in directions:
+
     @Test
     public void DefaultMazeCreation() {
         Maze maze = new Maze();
@@ -17,8 +20,6 @@ public class MazeTest {
     public void testRectangleMazeCreation() {
         Maze maze = new Maze();
         assertNotNull(maze);
-
-        // TODO Check Default Values
 
         int rows = 10;
         int cols = 20;
@@ -38,8 +39,6 @@ public class MazeTest {
         assertEquals(neCorner.neighbors.toString(), "{NORTH=null, EAST=null, WEST=18, SOUTH=39}");
         assertEquals(swCorner.neighbors.toString(), "{NORTH=160, EAST=181, WEST=null, SOUTH=null}");
         assertEquals(seCorner.neighbors.toString(), "{NORTH=179, EAST=null, WEST=198, SOUTH=null}");
-
-
 
     }
 

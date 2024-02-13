@@ -7,7 +7,7 @@ public class ArcaneTest {
     {
         Arcane arcane = new Arcane();
         Creature creature = new Creature("wolf", 10);
-        Player player = new Player("Ben", 10);
+        Adventurer player = new Adventurer("Ben", 10);
 
         arcane.Fight(player,creature);
 

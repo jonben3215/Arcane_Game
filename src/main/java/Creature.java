@@ -25,7 +25,7 @@ public class Creature {
     }
 
     // THIS IS ENCAPSULATION
-    public int getCreatureHealth()
+    public int getHealth()
     {
         return this.creatureHealth;
     }

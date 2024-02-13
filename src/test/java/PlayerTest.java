@@ -9,7 +9,7 @@ public class PlayerTest {
        String Name  = "Ben";
        int health = 10;
 
-       Player player1 = new Player(Name, health);
+       Adventurer player1 = new Adventurer(Name, health);
 
        assertNotNull(player1);
     }
@@ -20,7 +20,7 @@ public class PlayerTest {
         String Name  = "Ben";
         int health = 10;
 
-        Player player1 = new Player(Name, health);
+        Adventurer player1 = new Adventurer(Name, health);
         assertNotNull(player1.getName());
     }
     @Test
@@ -29,7 +29,7 @@ public class PlayerTest {
         String Name  = "Ben";
         int health = 10;
 
-        Player player1 = new Player(Name, health);
+        Adventurer player1 = new Adventurer(Name, health);
        assertEquals(health, player1.getHealth());
     }
     @Test
@@ -39,7 +39,7 @@ public class PlayerTest {
         String newName = "William";
         int health = 10;
 
-        Player player1 = new Player(Name, health);
+        Adventurer player1 = new Adventurer(Name, health);
         player1.setName(newName);
 
         assertEquals(newName, player1.getName());
@@ -52,7 +52,7 @@ public class PlayerTest {
         int health = 10;
         int new_Health = 8;
 
-        Player player1 = new Player(Name, health);
+        Adventurer player1 = new Adventurer(Name, health);
         player1.setHealth(new_Health);
         assertEquals(new_Health, player1.getHealth());
     }
@@ -65,7 +65,7 @@ public class PlayerTest {
        // int health = 1;
         int new_Health = 8;
 
-        Player player1 = new Player(Name, health);
+        Adventurer player1 = new Adventurer(Name, health);
         //assertTrue(player1.isAlive());
 
         player1.setHealth(0);
@@ -81,7 +81,7 @@ public class PlayerTest {
         // int health = 1;
         int new_Health = 8;
 
-        Player player1 = new Player(Name, health);
+        Adventurer player1 = new Adventurer(Name, health);
 
         int roomIdx= 1;
         Maze m= new Maze();
@@ -98,7 +98,7 @@ public class PlayerTest {
     @Test
     public void test_PlayerRoll()
     {
-        Player player1 = new Player("Ben", 10);
+        Adventurer player1 = new Adventurer("Ben", 10);
 
         int roll_Number = player1.playerRoll();
 

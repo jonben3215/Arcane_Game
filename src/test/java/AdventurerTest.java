@@ -2,10 +2,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PlayerTest {
+public class AdventurerTest {
+
     @Test
-    public void PlayerCreation()
-    {
+    public void TestAdventurerCreation() {
        String Name  = "Ben";
        int health = 10;
 
@@ -13,19 +13,8 @@ public class PlayerTest {
 
        assertNotNull(player1);
     }
-
     @Test
-    public void Test_getname()
-    {
-        String Name  = "Ben";
-        int health = 10;
-
-        Adventurer player1 = new Adventurer(Name, health);
-        assertNotNull(player1.getName());
-    }
-    @Test
-    public void Test_getHealth()
-    {
+    public void TestGetHealth() {
         String Name  = "Ben";
         int health = 10;
 
@@ -33,8 +22,26 @@ public class PlayerTest {
        assertEquals(health, player1.getHealth());
     }
     @Test
-    public void Test_setName()
-    {
+    public void TestSetHealth() {
+
+        String Name  = "Ben";
+        int health = 10;
+        int new_Health = 8;
+
+        Adventurer player1 = new Adventurer(Name, health);
+        player1.setHealth(new_Health);
+        assertEquals(new_Health, player1.getHealth());
+    }
+    @Test
+    public void TestGetName() {
+        String Name  = "Ben";
+        int health = 10;
+
+        Adventurer player1 = new Adventurer(Name, health);
+        assertNotNull(player1.getName());
+    }
+    @Test
+    public void TestSetName() {
         String Name  = "Ben";
         String newName = "William";
         int health = 10;
@@ -46,36 +53,51 @@ public class PlayerTest {
     }
 
     @Test
-    public void Test_setHealth()
-    {
-        String Name  = "Ben";
-        int health = 10;
-        int new_Health = 8;
+    public void TestRoom() {
 
-        Adventurer player1 = new Adventurer(Name, health);
-        player1.setHealth(new_Health);
-        assertEquals(new_Health, player1.getHealth());
+        Room r = new Room();
+        Adventurer a = new Adventurer();
+        a.setName("Billy");
+        a.setHealth(999.999);
+        a.setRoom(r);
+
+        assertEquals(r, a.getRoom());
+    }
+    @Test
+    public void TestTakeDamage() {
+        Adventurer a1 = new Adventurer();
+        a1.setHealth(5);
+        assertTrue(a1.isAlive());
+
+        a1.takeDamage(-4);
+        assertTrue(a1.isAlive());
+        assertEquals(5, a1.getHealth());
+
+        a1.takeDamage(3);
+        assertTrue(a1.isAlive());
+        assertEquals(2, a1.getHealth());
+
+        a1.takeDamage(3);
+        assertFalse(a1.isAlive());
+
     }
 
     @Test
-    public void test_isAlive()
-    {
+    public void TestIsAlive() {
         String Name  = "Ben";
-        int health = 0;
-       // int health = 1;
-        int new_Health = 8;
+        double health = 0;
+        double new_Health = 8;
 
-        Adventurer player1 = new Adventurer(Name, health);
+        Adventurer a1 = new Adventurer(Name, health);
         //assertTrue(player1.isAlive());
 
-        player1.setHealth(0);
-        assertFalse(player1.isAlive());
+        a1.setHealth(0);
+        assertFalse(a1.isAlive());
 
     }
 
     @Test
-    public void test_player_Movement()
-    {
+    public void test_player_Movement() {
         String Name  = "Ben";
         int health = 0;
         // int health = 1;
@@ -92,12 +114,10 @@ public class PlayerTest {
 
         player1.player_Movement(m, 2);
         player1.player_Movement(m, 3);
-        System.out.println(player1.getPosition());
     }
 
     @Test
-    public void test_PlayerRoll()
-    {
+    public void test_PlayerRoll() {
         Adventurer player1 = new Adventurer("Ben", 10);
 
         int roll_Number = player1.playerRoll();
@@ -108,5 +128,4 @@ public class PlayerTest {
         else
             assert false;
     }
-
 }

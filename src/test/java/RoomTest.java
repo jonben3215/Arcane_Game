@@ -123,6 +123,10 @@ public class RoomTest
         expectedAdventurers.add(a);
         assertEquals(expectedAdventurers, room.getAdventurers());
 
+        room.removeAdventurer(a);
+        assertTrue(room.getAdventurers().isEmpty());
+
+
     }
 
     @Test
@@ -169,7 +173,8 @@ public class RoomTest
         assertEquals(expectedCreatures, room.getCreatures());
 
         // TODO if linked list approach does not work
-        // room.removeCreature(c);
+         room.removeCreature(c);
+         assertTrue(room.getCreatures().isEmpty());
     }
 
     @Test
@@ -210,6 +215,8 @@ public class RoomTest
         room.addFood(f);
         expectedFood.add(f);
         assertEquals(expectedFood, room.getFoods());
+        room.removeFood(f);
+        assertTrue(room.getFoods().isEmpty());
     }
 
     @Test

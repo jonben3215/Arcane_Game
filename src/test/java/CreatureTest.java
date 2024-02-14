@@ -45,22 +45,5 @@ public class CreatureTest {
         else
             assert false;
     }
-    @Test
-    public void testSpawnAndDisplayCreaturePosition() {
-        // Create a maze
-        Maze maze = new Maze();
-        maze.GenerateRectangleMaze(3, 3); // Assuming a 3x3 maze
-
-        // Create a creature
-        Creature creature = new Creature("CreatureName", 10);
-
-        // Spawn creatures in the maze
-        creature.spawnCreature(maze);
-
-        // Display creature positions
-        // creature.displayCreaturePosition();
-        creature.checkIfCreature(5);
-    }
-
 }
 

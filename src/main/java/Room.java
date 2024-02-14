@@ -1,9 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class Room {
     private String name = "";
@@ -55,7 +50,6 @@ public class Room {
     }
 
     // ---------- Helpers ---------- //
-
     // TODO make this function get a random description from the description file
 
     private void generateDescription() {
@@ -117,9 +111,7 @@ public class Room {
         for (Food f : this.foods) {
             info_string.append(" ").append(f.getName());
         }
-
         return info_string.toString();
-
     }
 
     public List<Adventurer> getAdventurers() {
@@ -130,8 +122,24 @@ public class Room {
         this.adventurers.sort(Comparator.comparingDouble(Adventurer::getHealth).reversed());
     }
 
-    public void removeAdventurer() {
+    public void removeAdventurer(Adventurer adventurer)
+    {
+        this.adventurers.remove(adventurer);
+    }
 
+    public void removeCreature(Creature creature)
+    {
+        this.creatures.remove(creature);
+    }
+
+    public void removeFood(Food food)
+    {
+        this.foods.remove(food);
+    }
+
+    public List<Room> getNeighborRooms()
+    {
+        return (List<Room>) this.neighbors.values();
     }
 
     public List<Creature> getCreatures() {

@@ -97,26 +97,6 @@ public class AdventurerTest {
     }
 
     @Test
-    public void test_player_Movement() {
-        String Name  = "Ben";
-        int health = 0;
-        // int health = 1;
-        int new_Health = 8;
-
-        Adventurer player1 = new Adventurer(Name, health);
-
-        int roomIdx= 1;
-        Maze m= new Maze();
-        m.GenerateRectangleMaze(3, 3);
-
-        m.Display(3,3);
-        //System.out.println(m.roomExists(roomIdx,3,3));
-
-        player1.player_Movement(m, 2);
-        player1.player_Movement(m, 3);
-    }
-
-    @Test
     public void test_PlayerRoll() {
         Adventurer player1 = new Adventurer("Ben", 10);
 

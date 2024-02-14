@@ -1,7 +1,15 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Random;
 
 public class Creature {
+
+    private static final Logger logger = LoggerFactory.getLogger(Adventurer.class);
     private String name;
+
+    private boolean isAlive = true;
+    private Room room = null;
     private double health;
     private int[] pos;//Position for the creature on the map
 
@@ -26,11 +34,19 @@ public class Creature {
         return this.health;
     }
 
-    public void setHealth(double Chealth )
-    {
+    public void setHealth(double health) {
+        // Update hp
         this.health = health;
+        // Kill player if hp drops below zero, ensure hp >= 0
+        if (this.health <= 0) {
+            this.health = 0;
+            this.isAlive = false;
+            this.setRoom(null);
+            logger.info("Creature " + this.getName() + " was killed");
+        } else {
+            this.isAlive = true;
+        }
     }
-
     public boolean isAlive()
     {
         return health > 0;
@@ -53,20 +69,6 @@ public class Creature {
         return false;
     }
 
-    public void spawnCreature(Maze maze)
-    {
-        Random random = new Random();
-
-        for (int i = 0; i < number_creature; i++)
-        {
-            int newRoomIdx;
-            do {
-                newRoomIdx = random.nextInt(9) + 1;
-            } while (isRoomIdxUsed(newRoomIdx)); // Check if the new room index is already in pos array
-
-            this.pos[i] = newRoomIdx;
-        }
-    }
     public boolean checkIfCreature(int newRoomIdx)
     {
         for (int existingRoomIdx : pos) {
@@ -78,9 +80,27 @@ public class Creature {
         return false;
     }
 
+    public void setRoom(Room room)
+    {
+        this.room.removeCreature(this);
+        this.room = room;
+
+        if(this.room != null) {
+            this.room.addCreature(this);
+        }
+    }
+
+
     public Creature(String name)
     {
         this.name = name;
+    }
+
+    public void takeDamage(double damage) {
+        // Negative damage does nothing
+        if (damage < 0) {return;}
+        // Damage player with checks in setHealth
+        setHealth(this.health-damage);
     }
 
 }

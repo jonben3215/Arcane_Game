@@ -1,49 +1,41 @@
 import java.util.Random;
 
 public class Creature {
-    private String CreatureName;
-    private int creatureHealth;
+    private String name;
+    private double health;
     private int[] pos;//Position for the creature on the map
 
     private int roomIdx = 0;
     int number_creature = 5;
-    private String Name;
-    private double health;
+
 
     // On constructor, set random starting postion, name, health=5
-    public Creature(String Cname, int Chealth)
+    public Creature(String name, int health)
     {
-        this.CreatureName = Cname;
-        this.creatureHealth = Chealth;
+        this.name = name;
+        this.health = health;
         pos = new int[number_creature];
     }
 
-    // THIS IS ENCAPSULATION
     public String getName()
     {
-        return this.CreatureName;
+        return this.name;
     }
-
-    // THIS IS ENCAPSULATION
-    public int getHealth()
+    public double getHealth()
     {
-        return this.creatureHealth;
+        return this.health;
     }
 
-    // THIS IS ENCAPSULATION
-    public void setCreatureHealth(int Chealth )
+    public void setHealth(double Chealth )
     {
-        this.creatureHealth = Chealth;
+        this.health = health;
     }
 
-    // THIS IS COHESION
     public boolean isAlive()
     {
-        return creatureHealth > 0;
+        return health > 0;
     }
 
-
-    // THIS IS COHESION
     public int Creature_Roll()
     {
         Random numGenerator = new Random();
@@ -61,8 +53,6 @@ public class Creature {
         return false;
     }
 
-
-    // THIS IS COHESION
     public void spawnCreature(Maze maze)
     {
         Random random = new Random();
@@ -77,8 +67,6 @@ public class Creature {
             this.pos[i] = newRoomIdx;
         }
     }
-
-    // THIS IS COHESION
     public boolean checkIfCreature(int newRoomIdx)
     {
         for (int existingRoomIdx : pos) {
@@ -92,7 +80,7 @@ public class Creature {
 
     public Creature(String name)
     {
-        this.Name = name;
+        this.name = name;
     }
 
 }

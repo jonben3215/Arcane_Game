@@ -7,9 +7,15 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MazeTest {
 
     // TODO: Make constructor test for food and whatever else in directions:
+    // adventurers to add
+    // creatures to add
+    // maze size
+    // food count
+
 
     @Test
     public void DefaultMazeCreation() {
+
         Maze maze = new Maze();
         assertNotNull(maze);
 
@@ -18,6 +24,7 @@ public class MazeTest {
 
     @Test
     public void testRectangleMazeCreation() {
+
         Maze maze = new Maze();
         assertNotNull(maze);
 
@@ -43,8 +50,7 @@ public class MazeTest {
     }
 
     @Test
-    public void testDisplayMaze()
-    {
+    public void testDisplayMaze() {
         Maze maze = new Maze();
         maze.GenerateRectangleMaze(3, 3);
         maze.Display(3,3);

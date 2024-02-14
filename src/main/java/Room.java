@@ -6,39 +6,20 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class Room {
-    private String Name;
+    private String name = "";
     private String description = "";
-
     private final List<Adventurer> adventurers = new ArrayList<>();
     private final List<Creature> creatures = new ArrayList<>();
     private final List<Food> foods = new ArrayList<>();
 
-    public void addRoom(String direction, int roomID) {
-        //Will connect rooms together.
-    }
-
-    // TODO eventually rework direction to be decoupled and behind the scenes (no need to directly modify or set)
-    // TODO it should be calculated automatically based on position of room.
-    public enum Direction {
-        NORTH,
-        SOUTH,
-        EAST,
-        WEST
-    }
-
-
-    // Static Variables:
     private static String DESCRIPTION_FILE_NAME; // Put default descriptionFileName here
     private static int ID_TRACKER = 0;
-
-    // ---------- Member Variables: ---------- //
     private int ID = -1;
-    private String name = "Default";
-//    private String description = "Default";
 
     // TODO make more expandable and general for future updates
     // TODO ideally neighborID list only, and dynamically calculate all directions
-    Map<Direction, Integer> neighbors = new HashMap<>();
+    Map<Direction, Room> neighbors = new HashMap<>();
+
     // ---------- Constructors: ---------- //
 
     // Constructors
@@ -58,16 +39,20 @@ public class Room {
     // ---------- Public Methods ---------- //
 
 
-    public void addNeighbor(Direction d, int roomID) {
-        neighbors.put(d, roomID);
+    public void addNeighbor(Direction d, Room adj) {
+        neighbors.put(d, adj);
     }
-    public void removeNeighbor(Direction d) {
-        neighbors.put(d, null);
+    public Room removeNeighbor(Direction direction) {
+        return this.neighbors.remove(direction);
     }
-    public void removeNeighbor(int roomID) {
-        // TODO not implemented yet, waiting to see how bad or good the implementation of the maze room system is
-        // neighbors.put(d, roomID);
-   }
+    public Room removeNeighbor(Room target) {
+        for (Map.Entry<Direction, Room> neighbor : this.neighbors.entrySet()) {
+            if (neighbor.getValue() == target) {
+                return this.neighbors.remove(neighbor.getKey());
+            }
+        }
+        return null;
+    }
 
     // ---------- Helpers ---------- //
 
@@ -90,9 +75,17 @@ public class Room {
 
     // ---------- Getters / Setters ---------- //
 
-    public Map<Direction, Integer> getNeighbors() {
+    public Map<Direction, Room> getNeighbors() {
         return this.neighbors;
     }
+
+    public Room getNeighbor(Direction direction) {
+        if (!this.neighbors.containsKey(direction)) {
+            return null;
+        }
+        return this.neighbors.get(direction);
+    }
+
 
     public String getName() {
         return this.name;
@@ -134,7 +127,11 @@ public class Room {
     }
     public void addAdventurer(Adventurer a) {
         this.adventurers.add(a);
-        this.adventurers.sort(Comparator.comparingInt(Adventurer::getHealth).reversed());
+        this.adventurers.sort(Comparator.comparingDouble(Adventurer::getHealth).reversed());
+    }
+
+    public void removeAdventurer() {
+
     }
 
     public List<Creature> getCreatures() {
@@ -143,7 +140,7 @@ public class Room {
 
     public void addCreature(Creature c) {
         this.creatures.add(c);
-        this.creatures.sort(Comparator.comparingInt(Creature::getHealth).reversed());
+        this.creatures.sort(Comparator.comparingDouble(Creature::getHealth).reversed());
     }
 
     public boolean hasFood() {
@@ -161,11 +158,6 @@ public class Room {
     public List<Food> getFoods() {
         return this.foods;
     }
-
-
-
-
-
 
     // Description - Extra Future Feature TODO
     // TODO automatically open + handle file instance with static methods, called on program run and filePath update

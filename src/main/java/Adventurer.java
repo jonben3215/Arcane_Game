@@ -1,6 +1,9 @@
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class Adventurer {
@@ -40,6 +43,7 @@ public class Adventurer {
         if (this.health <= 0) {
             this.health = 0;
             isAlive = false;
+            this.setRoom(null);
             logger.info("Adventurer " + this.getName() + " was killed");
         } else {
             isAlive = true;
@@ -53,20 +57,47 @@ public class Adventurer {
         setHealth(this.health-damage);
     }
 
-
-
     public void setName(String user_Name)
     {
         this.name = user_Name;
     }
-    public void setRoom(Room room)
+    public void setRoom(Room newRoom)
     {
-        this.room = room;
+        if(this.room != null) this.room.removeAdventurer(this);
+
+        this.room = newRoom;
+
+        if(newRoom != null) this.room.addAdventurer(this);
+
     }
 
+    public Map<Direction, Room> getValidMoves()
+    {
+        return this.room.getNeighbors();
+    }
 
     public void move(Direction direction) {
 
+    }
+
+    public void moveTo(Room room)
+    {
+        this.setRoom(room);
+    }
+
+    public void flee()
+    {
+        List<Room> neighboringRooms = new ArrayList<>(this.room.getNeighborRooms());
+        if(neighboringRooms.isEmpty())
+        {
+            logger.warn("Adventurer:" + this.getName() + "No neighboring rooms found to fee to.");
+            return;
+        }
+
+        Random random = new Random();
+        int randomIndex = random.nextInt(neighboringRooms.size());
+        Room randomRoom = neighboringRooms.get(randomIndex);
+        moveTo(randomRoom);
     }
 
 
@@ -83,4 +114,5 @@ public class Adventurer {
     {
         return this.isAlive;
     }
+
 }

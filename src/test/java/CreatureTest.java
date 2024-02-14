@@ -7,24 +7,21 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class CreatureTest {
 
     @Test
-    public void CreatureCreation()
-    {
+    public void CreatureCreation() {
         Creature Creature_1 = new Creature("Goblin", 10);
         assertNotNull(Creature_1);
     }
 
     @Test
 
-    public void Test_getName()
-    {
+    public void Test_getName() {
 
         Creature Creature_1 = new Creature("Goblin", 10);
         assertEquals("Goblin", Creature_1.getName());
     }
 
     @Test
-    public void test_isAlive()
-    {
+    public void test_isAlive() {
         String Name  = "Ben";
         int health = 0;
         // int health = 1;
@@ -37,8 +34,7 @@ public class CreatureTest {
     }
 
     @Test
-    public void test_CreatureRoll()
-    {
+    public void test_CreatureRoll() {
         Creature creature1 = new Creature ("Ogre", 10);
 
         int roll_Number = creature1.Creature_Roll();

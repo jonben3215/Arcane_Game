@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -74,6 +75,43 @@ public class RoomTest
     }
 
     @Test
+    public void TestGetSetNeighbors() {
+
+        Room room = new Room();
+        Room north = new Room();
+        Room south = new Room();
+        Room east = new Room();
+        Room west = new Room();
+
+        room.addNeighbor(Direction.N, north);
+        room.addNeighbor(Direction.S, south);
+        room.addNeighbor(Direction.E, east);
+        room.addNeighbor(Direction.W, west);
+
+        Map<Direction, Room> neighbors = room.getNeighbors();
+
+        System.out.println(neighbors);
+
+        assertEquals(north, room.getNeighbor(Direction.N));
+        assertEquals(south, room.getNeighbor(Direction.S));
+        assertEquals(east, room.getNeighbor(Direction.E));
+        assertEquals(west, room.getNeighbor(Direction.W));
+
+        Room removed_north = room.removeNeighbor(Direction.N);
+        assertEquals(removed_north, north);
+        assertNull(room.getNeighbor(Direction.N));
+        removed_north = room.removeNeighbor(Direction.N);
+        assertNull(removed_north);
+
+        Room removed_south = room.removeNeighbor(south);
+        assertEquals(removed_south, south);
+        assertNull(room.getNeighbor(Direction.S));
+        removed_south = room.removeNeighbor(south);
+        assertNull(removed_south);
+
+    }
+
+    @Test
     public void TestGetAddAdventurers() {
 
         Room room = new Room();
@@ -88,7 +126,7 @@ public class RoomTest
     }
 
     @Test
-    public void TestAddSortAdventurers() {
+    public void TestAddSortRemoveAdventurers() {
 
         Room room = new Room();
 
@@ -113,10 +151,14 @@ public class RoomTest
 
         // Assert check
         assertTrue(match);
+
+        // TODO if linked list approach does not work
+        // room.removeAdventurer(a);
+
     }
 
     @Test
-    public void TestGetAddCreatures() {
+    public void TestGetAddRemoveCreatures() {
         Room room = new Room();
         List<Creature> expectedCreatures = new ArrayList<>();
         assertTrue(room.getCreatures().isEmpty());
@@ -125,10 +167,13 @@ public class RoomTest
         room.addCreature(c);
         expectedCreatures.add(c);
         assertEquals(expectedCreatures, room.getCreatures());
+
+        // TODO if linked list approach does not work
+        // room.removeCreature(c);
     }
 
     @Test
-    public void TestAddSortCreatures() {
+    public void TestSortCreatures() {
 
         Room room = new Room();
 

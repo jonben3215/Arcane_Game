@@ -45,5 +45,4 @@ public class FoodTest {
         assertEquals(f3.getName(),"Taco");
         assertEquals(f3.getHealAmount(), 3);
     }
-
 }

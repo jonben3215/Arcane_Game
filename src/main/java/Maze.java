@@ -75,6 +75,7 @@ public class Maze {
 
     // Usage: Ex: (center, N, north) -> c.N=n, n.S=c
     public void join(Room r1, Direction d, Room r2) {
+        // Connects Neighbors
         r1.addNeighbor(d, r2);
         r2.addNeighbor(d.getOpposite(), r1);
     }
@@ -165,13 +166,15 @@ public class Maze {
     public void populateFood(List<Food> foods) {
         // Break Condition
         if(this.rooms.isEmpty()) {
+
             logger.warn("No rooms to populate food");
             return;
         }
+
         Random random = new Random();
         for (Food food : foods) {
             Room randomRoom = rooms.get(random.nextInt(rooms.size()));
-            randomRoom.addFood(food);
+            food.setRoom(randomRoom);
         }
     }
 
@@ -185,7 +188,7 @@ public class Maze {
         Random random = new Random();
         for (Adventurer adventurer : adventurers) {
             Room randomRoom = rooms.get(random.nextInt(rooms.size()));
-            randomRoom.addAdventurer(adventurer);
+            adventurer.setRoom(randomRoom);
         }
     }
 
@@ -198,7 +201,7 @@ public class Maze {
         Random random = new Random();
         for (Creature creature : creatures) {
             Room randomRoom = rooms.get(random.nextInt(rooms.size()));
-            randomRoom.addCreature(creature);
+            creature.setRoom(randomRoom);
         }
     }
 

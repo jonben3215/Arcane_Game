@@ -157,10 +157,6 @@ public class Room {
         return !(this.foods.isEmpty());
     }
 
-    public void addFood() {
-        this.foods.add(new Food());
-    }
-
     public void addFood(Food food) {
         this.foods.add(food);
     }

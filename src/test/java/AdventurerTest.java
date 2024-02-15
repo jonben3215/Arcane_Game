@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AdventurerTest {
 
+    String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+
     @Test
     public void TestAdventurerCreation() {
        String Name  = "Ben";
@@ -94,6 +96,36 @@ public class AdventurerTest {
         a1.setHealth(0);
         assertFalse(a1.isAlive());
 
+    }
+
+    @Test
+    public void test_player_Movement() {
+
+        Adventurer a1 = new Adventurer("Ben Dover", 5);
+
+        Maze m= new Maze();
+        m.generateNxN(3, roomNames3x3);// 0 1 2, 3 4 5, 6 7 8
+        Room r = m.getRooms().get(4); // 3,3 i think
+        a1.setRoom(r);
+        a1.move(Direction.N);
+
+        //assertEquals(a1.getRoom(), m.getRooms().get(1));
+    }
+
+    @Test
+    public void TestFlee () {
+
+        Adventurer a1 = new Adventurer("Ben Dover", 5);
+
+        Maze m= new Maze();
+        m.generateNxN(3, roomNames3x3);// 0 1 2, 3 4 5, 6 7 8
+        Room r = m.getRooms().get(4); // 3,3 i think
+
+        boolean different_behavior = false;
+        for (int i=0; i<10; i++) {
+            a1.setRoom(r);
+            
+        }
     }
 
     @Test

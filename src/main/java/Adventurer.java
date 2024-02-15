@@ -170,7 +170,6 @@ public class Adventurer extends Agent{
     public void eat() {
         List<Food> roomFoods = this.room.getFoods();
         if (roomFoods.isEmpty()) {
-            System.out.println("NO FOODS TO EAT WTF ARE YOU DOING ");
             return;
         }
 
@@ -179,6 +178,5 @@ public class Adventurer extends Agent{
         this.setHealth(this.health+1.0);
 
         logger.info("Adventurer " + this.getInfo() + " just ate " + foodToEat.getName());
-        System.out.println("Adventurer " + this.getInfo() + " just ate " + foodToEat.getName());
     }
 }

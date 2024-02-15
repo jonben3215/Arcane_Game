@@ -50,8 +50,29 @@ public class Room {
     }
 
     // ---------- Helpers ---------- //
-    // TODO make this function get a random description from the description file
 
+    public Adventurer getHealthiestAdventurer()
+    {
+      if(this.adventurers.isEmpty()) return null;
+
+      return adventurers.get(0);
+
+    }
+    public Creature getHealthiestCreature()
+    {
+        if(this.creatures.isEmpty()) return null;
+
+        return creatures.get(0);
+    }
+
+    public boolean hasCreature()
+    {
+        return !(this.creatures.isEmpty());
+    }
+
+
+
+    // TODO make this function get a random description from the description file
     private void generateDescription() {
         this.description = "This is the default description";
     }
@@ -162,6 +183,7 @@ public class Room {
     public static String getDescriptionFileName() {
         return DESCRIPTION_FILE_NAME;
     }
+
 
     /**
      * Updates filePath for descriptionTextFile.

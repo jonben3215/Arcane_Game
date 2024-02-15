@@ -43,14 +43,14 @@ public class Maze {
     // TODO: Comment this out
 
     // Creates empty default mazes with smartly named rooms
-    public static Maze defaultEmpty2x2() {
-        String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
-        return new Maze(2, roomNames2x2);
-    }
-    public static Maze defaultEmpty3x3() {
-        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
-        return new Maze(3, roomNames3x3);
-    }
+//    public static Maze defaultEmpty2x2() {
+//        String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
+//        return new Maze(2, roomNames2x2);
+//    }
+//    public static Maze defaultEmpty3x3() {
+//        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+//        return new Maze(3, roomNames3x3);
+//    }
 
     // ---------- Getters / Setters ---------- //
     // TODO: Remove rows and cols for better alternative in next hw

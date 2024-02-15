@@ -1,29 +1,85 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Arcane {
 
+    private static final Logger logger = LoggerFactory.getLogger(Adventurer.class);
 
-    //THIS IS COHESION
-    public void Fight(Adventurer adventurer, Creature creature)
-    {
-        int playerNumber = adventurer.playerRoll();
-        int creatureNumber = creature.Creature_Roll();
+    // ---------- Member Variables ---------- //
+    private Maze maze;
+    private List<Adventurer> adventurers = new ArrayList<>();
+    private List<Adventurer> initialAdventurers = new ArrayList<>();
+    private List<Creature> creatures = new ArrayList<>();
+    private List<Creature> initialCreatures = new ArrayList<>();
+    private List<Food> foods = new ArrayList<>();
+    private List<Food> initialFoods = new ArrayList<>();
+    private boolean gameOver = false;
 
-        System.out.println("Player Rolled a " + playerNumber);
-        System.out.println("Creature Rolled a " + creatureNumber);
-        if(playerNumber == creatureNumber)
-        {
-            System.out.println("Its a tie");
-        }
-        else if(playerNumber < creatureNumber)
-        {
-            System.out.println("Player lost battle.");
-            double playerHealth = adventurer.getHealth() - (creatureNumber - playerNumber);
-            adventurer.setHealth(playerHealth);
+    private int turnCount = 0;
 
-        }
-        else{
-            System.out.println("Player Won battle.");
-            double creatureHealth = creature.getHealth() - (playerNumber-creatureNumber);
-            adventurer.setHealth(creatureHealth);
-        }
+    // ---------- Constructors ---------- //
+
+    // maze(), creatures, adventurers, foods
+
+    // Maze:
+    // Initial Creatures
+    // Initial Adventurers
+    // Initial Foods
+
+    // TODO: Rememeber to remove the new food random thing
+
+    public Arcane (Maze maze, List<Adventurer> initialAdventurers, List<Creature> initialCreatures, List<Food> initialFoods) {
+        this.maze = maze;
+        this.initialAdventurers = initialAdventurers;
+        this.initialCreatures = initialCreatures;
+        this.initialFoods = initialFoods;
+
+        resetGame();
     }
+
+    public void resetGame() {
+        this.adventurers = this.initialAdventurers;
+        this.creatures = this.initialCreatures;
+        this.foods = this.initialFoods;
+
+        gameOver = false;
+        turnCount = 0;
+
+        // Populate Maze:
+        this.maze.populate(this.adventurers, this.creatures,this.foods);
+    }
+
+    public void play() {
+        while (!gameOver) {
+            takeTurn();
+            logger.info(gameStateInfo());
+        }
+
+        // Log who won
+
+    }
+
+    public void takeTurn() {
+
+    }
+
+    public String gameStateInfo() {
+        return this.maze.getInfo();
+    }
+
+    // ---------- Factory Methods for Default Settings ---------- //
+
+
+
+    // ---------- Getters / Setters ---------- //
+
+
+
+
+
 }
+
+

@@ -7,7 +7,6 @@ public class Creature {
 
     private static final Logger logger = LoggerFactory.getLogger(Adventurer.class);
     private String name;
-
     private boolean isAlive = true;
     private Room room = null;
     private double health;
@@ -90,7 +89,10 @@ public class Creature {
         }
     }
 
-
+    public Creature() {
+        this.name  = "";
+        this.health = 3; // Default
+    }
     public Creature(String name)
     {
         this.name = name;
@@ -101,6 +103,9 @@ public class Creature {
         if (damage < 0) {return;}
         // Damage player with checks in setHealth
         setHealth(this.health-damage);
+    }
+    public String getInfo() {
+        return this.name + "(health: " + this.health + ")";
     }
 
 }

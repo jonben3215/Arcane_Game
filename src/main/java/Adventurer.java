@@ -14,12 +14,18 @@ public class Adventurer {
     private Room room = null;
     private boolean isAlive = true;
 
+
+    // ---------- Constructors ---------- //
     public Adventurer() {
         this.name  = "";
         this.health = 5; // Default
     }
-
+    public Adventurer(String name) {
+        this();
+        this.name = name;
+    }
     public Adventurer(String user_Name, double health) {
+        this();
         this.name  = user_Name;
         this.health = health;
     }
@@ -98,9 +104,7 @@ public class Adventurer {
         int randomIndex = random.nextInt(neighboringRooms.size());
         Room randomRoom = neighboringRooms.get(randomIndex);
         moveTo(randomRoom);
-
     }
-
 
 
     public int playerRoll()
@@ -116,4 +120,10 @@ public class Adventurer {
     {
         return this.isAlive;
     }
+
+
+    public String getInfo() {
+        return this.name + "(health: " + this.health + ")";
+    }
+
 }

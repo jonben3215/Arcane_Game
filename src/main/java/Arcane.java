@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Arcane {
 
-    private static final Logger logger = LoggerFactory.getLogger(Adventurer.class);
+    private static final Logger logger = LoggerFactory.getLogger(Arcane.class);
 
     // ---------- Member Variables ---------- //
     private Maze maze;
@@ -61,12 +61,49 @@ public class Arcane {
     }
 
     public void play() {
+
+        logger.info("Starting Play... Turn 0\n");
+        System.out.print("Starting Play ... Turn 0\n");
+
+        logger.info(gameStateInfo());
+        System.out.println(gameStateInfo());
+
+
         while (!gameOver) {
+
+
             takeTurn();
+
+            logger.info("ARCANE MAZE: Turn " + this.turnCount);
+            System.out.println("ARCANE MAZE: Turn " + this.turnCount);
+
             logger.info(gameStateInfo());
+            System.out.println(gameStateInfo());
+
+            if (checkGameOver()) break;
+
         }
 
         // Log who won
+        if (adventurers.isEmpty()) {
+
+            // Creatures won
+            logger.info("Creatures number 1 victory royale!!!!");
+            System.out.println("Creatures number 1 victory royale!!!!");
+
+        } else if (creatures.isEmpty()) {
+
+            // adventurers won
+            logger.info("Adventurers got the dub!");
+            System.out.println("Adventurers got the dub!");
+
+        } else {
+
+            // this shouln't be reached
+            logger.warn("Error");
+            System.out.println("Error");
+
+        }
 
     }
 
@@ -76,7 +113,6 @@ public class Arcane {
 
     public void takeTurn() {
 
-
         // Add adventurers to flee list to act as delayed update of movement
         // (Prevents double updating positions)
         List<Adventurer> toMove = new ArrayList<>();
@@ -84,13 +120,16 @@ public class Arcane {
         for (Adventurer adventurer : this.adventurers) {
             // Case 1.a: (Fight)
             if (adventurer.isHealthiestInRoom() && adventurer.creaturePresentInRoom()) {
-                System.out.println(adventurer.getInfo() + " Fight!!!!");
-                // fight(adventurer)
 
+                logger.info("Adventurer " + adventurer.getInfo() + " just fought " + adventurer.getFightableCreature().getInfo());
+                System.out.println("Adventurer " + adventurer.getInfo() + " just fought " + adventurer.getFightableCreature().getInfo());
+
+                fight(adventurer, adventurer.getFightableCreature());
 
             } // Case 2: (Eat)
             else if (!(adventurer.creaturePresentInRoom()) && adventurer.foodPresentInRoom()) {
-                System.out.println(adventurer.getInfo() + " EATTTTT");
+                adventurer.eat();
+
             }// Case 1.b and 3: (Move)
             else {
                 toMove.add(adventurer);
@@ -104,6 +143,9 @@ public class Arcane {
 
         // After all hp updates, make sure adventurers health order is updated
         sortAdventurersByHealth();
+
+        this.turnCount ++;
+
     }
 
     public String gameStateInfo() {
@@ -116,24 +158,36 @@ public class Arcane {
         double playerNumber = adventurer.playerRoll();
         double creatureNumber = creature.Creature_Roll();
 
-        System.out.println("Player Rolled a " + playerNumber);
-        System.out.println("Creature Rolled a " + creatureNumber);
         if (playerNumber == creatureNumber) {
-            System.out.println("Its a tie");
+            //System.out.println("Its a tie");
         } else if (playerNumber < creatureNumber) {
-            System.out.println("Player lost battle.");
+            //System.out.println("Player lost battle.");
             double playerHealth = adventurer.getHealth() - (creatureNumber - playerNumber);
             adventurer.setHealth(playerHealth);
         } else {
-            System.out.println("Player Won battle.");
+            //System.out.println("Player Won battle.");
             double creatureHealth = creature.getHealth() - (playerNumber - creatureNumber);
             creature.setHealth(creatureHealth);
         }
+
+        adventurer.takeDamage(0.5);
+        creature.takeDamage(0.5);
+
+        // If creature is dead:
+        if (!creature.isAlive()) {
+            creatures.remove(creature);
+        }
+
+        // If adventurer is dead:
+        if (!adventurer.isAlive()) {
+            adventurers.remove(adventurer);
+        }
     }
 
-
-
-
+    public boolean checkGameOver() {
+        this.gameOver = adventurers.isEmpty() || creatures.isEmpty();
+        return this.gameOver;
+    }
 
 }
 

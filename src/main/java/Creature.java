@@ -9,8 +9,7 @@ public class Creature {
     private String name;
     private boolean isAlive = true;
     private Room room = null;
-    private double health;
-    private int[] pos;//Position for the creature on the map
+    private double health = 0;
 
     private int roomIdx = 0;
     int number_creature = 5;
@@ -19,10 +18,20 @@ public class Creature {
     // On constructor, set random starting postion, name, health=5
     public Creature(String name, int health)
     {
+        this();
         this.name = name;
         this.health = health;
-        pos = new int[number_creature];
     }
+    public Creature() {
+        this.name  = "";
+        this.health = 3; // Default
+    }
+    public Creature(String name)
+    {
+        this();
+        this.name = name;
+    }
+
 
     public String getName()
     {
@@ -59,44 +68,16 @@ public class Creature {
         return numGenerator.nextInt(6)+1;
     }
 
-    private boolean isRoomIdxUsed(int newRoomIdx) {
-        for (int existingRoomIdx : pos) {
-            if (existingRoomIdx == newRoomIdx) {
-                return true;
-            }
-        }
-        return false;
-    }
 
-    public boolean checkIfCreature(int newRoomIdx)
+    public void setRoom(Room newRoom)
     {
-        for (int existingRoomIdx : pos) {
-            if (existingRoomIdx == newRoomIdx) {
-                System.out.println("Creature Found");
-                return true;
-            }
-        }
-        return false;
+        if(this.room != null) this.room.removeCreature(this);
+
+        this.room = newRoom;
+
+        if(newRoom != null) this.room.addCreature(this);
     }
 
-    public void setRoom(Room room)
-    {
-        this.room.removeCreature(this);
-        this.room = room;
-
-        if(this.room != null) {
-            this.room.addCreature(this);
-        }
-    }
-
-    public Creature() {
-        this.name  = "";
-        this.health = 3; // Default
-    }
-    public Creature(String name)
-    {
-        this.name = name;
-    }
 
     public void takeDamage(double damage) {
         // Negative damage does nothing

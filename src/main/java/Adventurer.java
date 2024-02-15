@@ -43,17 +43,25 @@ public class Adventurer {
         return this.room.getName();
     }
 
-    public boolean isHealthiest()
+    public boolean isHealthiestInRoom()
     {
-        return this.room.getHealthiestAdventurer() == this;
+
+        Adventurer healthiestInRoom = this.room.getHealthiestAdventurer();
+
+        // This should never be true but check anyways
+        if (healthiestInRoom == null) {
+            logger.warn("Curious Error: No healthiest adv. in room, but there is at least one adv. in room");
+            return false;
+        }
+        return (this == healthiestInRoom);
     }
 
-    public boolean creaturePresent()
+    public boolean creaturePresentInRoom()
     {
         return this.room.hasCreature();
     }
 
-    public boolean foodPresent()
+    public boolean foodPresentInRoom()
     {
         return this.room.hasFood();
     }
@@ -110,10 +118,20 @@ public class Adventurer {
 
     public void flee()
     {
-        List<Room> neighboringRooms = new ArrayList<>(this.room.getNeighborRooms());
-        if(neighboringRooms.isEmpty())
-        {
+        System.out.println("Flee Begin");
+
+        List<Room> neighboringRooms = new ArrayList<>();
+
+        // TODO Ensure that only non-null neighboring rooms are added
+        for (Room neighborRoom : this.room.getNeighborRooms()) {
+            if (neighborRoom != null) {
+                neighboringRooms.add(neighborRoom);
+            }
+        }
+
+        if(neighboringRooms.isEmpty()) {
             logger.warn("Adventurer:" + this.getName() + "No neighboring rooms found to fee to.");
+            System.out.println("Delete me");
             return;
         }
 
@@ -121,6 +139,9 @@ public class Adventurer {
         int randomIndex = random.nextInt(neighboringRooms.size());
         Room randomRoom = neighboringRooms.get(randomIndex);
         moveTo(randomRoom);
+
+        System.out.println("Flee Complete");
+
     }
 
 

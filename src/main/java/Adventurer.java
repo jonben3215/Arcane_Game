@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class Adventurer {
+public class Adventurer extends Agent{
     private static final Logger logger = LoggerFactory.getLogger(Adventurer.class);
-    private String name;
+    //private String name;
     private double health;
     private Room room = null;
     private boolean isAlive = true;
@@ -16,15 +16,16 @@ public class Adventurer {
 
     // ---------- Constructors ---------- //
     public Adventurer() {
-        this.name  = "";
+        super("");
         this.health = 5; // Default
     }
     public Adventurer(String name) {
-        this();
+        super(name);
+        this.health = 5;
         this.name = name;
     }
     public Adventurer(String user_Name, double health) {
-        this();
+        super(user_Name);
         this.name  = user_Name;
         this.health = health;
     }

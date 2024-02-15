@@ -8,7 +8,6 @@ import java.util.Random;
 
 public class Adventurer {
     private static final Logger logger = LoggerFactory.getLogger(Adventurer.class);
-
     private String name;
     private double health;
     private Room room = null;

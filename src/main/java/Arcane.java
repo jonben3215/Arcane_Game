@@ -32,6 +32,7 @@ public class Arcane {
 
     // TODO: Rememeber to remove the new food random thing
 
+    // Below is a great example of dependency injection! Look at how the constructor accepts several dependencies!
     public Arcane (Maze maze, List<Adventurer> initialAdventurers, List<Creature> initialCreatures, List<Food> initialFoods) {
 
         this.maze = maze;
@@ -44,6 +45,8 @@ public class Arcane {
 
     }
 
+    // Checkout how this reset game function demonstrates information hiding!
+    // We abstract away the details of resetting the game and call this happy little function!
     public void resetGame() {
         this.adventurers = this.initialAdventurers;
         this.creatures = this.initialCreatures;

@@ -3,7 +3,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Random;
 
-public class Creature {
+public class Creature extends Agent{
 
     private static final Logger logger = LoggerFactory.getLogger(Adventurer.class);
     private String name;

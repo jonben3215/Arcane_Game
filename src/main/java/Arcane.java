@@ -2,6 +2,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Arcane {
@@ -45,6 +47,9 @@ public class Arcane {
         this.creatures = this.initialCreatures;
         this.foods = this.initialFoods;
 
+        // Make sure adventurers are always sorted by hp
+        sortAdventurersByHealth();
+
         gameOver = false;
         turnCount = 0;
 
@@ -62,8 +67,14 @@ public class Arcane {
 
     }
 
+    public void sortAdventurersByHealth() {
+        this.adventurers.sort(Comparator.comparingDouble(Adventurer::getHealth).reversed());
+    }
+
     public void takeTurn() {
 
+        // After all hp updates, make sure adventurers health order is updated
+        sortAdventurersByHealth();
     }
 
     public String gameStateInfo() {

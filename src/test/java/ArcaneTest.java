@@ -30,7 +30,9 @@ public class ArcaneTest {
             foods.add(new Food()); // Choose random name
         }
 
-        Arcane arcane = new Arcane(Maze.defaultEmpty3x3(), adventurers, creatures, foods);
+        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+        Maze maze = new Maze(3,roomNames3x3);
+        Arcane arcane = new Arcane(maze, adventurers, creatures, foods);
 
         arcane.play();
 

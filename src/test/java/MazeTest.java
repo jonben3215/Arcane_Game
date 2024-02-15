@@ -41,16 +41,19 @@ public class MazeTest {
 
     @Test
     public void testDisplay2DMaze() {
-        Maze maze2x2 = Maze.defaultEmpty2x2();
+        String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
+        Maze maze2x2 = new Maze(2, roomNames2x2);
         maze2x2.display2D();
 
-        Maze maze3x3 = Maze.defaultEmpty3x3();
+        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+        Maze maze3x3 = new Maze(3, roomNames3x3);
         maze3x3.display2D();
     }
 
     @Test
     public void TestFoodSpawn() {
-        Maze maze = Maze.defaultEmpty3x3();
+        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+        Maze maze = new Maze(3,roomNames3x3);
 
         // Create Food List
         List<Food> foods = new ArrayList<>();
@@ -66,7 +69,8 @@ public class MazeTest {
     }
     @Test
     public void TestAdventurerCreatureSpawn() {
-        Maze maze = Maze.defaultEmpty3x3();
+        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+        Maze maze = new Maze(3,roomNames3x3);
 
         // Create Adventurer List
         List<Adventurer> adventurers = new ArrayList<>();
@@ -90,8 +94,11 @@ public class MazeTest {
     @Test
     public void TestEmptyNxNGetInfo() {
 
-        Maze maze3x3 = Maze.defaultEmpty3x3();
-        Maze maze2x2 = Maze.defaultEmpty2x2();
+        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+        Maze maze3x3 = new Maze(3,roomNames3x3);
+
+        String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
+        Maze maze2x2 = new Maze(2,roomNames2x2);
 
         String mazeInfo3x3 = maze3x3.getInfo();
         String mazeInfo2x2 = maze2x2.getInfo();
@@ -107,7 +114,8 @@ public class MazeTest {
     @Test
     public void TestDefault3x3PopulateCreation() {
 
-        Maze maze = Maze.defaultEmpty3x3();
+        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+        Maze maze =new Maze(3, roomNames3x3);
 
         String mazeInfo = maze.getInfo();
         System.out.println(mazeInfo);

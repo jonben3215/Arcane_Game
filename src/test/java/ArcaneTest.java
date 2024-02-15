@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,12 +32,7 @@ public class ArcaneTest {
 
         Arcane arcane = new Arcane(Maze.defaultEmpty3x3(), adventurers, creatures, foods);
 
-        //arcane.play();
-        System.out.println(arcane.gameStateInfo());
-
-        arcane.takeTurn();
-
-        System.out.println(arcane.gameStateInfo());
+        arcane.play();
 
         // eventually have Arcane arcane = Arcane.createGame();
     }

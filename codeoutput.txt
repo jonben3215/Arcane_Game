@@ -1,0 +1,2104 @@
+5 points for correctly structured output:
+Submit the output generated from running your game.
+Indicate which test was run to produce this output.
+
+The test run was ArcaneTest.java
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+Starting Play ... Turn 0
+	Northwest:
+		Adventurers: DanTheCreator(health: 5.0)
+		Creatures: Iggy(health: 3.0)
+		Food: Annie's (TM) mac & cheese
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers: Ben_Dover(health: 5.0)
+		Creatures:
+		Food: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Food: Cookie, Poo-Sandwich
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures: Shrek(health: 3.0)
+		Food: Annie's (TM) mac & cheese, Orange, Orange
+
+Adventurer Ben_Dover(health: 6.0) just ate Apple
+Adventurer DanTheCreator(health: 5.0) just fought Iggy(health: 3.0)
+ARCANE MAZE: Turn 1
+	Northwest:
+		Adventurers: DanTheCreator(health: 4.5)
+		Creatures: Iggy(health: 0.5)
+		Food: Annie's (TM) mac & cheese
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers: Ben_Dover(health: 6.0)
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Cookie, Poo-Sandwich
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures: Shrek(health: 3.0)
+		Food: Annie's (TM) mac & cheese, Orange, Orange
+
+Adventurer DanTheCreator(health: 4.5) just fought Iggy(health: 0.5)
+ARCANE MAZE: Turn 2
+	Northwest:
+		Adventurers: DanTheCreator(health: 4.0)
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Cookie, Poo-Sandwich
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers: Ben_Dover(health: 6.0)
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures: Shrek(health: 3.0)
+		Food: Annie's (TM) mac & cheese, Orange, Orange
+
+Adventurer DanTheCreator(health: 5.0) just ate Annie's (TM) mac & cheese
+ARCANE MAZE: Turn 3
+	Northwest:
+		Adventurers: DanTheCreator(health: 5.0)
+		Creatures:
+		Food:
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Cookie, Poo-Sandwich
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 6.0)
+		Creatures: Shrek(health: 3.0)
+		Food: Annie's (TM) mac & cheese, Orange, Orange
+
+Adventurer Ben_Dover(health: 6.0) just fought Shrek(health: 3.0)
+ARCANE MAZE: Turn 4
+	Northwest:
+		Adventurers:
+		Creatures:
+		Food:
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers: DanTheCreator(health: 5.0)
+		Creatures:
+		Food: Cookie, Poo-Sandwich
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 1.5)
+		Creatures: Shrek(health: 2.5)
+		Food: Annie's (TM) mac & cheese, Orange, Orange
+
+Adventurer DanTheCreator(health: 6.0) just ate Cookie
+Adventurer Ben_Dover(health: 1.5) just fought Shrek(health: 2.5)
+ARCANE MAZE: Turn 5
+	Northwest:
+		Adventurers:
+		Creatures:
+		Food:
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers: DanTheCreator(health: 6.0)
+		Creatures:
+		Food: Poo-Sandwich
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 1.0)
+		Creatures:
+		Food: Annie's (TM) mac & cheese, Orange, Orange
+
+Adventurer DanTheCreator(health: 7.0) just ate Poo-Sandwich
+Adventurer Ben_Dover(health: 2.0) just ate Annie's (TM) mac & cheese
+ARCANE MAZE: Turn 6
+	Northwest:
+		Adventurers:
+		Creatures:
+		Food:
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers: DanTheCreator(health: 7.0)
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 2.0)
+		Creatures:
+		Food: Orange, Orange
+
+Adventurer Ben_Dover(health: 3.0) just ate Orange
+ARCANE MAZE: Turn 7
+	Northwest:
+		Adventurers: DanTheCreator(health: 7.0)
+		Creatures:
+		Food:
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 3.0)
+		Creatures:
+		Food: Orange
+
+Adventurer Ben_Dover(health: 4.0) just ate Orange
+ARCANE MAZE: Turn 8
+	Northwest:
+		Adventurers:
+		Creatures:
+		Food:
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers: DanTheCreator(health: 7.0)
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 4.0)
+		Creatures:
+		Food:
+
+ARCANE MAZE: Turn 9
+	Northwest:
+		Adventurers:
+		Creatures:
+		Food:
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers: DanTheCreator(health: 7.0)
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers: Ben_Dover(health: 4.0)
+		Creatures: Jeffery E.(health: 3.0)
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer DanTheCreator(health: 7.0) just fought Kailey(health: 3.0)
+Adventurer Ben_Dover(health: 4.0) just fought Jeffery E.(health: 3.0)
+ARCANE MAZE: Turn 10
+	Northwest:
+		Adventurers:
+		Creatures:
+		Food:
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers: DanTheCreator(health: 6.5)
+		Creatures: Kailey(health: 2.5), BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers: Ben_Dover(health: 3.5)
+		Creatures: Jeffery E.(health: 2.5)
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer DanTheCreator(health: 6.5) just fought Kailey(health: 2.5)
+Adventurer Ben_Dover(health: 3.5) just fought Jeffery E.(health: 2.5)
+ARCANE MAZE: Turn 11
+	Northwest:
+		Adventurers:
+		Creatures:
+		Food:
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers: DanTheCreator(health: 6.0)
+		Creatures: BHB(health: 3.0)
+		Food: Apple
+	South:
+		Adventurers: Ben_Dover(health: 3.0)
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer DanTheCreator(health: 6.0) just fought BHB(health: 3.0)
+ARCANE MAZE: Turn 12
+	Northwest:
+		Adventurers:
+		Creatures:
+		Food:
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers: DanTheCreator(health: 2.5)
+		Creatures: BHB(health: 2.5)
+		Food: Apple
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 3.0)
+		Creatures:
+		Food:
+
+Adventurer DanTheCreator(health: 2.5) just fought BHB(health: 2.5)
+ARCANE MAZE: Turn 13
+	Northwest:
+		Adventurers:
+		Creatures:
+		Food:
+	North:
+		Adventurers:
+		Creatures:
+		Food: Poo-Sandwich
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	East:
+		Adventurers: Ben_Dover(health: 3.0)
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers: DanTheCreator(health: 2.0)
+		Creatures:
+		Food: Apple
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurers got the dub!
+> Task :test
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.4/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+BUILD SUCCESSFUL in 1s
+4 actionable tasks: 1 executed, 3 up-to-date
+11:10:31 PM: Execution finished ':test --tests "ArcaneTest"'.
+
+
+
+Starting Play ... Turn 0
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers: Ben_Dover(health: 5.0)
+		Creatures: Iggy(health: 3.0)
+		Food: Cookie, Taco
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures: Shrek(health: 3.0)
+		Food: Cookie
+	East:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Southwest:
+		Adventurers: DanTheCreator(health: 5.0)
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: ScoobySnack
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food: Apple, Poo-Sandwich, Taco
+
+Adventurer Ben_Dover(health: 5.0) just fought Iggy(health: 3.0)
+Adventurer DanTheCreator(health: 5.0) just fought Kailey(health: 3.0)
+ARCANE MAZE: Turn 1
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers: Ben_Dover(health: 4.5)
+		Creatures: Iggy(health: 2.5)
+		Food: Cookie, Taco
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures: Shrek(health: 3.0)
+		Food: Cookie
+	East:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Southwest:
+		Adventurers: DanTheCreator(health: 4.5)
+		Creatures: BHB(health: 3.0)
+		Food: ScoobySnack
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food: Apple, Poo-Sandwich, Taco
+
+Adventurer Ben_Dover(health: 4.5) just fought Iggy(health: 2.5)
+Adventurer DanTheCreator(health: 4.5) just fought BHB(health: 3.0)
+ARCANE MAZE: Turn 2
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers: Ben_Dover(health: 4.0)
+		Creatures:
+		Food: Cookie, Taco
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures: Shrek(health: 3.0)
+		Food: Cookie
+	East:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Southwest:
+		Adventurers: DanTheCreator(health: 4.0)
+		Creatures: BHB(health: 0.5)
+		Food: ScoobySnack
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food: Apple, Poo-Sandwich, Taco
+
+Adventurer Ben_Dover(health: 5.0) just ate Cookie
+Adventurer DanTheCreator(health: 4.0) just fought BHB(health: 0.5)
+ARCANE MAZE: Turn 3
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers: Ben_Dover(health: 5.0)
+		Creatures:
+		Food: Taco
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures: Shrek(health: 3.0)
+		Food: Cookie
+	East:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Southwest:
+		Adventurers: DanTheCreator(health: 3.5)
+		Creatures:
+		Food: ScoobySnack
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food: Apple, Poo-Sandwich, Taco
+
+Adventurer Ben_Dover(health: 6.0) just ate Taco
+Adventurer DanTheCreator(health: 4.5) just ate ScoobySnack
+ARCANE MAZE: Turn 4
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers: Ben_Dover(health: 6.0)
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures: Shrek(health: 3.0)
+		Food: Cookie
+	East:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Southwest:
+		Adventurers: DanTheCreator(health: 4.5)
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food: Apple, Poo-Sandwich, Taco
+
+ARCANE MAZE: Turn 5
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers: DanTheCreator(health: 4.5)
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures: Shrek(health: 3.0)
+		Food: Cookie
+	East:
+		Adventurers: Ben_Dover(health: 6.0)
+		Creatures:
+		Food: Taco
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food: Apple, Poo-Sandwich, Taco
+
+Adventurer Ben_Dover(health: 7.0) just ate Taco
+ARCANE MAZE: Turn 6
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers: DanTheCreator(health: 4.5)
+		Creatures: Shrek(health: 3.0)
+		Food: Cookie
+	East:
+		Adventurers: Ben_Dover(health: 7.0)
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food: Apple, Poo-Sandwich, Taco
+
+Adventurer DanTheCreator(health: 4.5) just fought Shrek(health: 3.0)
+ARCANE MAZE: Turn 7
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers: DanTheCreator(health: 4.0)
+		Creatures:
+		Food: Cookie
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 7.0)
+		Creatures:
+		Food: Apple, Poo-Sandwich, Taco
+
+Adventurer Ben_Dover(health: 8.0) just ate Apple
+Adventurer DanTheCreator(health: 5.0) just ate Cookie
+ARCANE MAZE: Turn 8
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers: DanTheCreator(health: 5.0)
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 8.0)
+		Creatures:
+		Food: Poo-Sandwich, Taco
+
+Adventurer Ben_Dover(health: 9.0) just ate Poo-Sandwich
+ARCANE MAZE: Turn 9
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers: DanTheCreator(health: 5.0)
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 9.0)
+		Creatures:
+		Food: Taco
+
+Adventurer Ben_Dover(health: 10.0) just ate Taco
+ARCANE MAZE: Turn 10
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers: DanTheCreator(health: 5.0)
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 10.0)
+		Creatures:
+		Food:
+
+ARCANE MAZE: Turn 11
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers: DanTheCreator(health: 5.0)
+		Creatures:
+		Food: Cookie
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers: Ben_Dover(health: 10.0)
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer DanTheCreator(health: 6.0) just ate Cookie
+ARCANE MAZE: Turn 12
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers: DanTheCreator(health: 6.0)
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers: Ben_Dover(health: 10.0)
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+ARCANE MAZE: Turn 13
+	Northwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers: Ben_Dover(health: 10.0)
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers: DanTheCreator(health: 6.0)
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+ARCANE MAZE: Turn 14
+	Northwest:
+		Adventurers: Ben_Dover(health: 10.0)
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers: DanTheCreator(health: 6.0)
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 10.0) just fought Jeffery E.(health: 3.0)
+ARCANE MAZE: Turn 15
+	Northwest:
+		Adventurers: Ben_Dover(health: 8.5)
+		Creatures: Jeffery E.(health: 2.5)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers: DanTheCreator(health: 6.0)
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 8.5) just fought Jeffery E.(health: 2.5)
+ARCANE MAZE: Turn 16
+	Northwest:
+		Adventurers: Ben_Dover(health: 8.0)
+		Creatures:
+		Food: Apple
+	North:
+		Adventurers: DanTheCreator(health: 6.0)
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurers got the dub!
+
+
+
+
+
+
+Starting Play ... Turn 0
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers: DanTheCreator(health: 5.0)
+		Creatures:
+		Food: Annie's (TM) mac & cheese, Cookie
+	East:
+		Adventurers: Ben_Dover(health: 5.0)
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures: Shrek(health: 3.0), Iggy(health: 3.0)
+		Food: ScoobySnack, ScoobySnack, Cookie
+
+Adventurer DanTheCreator(health: 6.0) just ate Annie's (TM) mac & cheese
+ARCANE MAZE: Turn 1
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers: DanTheCreator(health: 6.0)
+		Creatures:
+		Food: Cookie
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 5.0)
+		Creatures: Shrek(health: 3.0), Iggy(health: 3.0)
+		Food: ScoobySnack, ScoobySnack, Cookie
+
+Adventurer DanTheCreator(health: 7.0) just ate Cookie
+Adventurer Ben_Dover(health: 5.0) just fought Shrek(health: 3.0)
+ARCANE MAZE: Turn 2
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers: DanTheCreator(health: 7.0)
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 4.5)
+		Creatures: Shrek(health: 1.5), Iggy(health: 3.0)
+		Food: ScoobySnack, ScoobySnack, Cookie
+
+Adventurer Ben_Dover(health: 4.5) just fought Shrek(health: 1.5)
+ARCANE MAZE: Turn 3
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers: DanTheCreator(health: 7.0)
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 4.0)
+		Creatures: Iggy(health: 3.0)
+		Food: ScoobySnack, ScoobySnack, Cookie
+
+Adventurer Ben_Dover(health: 4.0) just fought Iggy(health: 3.0)
+ARCANE MAZE: Turn 4
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers: DanTheCreator(health: 7.0)
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 3.5)
+		Creatures:
+		Food: ScoobySnack, ScoobySnack, Cookie
+
+Adventurer Ben_Dover(health: 4.5) just ate ScoobySnack
+ARCANE MAZE: Turn 5
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers: DanTheCreator(health: 7.0)
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 4.5)
+		Creatures:
+		Food: ScoobySnack, Cookie
+
+Adventurer Ben_Dover(health: 5.5) just ate ScoobySnack
+ARCANE MAZE: Turn 6
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food: ScoobySnack
+	Northeast:
+		Adventurers: DanTheCreator(health: 7.0)
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 5.5)
+		Creatures:
+		Food: Cookie
+
+Adventurer Ben_Dover(health: 6.5) just ate Cookie
+ARCANE MAZE: Turn 7
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers: DanTheCreator(health: 7.0)
+		Creatures:
+		Food: ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers: Ben_Dover(health: 6.5)
+		Creatures:
+		Food:
+
+Adventurer DanTheCreator(health: 8.0) just ate ScoobySnack
+ARCANE MAZE: Turn 8
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers: Ben_Dover(health: 6.5)
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+ARCANE MAZE: Turn 9
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers: Ben_Dover(health: 6.5)
+		Creatures: Jeffery E.(health: 3.0)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 6.5) just fought Jeffery E.(health: 3.0)
+ARCANE MAZE: Turn 10
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers: Ben_Dover(health: 5.0)
+		Creatures: Jeffery E.(health: 2.5)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 5.0) just fought Jeffery E.(health: 2.5)
+ARCANE MAZE: Turn 11
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers: Ben_Dover(health: 4.5)
+		Creatures: Jeffery E.(health: 2.0)
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 4.5) just fought Jeffery E.(health: 2.0)
+ARCANE MAZE: Turn 12
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers: Ben_Dover(health: 4.0)
+		Creatures:
+		Food: Orange, Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 5.0) just ate Orange
+ARCANE MAZE: Turn 13
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers: Ben_Dover(health: 5.0)
+		Creatures:
+		Food: Annie's (TM) mac & cheese
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 6.0) just ate Annie's (TM) mac & cheese
+ARCANE MAZE: Turn 14
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers: Ben_Dover(health: 6.0)
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+ARCANE MAZE: Turn 15
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	West:
+		Adventurers: Ben_Dover(health: 6.0)
+		Creatures:
+		Food: Taco
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 7.0) just ate Taco
+ARCANE MAZE: Turn 16
+	Northwest:
+		Adventurers:
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers: Ben_Dover(health: 7.0)
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+ARCANE MAZE: Turn 17
+	Northwest:
+		Adventurers: Ben_Dover(health: 7.0)
+		Creatures: Kailey(health: 3.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 7.0) just fought Kailey(health: 3.0)
+ARCANE MAZE: Turn 18
+	Northwest:
+		Adventurers: Ben_Dover(health: 6.5)
+		Creatures: Kailey(health: 1.5), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 6.5) just fought Kailey(health: 1.5)
+ARCANE MAZE: Turn 19
+	Northwest:
+		Adventurers: Ben_Dover(health: 5.0)
+		Creatures: Kailey(health: 1.0), BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 5.0) just fought Kailey(health: 1.0)
+ARCANE MAZE: Turn 20
+	Northwest:
+		Adventurers: Ben_Dover(health: 4.5)
+		Creatures: BHB(health: 3.0)
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers:
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurer Ben_Dover(health: 4.5) just fought BHB(health: 3.0)
+ARCANE MAZE: Turn 21
+	Northwest:
+		Adventurers: Ben_Dover(health: 4.0)
+		Creatures:
+		Food: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Food:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Food:
+	West:
+		Adventurers:
+		Creatures:
+		Food:
+	Center:
+		Adventurers: DanTheCreator(health: 8.0)
+		Creatures:
+		Food:
+	East:
+		Adventurers:
+		Creatures:
+		Food:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Food:
+	South:
+		Adventurers:
+		Creatures:
+		Food:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Food:
+
+Adventurers got the dub!
+> Task :test
+
+

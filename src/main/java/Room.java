@@ -154,7 +154,7 @@ public class Room {
     }
 
     public boolean hasFood() {
-        return this.foods.isEmpty();
+        return !(this.foods.isEmpty());
     }
 
     public void addFood() {

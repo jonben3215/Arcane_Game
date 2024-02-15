@@ -66,10 +66,9 @@ public class Arcane {
     public void play() {
 
         logger.info("Starting Play... Turn 0\n");
-        System.out.print("Starting Play ... Turn 0\n");
 
         logger.info(gameStateInfo());
-        System.out.println(gameStateInfo());
+
 
 
         while (!gameOver) {
@@ -78,10 +77,8 @@ public class Arcane {
             takeTurn();
 
             logger.info("ARCANE MAZE: Turn " + this.turnCount);
-            System.out.println("ARCANE MAZE: Turn " + this.turnCount);
 
             logger.info(gameStateInfo());
-            System.out.println(gameStateInfo());
 
             if (checkGameOver()) break;
 
@@ -92,19 +89,16 @@ public class Arcane {
 
             // Creatures won
             logger.info("Creatures number 1 victory royale!!!!");
-            System.out.println("Creatures number 1 victory royale!!!!");
 
         } else if (creatures.isEmpty()) {
 
             // adventurers won
             logger.info("Adventurers got the dub!");
-            System.out.println("Adventurers got the dub!");
 
         } else {
 
             // this shouln't be reached
             logger.warn("Error");
-            System.out.println("Error");
 
         }
 
@@ -125,7 +119,6 @@ public class Arcane {
             if (adventurer.isHealthiestInRoom() && adventurer.creaturePresentInRoom()) {
 
                 logger.info("Adventurer " + adventurer.getInfo() + " just fought " + adventurer.getFightableCreature().getInfo());
-                System.out.println("Adventurer " + adventurer.getInfo() + " just fought " + adventurer.getFightableCreature().getInfo());
 
                 fight(adventurer, adventurer.getFightableCreature());
 

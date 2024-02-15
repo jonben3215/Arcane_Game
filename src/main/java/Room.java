@@ -93,26 +93,7 @@ public class Room {
         return this.ID;
     }
 
-    public String getInfo() {
 
-        StringBuilder info_string = new StringBuilder(this.name + ":");
-
-        info_string.append("\n> Adventurers:");
-        for (Adventurer a : this.adventurers) {
-            info_string.append(" ").append(a.getName());
-        }
-
-        info_string.append("\n> Creatures:");
-        for (Creature c : this.creatures) {
-            info_string.append(" ").append(c.getName());
-        }
-
-        info_string.append("\n> Food:");
-        for (Food f : this.foods) {
-            info_string.append(" ").append(f.getName());
-        }
-        return info_string.toString();
-    }
 
     public List<Adventurer> getAdventurers() {
         return this.adventurers;
@@ -198,5 +179,44 @@ public class Room {
         // If filePath passes checks, update the filePath
         DESCRIPTION_FILE_NAME = filePath;
     }
+
+
+    public String getInfo() {
+
+        StringBuilder sb = new StringBuilder("\t" + this.name + ":");
+
+        sb.append("\n\t\tAdventurers: ");
+
+        for (int i = 0; i < this.adventurers.size(); i++) {
+            Adventurer a = this.adventurers.get(i);
+            sb.append(a.getInfo());
+            if (i < this.adventurers.size() - 1) {
+                sb.append(", ");
+            }
+        }
+
+        sb.append("\n\t\tCreatures: ");
+
+        for (int i = 0; i < this.creatures.size(); i++) {
+            Creature c = this.creatures.get(i);
+            sb.append(c.getInfo());
+            if (i < this.creatures.size() - 1) {
+                sb.append(", ");
+            }
+        }
+
+        sb.append("\n\t\tFood: ");
+
+        for (int i = 0; i < this.foods.size(); i++) {
+            Food f = this.foods.get(i);
+            sb.append(f.getName());
+            if (i < this.foods.size() - 1) {
+                sb.append(", ");
+            }
+        }
+
+        return sb.toString();
+    }
+
 }
 

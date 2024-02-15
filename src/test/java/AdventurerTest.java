@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AdventurerTest {
 
+    String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+
     @Test
     public void TestAdventurerCreation() {
        String Name  = "Ben";
@@ -102,7 +104,7 @@ public class AdventurerTest {
         Adventurer a1 = new Adventurer("Ben Dover", 5);
 
         Maze m= new Maze();
-        m.GenerateRectangleMaze(3, 3);// 0 1 2, 3 4 5, 6 7 8
+        m.generateNxN(3, roomNames3x3);// 0 1 2, 3 4 5, 6 7 8
         Room r = m.getRooms().get(4); // 3,3 i think
         a1.setRoom(r);
         a1.move(Direction.N);
@@ -116,7 +118,7 @@ public class AdventurerTest {
         Adventurer a1 = new Adventurer("Ben Dover", 5);
 
         Maze m= new Maze();
-        m.GenerateRectangleMaze(3, 3);// 0 1 2, 3 4 5, 6 7 8
+        m.generateNxN(3, roomNames3x3);// 0 1 2, 3 4 5, 6 7 8
         Room r = m.getRooms().get(4); // 3,3 i think
 
         boolean different_behavior = false;

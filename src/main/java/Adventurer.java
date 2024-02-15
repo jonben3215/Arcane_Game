@@ -118,7 +118,6 @@ public class Adventurer {
 
     public void flee()
     {
-        System.out.println("Flee Begin");
 
         List<Room> neighboringRooms = new ArrayList<>();
 
@@ -131,7 +130,6 @@ public class Adventurer {
 
         if(neighboringRooms.isEmpty()) {
             logger.warn("Adventurer:" + this.getName() + "No neighboring rooms found to fee to.");
-            System.out.println("Delete me");
             return;
         }
 
@@ -139,8 +137,6 @@ public class Adventurer {
         int randomIndex = random.nextInt(neighboringRooms.size());
         Room randomRoom = neighboringRooms.get(randomIndex);
         moveTo(randomRoom);
-
-        System.out.println("Flee Complete");
 
     }
 
@@ -154,6 +150,11 @@ public class Adventurer {
     }
 
 
+    public Creature getFightableCreature() {
+        return this.room.getHealthiestCreature();
+    }
+
+
     public boolean isAlive()
     {
         return this.isAlive;
@@ -164,4 +165,20 @@ public class Adventurer {
         return this.name + "(health: " + this.health + ")";
     }
 
+
+    // Only works when done in in healthiest order, the project is due soon, it gotta be this way
+    public void eat() {
+        List<Food> roomFoods = this.room.getFoods();
+        if (roomFoods.isEmpty()) {
+            System.out.println("NO FOODS TO EAT WTF ARE YOU DOING ");
+            return;
+        }
+
+        Food foodToEat = this.room.getFoods().get(0);
+        this.room.removeFood(foodToEat);
+        this.setHealth(this.health+1.0);
+
+        logger.info("Adventurer " + this.getInfo() + " just ate " + foodToEat.getName());
+        System.out.println("Adventurer " + this.getInfo() + " just ate " + foodToEat.getName());
+    }
 }

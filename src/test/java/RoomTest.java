@@ -221,8 +221,10 @@ public class RoomTest
 
     @Test
     public void TestGetInfo () {
-        String expected = default_room.getName() + ":\n> Adventurers:\n> Creatures:\n> Food:";
+        String expected = default_room.getName() + ":\n\tAdventurers:\n\tCreatures:\n\tFood:";
         assertEquals(default_room.getInfo(), expected);
+
+        System.out.println(default_room.getInfo());
     }
 
     @Test

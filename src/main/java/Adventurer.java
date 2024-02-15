@@ -42,6 +42,23 @@ public class Adventurer {
     public String getRoomName() {
         return this.room.getName();
     }
+
+    public boolean isHealthiest()
+    {
+        return this.room.getHealthiestAdventurer() == this;
+    }
+
+    public boolean creaturePresent()
+    {
+        return this.room.hasCreature();
+    }
+
+    public boolean foodPresent()
+    {
+        return this.room.hasFood();
+    }
+
+
     public void setHealth(double health) {
         // Update hp
         this.health = health;

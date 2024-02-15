@@ -141,7 +141,7 @@ public class Room {
 
     public List<Room> getNeighborRooms()
     {
-        return (List<Room>) this.neighbors.values();
+        return new ArrayList<>(this.neighbors.values());
     }
 
     public List<Creature> getCreatures() {

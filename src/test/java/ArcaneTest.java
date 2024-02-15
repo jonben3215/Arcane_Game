@@ -11,6 +11,7 @@ public class ArcaneTest {
 
         // Create Adventurer List
         List<Adventurer> adventurers = new ArrayList<>();
+
         adventurers.add(new Adventurer("Ben_Dover"));
         adventurers.add(new Adventurer("DanTheCreator"));
 
@@ -31,6 +32,9 @@ public class ArcaneTest {
         Arcane arcane = new Arcane(Maze.defaultEmpty3x3(), adventurers, creatures, foods);
 
         //arcane.play();
+        System.out.println(arcane.gameStateInfo());
+
+        arcane.takeTurn();
 
         System.out.println(arcane.gameStateInfo());
 

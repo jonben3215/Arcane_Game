@@ -20,6 +20,11 @@ public class Maze {
 
 
     // ---------- Constructors ---------- //
+
+
+    // Polymorphism wow look how we have multiple constructors that can all be
+    // called with the same name, depending on the parameters, we resolve the different calls
+    // on compile. wow!
     public Maze() {}
 
     public Maze(int n) {

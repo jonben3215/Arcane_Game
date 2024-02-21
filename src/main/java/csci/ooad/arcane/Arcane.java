@@ -1,3 +1,5 @@
+package csci.ooad.arcane;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -7,7 +9,8 @@ import java.util.List;
 
 public class Arcane {
 
-    private static final Logger logger = LoggerFactory.getLogger(Arcane.class);
+    public static final Logger logger = LoggerFactory.getLogger(Arcane.class);
+   //  private static final Marker GAME_STATUS = MarkerFactory.getMarker("Game_Status");
 
     // ---------- Member Variables ---------- //
     private Maze maze;
@@ -25,7 +28,7 @@ public class Arcane {
 
     // maze(), creatures, adventurers, foods
 
-    // Maze:
+    // csci.ooad.arcane.Maze:
     // Initial Creatures
     // Initial Adventurers
     // Initial Foods
@@ -35,8 +38,9 @@ public class Arcane {
     // Below is a great example of dependency injection! Look at how the constructor accepts several dependencies!
     public Arcane (Maze maze, List<Adventurer> initialAdventurers, List<Creature> initialCreatures, List<Food> initialFoods) {
 
-        this.maze = maze;
+        logger.info("csci.ooad.arcane.Arcane()");
 
+        this.maze = maze;
         this.initialAdventurers = initialAdventurers;
         this.initialCreatures = initialCreatures;
         this.initialFoods = initialFoods;
@@ -61,7 +65,7 @@ public class Arcane {
         gameOver = false;
         turnCount = 0;
 
-        // Populate Maze:
+        // Populate csci.ooad.arcane.Maze:
         this.maze.populate(this.adventurers, this.creatures, this.foods);
 
     }
@@ -71,7 +75,6 @@ public class Arcane {
         logger.info("Starting Play... Turn 0\n");
 
         logger.info(gameStateInfo());
-
 
 
         while (!gameOver) {
@@ -121,7 +124,7 @@ public class Arcane {
             // Case 1.a: (Fight)
             if (adventurer.isHealthiestInRoom() && adventurer.creaturePresentInRoom()) {
 
-                logger.info("Adventurer " + adventurer.getInfo() + " just fought " + adventurer.getFightableCreature().getInfo());
+                logger.info("csci.ooad.arcane.Adventurer " + adventurer.getInfo() + " just fought " + adventurer.getFightableCreature().getInfo());
 
                 fight(adventurer, adventurer.getFightableCreature());
 

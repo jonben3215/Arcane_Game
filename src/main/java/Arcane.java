@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Arcane {
 
-    private static final Logger logger = LoggerFactory.getLogger(Arcane.class);
+    public static final Logger logger = LoggerFactory.getLogger(Arcane.class);
 
     // ---------- Member Variables ---------- //
     private Maze maze;
@@ -34,6 +34,8 @@ public class Arcane {
 
     // Below is a great example of dependency injection! Look at how the constructor accepts several dependencies!
     public Arcane (Maze maze, List<Adventurer> initialAdventurers, List<Creature> initialCreatures, List<Food> initialFoods) {
+
+        logger.info("Creating new arcane");
 
         this.maze = maze;
 

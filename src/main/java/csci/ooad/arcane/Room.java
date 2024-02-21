@@ -1,3 +1,5 @@
+package csci.ooad.arcane;
+
 import java.util.*;
 
 public class Room {
@@ -174,7 +176,7 @@ public class Room {
     /**
      * Get descriptionTextFile
      * WARNING: Will return 'null' if fileName is undefined
-     * (fileName is undefined by default, assign it with Room.setDescriptionTextFile)
+     * (fileName is undefined by default, assign it with csci.ooad.arcane.Room.setDescriptionTextFile)
      */
     public static String getDescriptionFileName() {
         return DESCRIPTION_FILE_NAME;
@@ -223,7 +225,7 @@ public class Room {
             }
         }
 
-        sb.append("\n\t\tFood: ");
+        sb.append("\n\t\tcsci.ooad.arcane.Food: ");
 
         for (int i = 0; i < this.foods.size(); i++) {
             Food f = this.foods.get(i);

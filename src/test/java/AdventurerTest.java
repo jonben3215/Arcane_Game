@@ -1,3 +1,7 @@
+import csci.ooad.arcane.Adventurer;
+import csci.ooad.arcane.Direction;
+import csci.ooad.arcane.Maze;
+import csci.ooad.arcane.Room;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

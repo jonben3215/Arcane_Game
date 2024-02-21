@@ -8,7 +8,7 @@
 
     # Simple logging -- equivalent to System.out.println()
     <appender name="Same_As_Println" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
+        <encoder>ome
             <pattern>%yellow(%msg%n)</pattern>
         </encoder>
     </appender>
@@ -29,7 +29,7 @@
         </encoder>
     </appender>
 
-    <root level="error">
+    <root level="info">
         <appender-ref ref="CONSOLE" />
     </root>
 

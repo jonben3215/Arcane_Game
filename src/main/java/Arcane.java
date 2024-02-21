@@ -50,6 +50,9 @@ public class Arcane {
     // Checkout how this reset game function demonstrates information hiding!
     // We abstract away the details of resetting the game and call this happy little function!
     public void resetGame() {
+
+        logger.info("Resetting Game ...");
+
         this.adventurers = this.initialAdventurers;
         this.creatures = this.initialCreatures;
         this.foods = this.initialFoods;

@@ -34,6 +34,7 @@ public class ArcaneTest {
         Maze maze = new Maze(3,roomNames3x3);
         Arcane arcane = new Arcane(maze, adventurers, creatures, foods);
 
+        // Play the game
         arcane.play();
 
         // eventually have Arcane arcane = Arcane.createGame();

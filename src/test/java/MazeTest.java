@@ -1,3 +1,4 @@
+import csci.ooad.arcane.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -9,14 +10,7 @@ public class MazeTest {
 
     // Use as input for 3x3 maze room names for clear debugging
 
-    @Test
-    public void TestMazeConstruction() {
-
-        Maze maze = new Maze();
-        assertNotNull(maze);
-
-        // TODO Check Default Values
-    }
+    public static final Maze emptyMaze = new Maze();
 
     @Test
     public void testNxNMazeCreation() {
@@ -54,7 +48,7 @@ public class MazeTest {
         String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
         Maze maze = new Maze(3,roomNames3x3);
 
-        // Create Food List
+        // Create csci.ooad.arcane.Food List
         List<Food> foods = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             foods.add(new Food()); // Choose random name
@@ -71,12 +65,12 @@ public class MazeTest {
         String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
         Maze maze = new Maze(3,roomNames3x3);
 
-        // Create Adventurer List
+        // Create csci.ooad.arcane.Adventurer List
         List<Adventurer> adventurers = new ArrayList<>();
         adventurers.add(new Adventurer("Ben_Dover"));
         adventurers.add(new Adventurer("DanTheCreator"));
 
-        // Create Creature List
+        // Create csci.ooad.arcane.Creature List
         List<Creature> creatures = new ArrayList<>();
         creatures.add(new Creature("Kailey"));
         creatures.add(new Creature("Jeffery E."));

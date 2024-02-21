@@ -1,3 +1,5 @@
+package csci.ooad.arcane;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -75,7 +77,7 @@ public class Adventurer extends Agent{
             this.health = 0;
             isAlive = false;
             this.setRoom(null);
-            logger.info("Adventurer " + this.getName() + " was killed");
+            logger.info("csci.ooad.arcane.Adventurer " + this.getName() + " was killed");
         } else {
             isAlive = true;
         }
@@ -129,7 +131,7 @@ public class Adventurer extends Agent{
         }
 
         if(neighboringRooms.isEmpty()) {
-            logger.warn("Adventurer:" + this.getName() + "No neighboring rooms found to fee to.");
+            logger.warn("csci.ooad.arcane.Adventurer:" + this.getName() + "No neighboring rooms found to fee to.");
             return;
         }
 
@@ -177,6 +179,6 @@ public class Adventurer extends Agent{
         this.room.removeFood(foodToEat);
         this.setHealth(this.health+1.0);
 
-        logger.info("Adventurer " + this.getInfo() + " just ate " + foodToEat.getName());
+        logger.info("csci.ooad.arcane.Adventurer " + this.getInfo() + " just ate " + foodToEat.getName());
     }
 }

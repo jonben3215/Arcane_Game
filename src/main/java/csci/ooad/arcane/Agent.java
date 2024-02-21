@@ -1,3 +1,5 @@
+package csci.ooad.arcane;
+
 public class Agent {
     // TODO Make this a proper super class, this is just to demonstrate we know
     // how inheritance works and can implement it for the comment grade.

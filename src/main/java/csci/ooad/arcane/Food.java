@@ -1,3 +1,5 @@
+package csci.ooad.arcane;
+
 import java.util.Random;
 
 public class Food {

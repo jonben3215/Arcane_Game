@@ -1,3 +1,5 @@
+package csci.ooad.arcane;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,7 +52,7 @@ public class Creature extends Agent{
             this.health = 0;
             this.isAlive = false;
             this.setRoom(null);
-            logger.info("Creature " + this.getName() + " was killed");
+            logger.info("csci.ooad.arcane.Creature " + this.getName() + " was killed");
         } else {
             this.isAlive = true;
         }

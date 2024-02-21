@@ -44,7 +44,6 @@ public class MazeTest {
         String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
         Maze maze2x2 = new Maze(2, roomNames2x2);
         maze2x2.display2D();
-
         String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
         Maze maze3x3 = new Maze(3, roomNames3x3);
         maze3x3.display2D();

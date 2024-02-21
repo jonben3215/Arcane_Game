@@ -143,4 +143,12 @@ public class AdventurerTest {
         else
             assert false;
     }
+
+    @Test
+    public void test_AdventureDeath()
+    {
+        Adventurer player1 = new Adventurer("Bruh", 0);
+        assertTrue(player1.isAlive());
+
+    }
 }

@@ -65,6 +65,9 @@ public class AdventurerTest {
 
         assertEquals(r, a.getRoom());
     }
+
+
+    //Thats a lot damage
     @Test
     public void TestTakeDamage() {
         Adventurer a1 = new Adventurer();

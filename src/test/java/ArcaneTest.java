@@ -36,7 +36,7 @@ public class ArcaneTest {
         Arcane arcane = new Arcane(maze, adventurers, creatures, foods);
 
         // Play the game
-        //arcane.play();
+        arcane.play();
 
         // eventually have csci.ooad.arcane.Arcane arcane = csci.ooad.arcane.Arcane.createGame();
     }

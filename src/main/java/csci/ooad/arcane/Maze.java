@@ -213,17 +213,21 @@ public class Maze {
     }
 
     // ---------- Display / Info ---------- //
-    public String getInfo() {
+
+    public String getInfo(String indent) {
 
         StringBuilder sb = new StringBuilder();
 
         for (int i=0; i < this.rooms.size(); i++) {
             Room r = this.rooms.get(i);
             // Append roomInfo + "\n" unless its the last room
-            sb.append(r.getInfo()).append((i<this.rooms.size()-1) ? "\n" : "");
+            sb.append(indent).append(r.getInfo()).append((i<this.rooms.size()-1) ? "\n" : "");
         }
 
         return sb.toString();
+    }
+    public String getInfo() {
+        return getInfo("");
     }
     
     public void display2D() {

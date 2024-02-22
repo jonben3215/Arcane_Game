@@ -164,7 +164,7 @@ public class Adventurer extends Agent{
 
 
     public String getInfo() {
-        return this.name + "(health: " + this.health + ")";
+        return this.name + "(hp: " + this.health + ")";
     }
 
 

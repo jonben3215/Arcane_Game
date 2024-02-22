@@ -53,4 +53,7 @@ public class Food {
         this.healAmount = healAmount;
     }
 
+    public String getInfo() {
+        return getName();
+    }
 }

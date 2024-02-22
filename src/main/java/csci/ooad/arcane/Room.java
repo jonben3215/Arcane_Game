@@ -53,17 +53,12 @@ public class Room {
 
     // ---------- Helpers ---------- //
 
-    public Adventurer getHealthiestAdventurer()
-    {
+    public Adventurer getHealthiestAdventurer() {
       if(this.adventurers.isEmpty()) return null;
-
       return adventurers.get(0);
-
     }
-    public Creature getHealthiestCreature()
-    {
+    public Creature getHealthiestCreature() {
         if(this.creatures.isEmpty()) return null;
-
         return creatures.get(0);
     }
 
@@ -71,7 +66,6 @@ public class Room {
     {
         return !(this.creatures.isEmpty());
     }
-
 
 
     // TODO make this function get a random description from the description file
@@ -102,7 +96,6 @@ public class Room {
         }
         return this.neighbors.get(direction);
     }
-
 
     public String getName() {
         return this.name;
@@ -181,7 +174,6 @@ public class Room {
     public static String getDescriptionFileName() {
         return DESCRIPTION_FILE_NAME;
     }
-
 
     /**
      * Updates filePath for descriptionTextFile.

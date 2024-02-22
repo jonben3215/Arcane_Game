@@ -104,6 +104,7 @@ public class Adventurer extends Agent{
 
     }
 
+    // todo remove direction dependency from the game
     public Map<Direction, Room> getValidMoves()
     {
         return this.room.getNeighbors();
@@ -113,17 +114,60 @@ public class Adventurer extends Agent{
 
     }
 
-    public void moveTo(Room room)
-    {
+    public void moveTo(Room room) {
+        // TODO: DELAYED UPDATE MOVE
         this.setRoom(room);
+    }
+
+    // DRUNK ME THINKS THIS IS A GOOD IDEA WATCH THE FUCK OUT
+    // TODO ALSO MAKE toMove // toUpdate a static arraylist
+    // TODO THIS IS AN ACTUAL DRUNK AF THOUGHT BUT WHAT IF WE MADE THE WHOLE UPDATE STATIC
+    // MAYBE REPOPULATE? EVERY ITERATION INSIDE OF MAZE UPDATE
+    public void addAction() {
+        // add action to static to move list???? idk i should make this fully encapsulated hence
+        // my repopulate idea above
+
+
+        /* TODO: THE DELAYED UPDATE PROBLEM ALL COMMENTS AROUND HERE (IMPORTANT)
+        ALTERNATE SOLUTION INSRTEAD OF COMPROMISING THE FORM OF THE UPDATE / DO ACTION FUNCTIONS,
+        INSTEAD MAKE CHANGES TO THE MOVEtO / SET POSITION FUNCTIONS TO SOMEHOW DECOUPLE FROM ROOM
+        AND MAKE IT SO MOVEtO WILL BEHAVE WITHOUT INTERFERING WITH THE CURRENT ROOM CHANGES
+        UNTIL THE TURN UPDATES. I THINK I COULD DO IT WITH SOME FORM OF MONO UPDATE / OBSERVER PATTERN
+        ATTACHED TO ROOM. THIS CAN ALSO MAYBE BE DONE WITH HAVING THE ROOM CALCULATE IT'S GET METHOD
+        UPDATES ONCE PER TURN WITH SOME UPDATE BASED ON PER TURN ACTIONS.
+         */
+
+        // all my potential soutions involve keeping the knowledge of the adventurer to itselve no matter what
+        // i think this is best absolutely so i will now implement without regard to the delayed update problem
+    }
+
+
+    public void doAction() {
+        // Case 1.a: (Fight)
+        if (isHealthiestInRoom() && creaturePresentInRoom()) {
+            fight();
+        } // Case 2: (Eat)
+        else if (!(creaturePresentInRoom()) && foodPresentInRoom()) {
+            eat();
+        }// Case 1.b and 3: (Move)
+        else {
+            // toMove.add(adventurer); TODO: (IMPORTANT) THIS IS THE ONE THAT IS PROBLEMATIC SEE: DELAYED UPDATE
+            // todo calling this doaction funciton should completely account for the universal update
+            flee();
+        }
+    }
+
+    public void fight() {
+        this.room.getHealthiestAdventurer();
+        logger.info("Adventurer " + getInfo() + " just fought " + getFightableCreature().getInfo() + "\n");
     }
 
     public void flee()
     {
-
         List<Room> neighboringRooms = new ArrayList<>();
 
         // TODO Ensure that only non-null neighboring rooms are added
+        // TODO I am dreally drunk but this seeems illogical, i can't say why though
         for (Room neighborRoom : this.room.getNeighborRooms()) {
             if (neighborRoom != null) {
                 neighboringRooms.add(neighborRoom);
@@ -131,7 +175,7 @@ public class Adventurer extends Agent{
         }
 
         if(neighboringRooms.isEmpty()) {
-            logger.warn("csci.ooad.arcane.Adventurer:" + this.getName() + "No neighboring rooms found to fee to.");
+            logger.warn("Adventurer:" + this.getName() + "No neighboring rooms found to fee to.");
             return;
         }
 
@@ -139,14 +183,11 @@ public class Adventurer extends Agent{
         int randomIndex = random.nextInt(neighboringRooms.size());
         Room randomRoom = neighboringRooms.get(randomIndex);
         moveTo(randomRoom);
-
     }
-
 
     public int playerRoll()
     {
         Random numGenerator = new Random();
-
         //Generates a number from 1 to 6 similar to a die
         return numGenerator.nextInt(6)+1;
     }
@@ -175,7 +216,7 @@ public class Adventurer extends Agent{
             return;
         }
 
-        Food foodToEat = this.room.getFoods().get(0);
+        Food fo0odToEat = this.room.getFoods().get(0);
         this.room.removeFood(foodToEat);
         this.setHealth(this.health+1.0);
 

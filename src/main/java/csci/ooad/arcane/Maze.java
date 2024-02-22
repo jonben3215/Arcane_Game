@@ -221,7 +221,8 @@ public class Maze {
         for (int i=0; i < this.rooms.size(); i++) {
             Room r = this.rooms.get(i);
             // Append roomInfo + "\n" unless its the last room
-            sb.append(indent).append(r.getInfo()).append((i<this.rooms.size()-1) ? "\n" : "");
+            // May use this later: .append((i<this.rooms.size()-1) ? "\n" : "")
+            sb.append(r.getInfo(indent));
         }
 
         return sb.toString();

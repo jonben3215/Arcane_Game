@@ -38,7 +38,7 @@ public class Arcane {
     // Below is a great example of dependency injection! Look at how the constructor accepts several dependencies!
     public Arcane (Maze maze, List<Adventurer> initialAdventurers, List<Creature> initialCreatures, List<Food> initialFoods) {
 
-        logger.info("csci.ooad.arcane.Arcane()");
+        logger.info("csci.ooad.arcane.Arcane()" + "\n");
 
         this.maze = maze;
         this.initialAdventurers = initialAdventurers;
@@ -46,14 +46,13 @@ public class Arcane {
         this.initialFoods = initialFoods;
 
         resetGame();
-
     }
 
     // Checkout how this reset game function demonstrates information hiding!
     // We abstract away the details of resetting the game and call this happy little function!
     public void resetGame() {
 
-        logger.info("Resetting Game ...");
+        logger.info("Resetting Game ..." + "\n");
 
         this.adventurers = this.initialAdventurers;
         this.creatures = this.initialCreatures;
@@ -72,42 +71,39 @@ public class Arcane {
 
     public void play() {
 
-        logger.info("Starting Play... Turn 0\n");
+        logger.info("Starting Play..." + "\n");
 
         logger.info(gameStateInfo());
 
 
         while (!gameOver) {
 
+            // Prints in a way to make a new line before every gameStateInfo() print.
+            // Breaking the line lets the logger lose the color property,
+            // allowing for all maze info to log white, like the homework guidelines.
+            logger.info("ARCANE MAZE: ");
+            logger.info("Turn " + this.turnCount + "\n" + gameStateInfo());
 
             takeTurn();
 
-            logger.info("ARCANE MAZE: Turn " + this.turnCount);
-
-            logger.info(gameStateInfo());
-
+            //logger.info(gameStateInfo());
             if (checkGameOver()) break;
 
         }
 
         // Log who won
         if (adventurers.isEmpty()) {
-
             // Creatures won
-            logger.info("Creatures number 1 victory royale!!!!");
+            logger.info("Creatures number 1 victory royale!!!!" + "\n");
 
         } else if (creatures.isEmpty()) {
-
             // adventurers won
-            logger.info("Adventurers got the dub!");
+            logger.info("Adventurers got the dub!" + "\n");
 
         } else {
-
             // this shouln't be reached
-            logger.warn("Error");
-
+            logger.warn("Error" + "\n");
         }
-
     }
 
     public void sortAdventurersByHealth() {
@@ -118,29 +114,17 @@ public class Arcane {
 
         // Add adventurers to flee list to act as delayed update of movement
         // (Prevents double updating positions)
-        List<Adventurer> toMove = new ArrayList<>();
+
+        // UHH WE HAVE TO REMOVE THIS I THINK List<Adventurer> toMove = new ArrayList<>();
 
         for (Adventurer adventurer : this.adventurers) {
-            // Case 1.a: (Fight)
-            if (adventurer.isHealthiestInRoom() && adventurer.creaturePresentInRoom()) {
-
-                logger.info("csci.ooad.arcane.Adventurer " + adventurer.getInfo() + " just fought " + adventurer.getFightableCreature().getInfo());
-
-                fight(adventurer, adventurer.getFightableCreature());
-
-            } // Case 2: (Eat)
-            else if (!(adventurer.creaturePresentInRoom()) && adventurer.foodPresentInRoom()) {
-                adventurer.eat();
-
-            }// Case 1.b and 3: (Move)
-            else {
-                toMove.add(adventurer);
-            }
+            // maybe somehow prime action
+            // Somehow make the to move stuff
         }
 
         // Delayed movement update to avoid double updating conflicts
         for (Adventurer adventurer : toMove) {
-            adventurer.flee();
+            adventurer.doAction();
         }
 
         // After all hp updates, make sure adventurers health order is updated
@@ -151,7 +135,7 @@ public class Arcane {
     }
 
     public String gameStateInfo() {
-        return this.maze.getInfo();
+        return this.maze.getInfo("\t");
     }
 
     // ---------- Getters / Setters ---------- //

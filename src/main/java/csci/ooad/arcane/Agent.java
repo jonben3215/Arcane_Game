@@ -146,10 +146,10 @@ public class Agent {
         this.isAlive = false;
         this.setRoom(null);
 
-        logger.info(this.getClass().getSimpleName() + ": " + this.getName() + " was killed");
+        logger.info(this.getClass().getSimpleName() + ": " + this.getName() + " died.");
     }
 
     public String getInfo() {
-        return this.name + "(hp: " + this.health + ")";
+        return this.name + "(" +((isAlive())? "hp: " + this.health : "Dead") + ")";
     }
 }

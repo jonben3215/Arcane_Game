@@ -3,9 +3,9 @@ package csci.ooad.arcane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Random;
-
 public class Creature extends Agent{
+
+    private static final Logger logger = LoggerFactory.getLogger(Creature.class);
 
     // ---------- Constructors ---------- //
     public Creature() {

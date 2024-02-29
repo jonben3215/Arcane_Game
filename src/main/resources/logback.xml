@@ -3,6 +3,7 @@
     # ---------- APPENDER PROCESSES ---------- #
 
     # Full blown logging appender
+
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>
@@ -18,8 +19,59 @@
         </encoder>
     </appender>
 
+    <appender name="Trace_Appender" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>TRACE</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>%white(DEBUG: %msg%n)</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="Debug_Appender" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>%green(DEBUG: %msg%n)</pattern>
+        </encoder>
+    </appender>
+
+    # Simple logging -- equivalent to System.out.println()
+    <appender name="Info_Appender" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>%yellow(%msg%n)</pattern>
+        </encoder>
+    </appender>
+
+    # Warn Appender
+    <appender name="Warn_Appender" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>%red(WARNING: %msg%n)</pattern>
+        </encoder>
+    </appender>
+
     # Game Status Appender --- just for logging the state of the game
     <appender name="Game_Status" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
         <encoder>
             <pattern>%cyan(%msg)</pattern>
         </encoder>
@@ -34,12 +86,6 @@
         </encoder>
     </appender>
 
-    # Warn Appender
-    <appender name="Warn_Status" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%orange(%-5level) %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
 
     # ---------- LOGGING CASES ---------- #
 
@@ -48,19 +94,18 @@
         <appender-ref ref="CONSOLE"/>
     </root>
 
-    # Logging Base Case for arcane package - info
-    <logger name="csci.ooad.arcane" level="debug" additivity="false">
-        <appender-ref ref="Same_As_Println"/>
+    <!-- Logging for arcane package -->
+    <logger name="csci.ooad.arcane" level="TRACE" additivity="false">
+        <appender-ref ref="Trace_Appender"/>
+        <appender-ref ref="Debug_Appender"/>
+        <appender-ref ref="Info_Appender"/>
+        <appender-ref ref="Warn_Appender"/>
     </logger>
 
-<!--    # Logging Base Case for arcane package - warn-->
-<!--    <logger name="csci.ooad.arcane" level="warn" additivity="false">-->
-<!--        <appender-ref ref="Warn_Status"/>-->
-<!--    </logger>-->
-
     # Special Logging Case for Arcane class - info
-    <logger name="csci.ooad.arcane.Arcane" level="info" additivity="false">
+    <logger name="csci.ooad.arcane.Arcane" level="INFO" additivity="false">
         <appender-ref ref="Game_Status"/>
+        <appender-ref ref="Warn_Appender"/>
         <appender-ref ref="File_Output"/>
     </logger>
 

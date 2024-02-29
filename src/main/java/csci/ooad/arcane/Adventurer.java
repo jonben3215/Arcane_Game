@@ -44,7 +44,7 @@ public class Adventurer extends Agent{
     @Override
     public void doAction() {
 
-        logger.info("Adventurer " + getInfo() + " is doing an action");
+
 
         // If alive
         if (!isAlive()) return;
@@ -75,7 +75,7 @@ public class Adventurer extends Agent{
             return;
         }
 
-        logger.info("Adventurer " + getInfo() + " just fought " + getFightableCreature().getInfo() + "\n");
+        logger.info("Adventurer " + getInfo() + " just fought " + getFightableCreature().getInfo());
 
         double playerAttack = this.calcDamage();
         double creatureAttack = enemyCreature.calcDamage();
@@ -107,14 +107,17 @@ public class Adventurer extends Agent{
         }
 
         if(neighboringRooms.isEmpty()) {
-            logger.warn("Adventurer:" + this.getName() + "No neighboring rooms found to fee to.");
+            logger.warn("Adventurer:" + this.getName() + "No neighboring rooms found to move to.");
             return;
         }
 
         Random random = new Random();
         int randomIndex = random.nextInt(neighboringRooms.size());
         Room randomRoom = neighboringRooms.get(randomIndex);
-        setRoom(randomRoom);
+
+        logger.info("Adventurer " + this.getInfo() + " moved from " + this.getRoomName() + " to " + randomRoom.getName());
+        this.setRoom(randomRoom);
+
     }
 
 

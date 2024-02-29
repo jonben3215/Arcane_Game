@@ -15,7 +15,7 @@ public class Agent {
     protected double health; // TODO: Implement max health / difference between initial and current hp
     protected Room room = null;
     protected boolean isAlive = true;
-    // DefaulRt is just roll 6 sided die (min:1, max:6)
+    // Default is just roll 6 sided die (min:1, max:6)
     private double minAttack = 1, maxAttack = 6;
 
 

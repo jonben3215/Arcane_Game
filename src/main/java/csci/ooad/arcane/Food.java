@@ -32,7 +32,7 @@ public class Food {
 
     }
 
-    public Food (String name, int healAmount) {
+    public Food (String name, double healAmount) {
         this.name = name;
         this.healAmount = healAmount;
     }

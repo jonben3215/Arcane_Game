@@ -370,6 +370,7 @@ gen
 
 # I AM ADDDING THIS AND I HOPE IT DOESNT BREAK ANYTHING HAHAHAHAHAHAHAHAHAH
 .gradle/
+.gradle/**
 
 # Same here, this should be okay i hope!
 *.hprof

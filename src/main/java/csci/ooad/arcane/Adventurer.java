@@ -118,7 +118,6 @@ public class Adventurer extends Agent{
     }
 
 
-
     // Only works when done in in healthiest order, the project is due soon, it gotta be this way
     public void eat() {
         List<Food> roomFoods = this.room.getFoods();

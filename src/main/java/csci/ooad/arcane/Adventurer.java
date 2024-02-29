@@ -129,7 +129,7 @@ public class Adventurer extends Agent {
         }
 
         Food foodToEat = this.room.getFoods().get(0);
-        this.room.removeFood(foodToEat);
+        this.room.removeEntity(foodToEat);
         this.setHealth(this.health+1.0);
 
         logger.info("Adventurer " + this.getInfo() + " just ate " + foodToEat.getName());

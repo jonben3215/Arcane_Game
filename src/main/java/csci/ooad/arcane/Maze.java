@@ -13,16 +13,12 @@ public class Maze {
 
     // ---------- Member Variables ---------- //
     private static final Logger logger = LoggerFactory.getLogger(Maze.class);
-
-    private final ArrayList<Room> rooms = new ArrayList<>();
+    private ArrayList<Room> rooms = new ArrayList<>();
     private int n = 0; // csci.ooad.arcane.Maze dimension is nxn
-
-
 
     public static Builder newBuilder() {
         return new Builder();
     }
-
 
     // ---------- Constructors ---------- //
     public Maze() {}
@@ -40,9 +36,9 @@ public class Maze {
         return n;
     }
 
-    public Room getRoomByID (int ID) {
+    public Room getRoomByName (String name) {
         for (Room room : this.rooms) {
-            if (room.getID() == ID) {
+            if (room.getName().equals(name)) {
                 return room;
             }
         }
@@ -57,18 +53,17 @@ public class Maze {
     // TODO: Maze . get contents -> to get num of items and stuff, can be useful maybe in future
 
 
-    class Builder {
-
+    public static class Builder {
         private final ArrayList<Room> rooms = new ArrayList<>();
-        private boolean doSequentialDistribution = false;
+        private boolean doSequentialDistribution = false; // Default Random Distribution
         private int seqDistIdx = 0;
         private final Random random = new Random();
 
         // ----------- Builder Constructors ----------- //
         public Builder() {
-
         }
-        public Builder(AdventurerFactory, CreatureFactory, FoodFactory) {
+
+        public Builder(AdventurerFactory adventurerFactory, CreatureFactory creatureFactory, FoodFactory foodFactory) {
             return;
         }
 
@@ -80,18 +75,19 @@ public class Maze {
         public void doSequentialDistribution() {
             this.doSequentialDistribution = true;
         }
+
         public void doRandomDistribution() {
             this.doSequentialDistribution = false;
         }
 
         // Extra Credit (Complete)
-        public Builder makeFullyConnectedGridNxN (int n) {
+        public Builder makeFullyConnectedGridNxN(int n) {
 
             // Reset room list
             rooms.clear();
 
             // Add rooms to room list
-            for (int i = 0; i<(n*n); i++) {
+            for (int i = 0; i < (n * n); i++) {
                 this.rooms.add(new Room());
             }
 
@@ -108,15 +104,15 @@ public class Maze {
 
                 // Add neighbor if valid (Fully connect rooms)
                 if (north_idx >= 0) this.join(room, Direction.N, rooms.get(north_idx));
-                if (south_idx <= this.rooms.size() -1) this.join(room, Direction.S, rooms.get(south_idx));
-                if (room_idx%n != 0) this.join(room, Direction.W, rooms.get(west_idx));
-                if (room_idx%n != n-1) this.join(room, Direction.E, rooms.get(east_idx));
+                if (south_idx <= this.rooms.size() - 1) this.join(room, Direction.S, rooms.get(south_idx));
+                if (room_idx % n != 0) this.join(room, Direction.W, rooms.get(west_idx));
+                if (room_idx % n != n - 1) this.join(room, Direction.E, rooms.get(east_idx));
             }
 
             return this;
         }
 
-        public void populateEntities (List <Entity> entities) {
+        public void populateEntities(List<Entity> entities) {
 
             // Break Condition
             if (this.rooms.isEmpty()) {
@@ -141,7 +137,7 @@ public class Maze {
             return nextRoom;
         }
 
-        public void populateAdventurers(List <Adventurer> adventurers) {
+        public void populateAdventurers(List<Adventurer> adventurers) {
             // Break Condition
             if (this.rooms.isEmpty()) {
                 logger.warn("No rooms to populate.");
@@ -153,7 +149,7 @@ public class Maze {
             }
         }
 
-        public void populateCreatures(List <Creature> creatures) {
+        public void populateCreatures(List<Creature> creatures) {
             // Break Condition
             if (this.rooms.isEmpty()) {
                 logger.warn("No rooms to populate.");
@@ -166,7 +162,7 @@ public class Maze {
         }
 
 
-        public void populateFoods(List <Food> foods) {
+        public void populateFoods(List<Food> foods) {
             // Break Condition
             if (this.rooms.isEmpty()) {
                 logger.warn("No rooms to populate.");
@@ -179,36 +175,14 @@ public class Maze {
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
         public Builder defaultEmpty2x2() {
             String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
-            return this;
+            return this.makeFullyConnectedGridNxN(2).nameRooms(roomNames2x2);
         }
 
         public Builder defaultEmpty3x3() {
             String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
-            return this;
-        }
-
-
-
-
-        public void generateNxN(int n, String[] roomNames, List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
-            generateNxN(n);
-            populateRoomNames(roomNames);
-            populateAdventurers(adventurers);
-            populateCreatures(creatures);
-            populateFood(foods);
+            return this.makeFullyConnectedGridNxN(3).nameRooms(roomNames3x3);
         }
 
         // Usage: Ex: (center, N, north) -> c.N=n, n.S=c
@@ -218,11 +192,35 @@ public class Maze {
             r2.addNeighbor(d.getOpposite(), r1);
         }
 
-        public void populate(List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
+        public Builder populate(List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
+
             populateAdventurers(adventurers);
             populateCreatures(creatures);
-            populateFood(foods);
+            populateFoods(foods);
+
+            return this;
         }
+
+        public Builder nameRooms (String[] roomNames) {
+
+            if (roomNames.length != rooms.size()) {
+                logger.warn("Room names provided do not match number of rooms.");
+                return this;
+            }
+
+            for (int i = 0; i < rooms.size(); i++) {
+                rooms.get(i).setName(roomNames[i]);
+            }
+
+            return this;
+        }
+        public Builder numberRooms () {
+            for (int i = 0; i < rooms.size(); i++) {
+                rooms.get(i).setName("Room " + Integer.toString(i+1));
+            }
+            return this;
+        }
+    }
 
 
 

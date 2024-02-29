@@ -109,8 +109,7 @@ public class AdventurerTest {
 
         Adventurer a1 = new Adventurer("Ben Dover", 5);
 
-        Maze m= new Maze();
-        m.generateNxN(3, roomNames3x3);// 0 1 2, 3 4 5, 6 7 8
+        Maze m = Maze.newBuilder().defaultEmpty3x3().build();
         Room r = m.getRooms().get(4); // 3,3 i think
         a1.setRoom(r);
         a1.move(Direction.N);
@@ -123,8 +122,7 @@ public class AdventurerTest {
 
         Adventurer a1 = new Adventurer("Ben Dover", 5);
 
-        Maze m= new Maze();
-        m.generateNxN(3, roomNames3x3);// 0 1 2, 3 4 5, 6 7 8
+        Maze m = Maze.newBuilder().defaultEmpty3x3().build();// 0 1 2, 3 4 5, 6 7 8
         Room r = m.getRooms().get(4); // 3,3 i think
 
         boolean different_behavior = false;

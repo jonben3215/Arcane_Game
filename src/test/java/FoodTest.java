@@ -1,4 +1,5 @@
 import csci.ooad.arcane.Food;
+import csci.ooad.arcane.FoodFactory;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,7 +10,7 @@ public class FoodTest {
         Food f1 = new Food();
         assertEquals(f1.getHealAmount(), 1);
         boolean food_found = false;
-        for (String food : Food.FOOD_NAMES) {
+        for (String food : FoodFactory.FOOD_NAMES) {
             if (food.equals(f1.getName())) {
                 food_found = true;
                 break;

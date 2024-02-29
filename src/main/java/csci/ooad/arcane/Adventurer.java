@@ -221,5 +221,6 @@ public class Adventurer extends Agent{
         this.setHealth(this.health+1.0);
 
         logger.info("csci.ooad.arcane.Adventurer " + this.getInfo() + " just ate " + foodToEat.getName());
+        logger.info("Adventurer " + this.getInfo() + " just ate " + foodToEat.getName());
     }
 }

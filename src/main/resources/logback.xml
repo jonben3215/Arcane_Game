@@ -44,19 +44,19 @@
     # ---------- LOGGING CASES ---------- #
 
     # Default Logging Behavior
-    <root level="error">
+    <root level="ERROR">
         <appender-ref ref="CONSOLE"/>
     </root>
 
     # Logging Base Case for arcane package - info
-    <logger name="csci.ooad.arcane" level="info" additivity="false">
+    <logger name="csci.ooad.arcane" level="debug" additivity="false">
         <appender-ref ref="Same_As_Println"/>
     </logger>
 
-    # Logging Base Case for arcane package - warn
-    <logger name="csci.ooad.arcane" level="warn" additivity="false">
-        <appender-ref ref="Warn_Status"/>
-    </logger>
+<!--    # Logging Base Case for arcane package - warn-->
+<!--    <logger name="csci.ooad.arcane" level="warn" additivity="false">-->
+<!--        <appender-ref ref="Warn_Status"/>-->
+<!--    </logger>-->
 
     # Special Logging Case for Arcane class - info
     <logger name="csci.ooad.arcane.Arcane" level="info" additivity="false">

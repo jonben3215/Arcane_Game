@@ -38,7 +38,7 @@ public class CreatureTest {
     public void test_CreatureRoll() {
         Creature creature1 = new Creature ("Ogre", 10);
 
-        int roll_Number = creature1.Creature_Roll();
+        double roll_Number = creature1.calcDamage();
 
         //Making sure the Generated number is within 1 and 6
         if(roll_Number >= 1 && roll_Number <= 6)

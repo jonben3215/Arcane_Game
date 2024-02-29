@@ -119,6 +119,23 @@ public class Room {
         this.adventurers.sort(Comparator.comparingDouble(Adventurer::getHealth).reversed());
     }
 
+    public void removeAgent(Agent agent) {
+        if (agent instanceof Adventurer) {
+            removeAdventurer((Adventurer) agent);
+        }
+        if (agent instanceof  Creature) {
+            removeCreature((Creature) agent);
+        }
+    }
+    public void addAgent(Agent agent) {
+        if (agent instanceof Adventurer) {
+            addAdventurer((Adventurer) agent);
+        }
+        if (agent instanceof Creature) {
+            addCreature((Creature) agent);
+        }
+    }
+
     public void removeAdventurer(Adventurer adventurer)
     {
         this.adventurers.remove(adventurer);

@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 public class Arcane {
@@ -75,8 +76,7 @@ public class Arcane {
 
         logger.info(gameStateInfo());
 
-
-        while (!gameOver) {
+        while (!checkGameOver()) {
 
             // Prints in a way to make a new line before every gameStateInfo() print.
             // Breaking the line lets the logger lose the color property,
@@ -85,9 +85,6 @@ public class Arcane {
             logger.info("Turn " + this.turnCount + "\n" + gameStateInfo());
 
             takeTurn();
-
-            //logger.info(gameStateInfo());
-            if (checkGameOver()) break;
 
         }
 
@@ -101,8 +98,8 @@ public class Arcane {
             logger.info("Adventurers got the dub!" + "\n");
 
         } else {
-            // this shouln't be reached
-            logger.warn("Error" + "\n");
+            // This probably shouldn't be reached
+            logger.warn("Warning, potential error, neither adventurers nor creatures won." + "\n");
         }
     }
 
@@ -114,16 +111,12 @@ public class Arcane {
 
         // Add adventurers to flee list to act as delayed update of movement
         // (Prevents double updating positions)
-
-        // UHH WE HAVE TO REMOVE THIS I THINK List<Adventurer> toMove = new ArrayList<>();
-
-        for (Adventurer adventurer : this.adventurers) {
-            // maybe somehow prime action
-            // Somehow make the to move stuff
-        }
+        // This has been removed, will do a better solution with observer pattern next homework
 
         // Delayed movement update to avoid double updating conflicts
-        for (Adventurer adventurer : toMove) {
+        // (TODO: Refactor to use observer pattern next homework
+
+        for (Adventurer adventurer : this.adventurers) {
             adventurer.doAction();
         }
 
@@ -141,36 +134,33 @@ public class Arcane {
     // ---------- Getters / Setters ---------- //
 
     public void fight(Adventurer adventurer, Creature creature) {
-        double playerNumber = adventurer.playerRoll();
-        double creatureNumber = creature.Creature_Roll();
 
-        if (playerNumber == creatureNumber) {
-            //System.out.println("Its a tie");
-        } else if (playerNumber < creatureNumber) {
-            //System.out.println("Player lost battle.");
-            double playerHealth = adventurer.getHealth() - (creatureNumber - playerNumber);
-            adventurer.setHealth(playerHealth);
-        } else {
-            //System.out.println("Player Won battle.");
-            double creatureHealth = creature.getHealth() - (playerNumber - creatureNumber);
-            creature.setHealth(creatureHealth);
-        }
-
-        adventurer.takeDamage(0.5);
-        creature.takeDamage(0.5);
-
-        // If creature is dead:
-        if (!creature.isAlive()) {
-            creatures.remove(creature);
-        }
-
-        // If adventurer is dead:
-        if (!adventurer.isAlive()) {
-            adventurers.remove(adventurer);
-        }
     }
 
     public boolean checkGameOver() {
+
+        // Remove all dead adventurers
+        List<Adventurer> adventurersToRemove = new ArrayList<>();
+        for (Adventurer adventurer : adventurers) {
+            if (!adventurer.isAlive()) {
+                adventurersToRemove.add(adventurer);
+            }
+        }
+
+        // Remove all dead adventurers from the list
+        this.adventurers.removeAll(adventurersToRemove);
+
+        // Remove all dead creatures
+        List<Creature> creaturesToRemove = new ArrayList<>();
+        for (Creature creature : creatures) {
+            if (!creature.isAlive()) {
+                creaturesToRemove.add(creature);
+            }
+        }
+
+        // Remove all dead creatures from the list
+        this.creatures.removeAll(creaturesToRemove);
+
         this.gameOver = adventurers.isEmpty() || creatures.isEmpty();
         return this.gameOver;
     }

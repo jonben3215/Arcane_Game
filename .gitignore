@@ -371,6 +371,9 @@ gen
 # I AM ADDDING THIS AND I HOPE IT DOESNT BREAK ANYTHING HAHAHAHAHAHAHAHAHAH
 .gradle/
 
+# Same here, this should be okay i hope!
+*.hprof
+
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
 # since they will be recreated, and may cause churn.  Uncomment if using

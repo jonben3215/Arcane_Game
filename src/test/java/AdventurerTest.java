@@ -138,7 +138,7 @@ public class AdventurerTest {
     public void test_PlayerRoll() {
         Adventurer player1 = new Adventurer("Ben", 10);
 
-        int roll_Number = player1.playerRoll();
+        double roll_Number = player1.calcDamage();
 
         //Making sure the Generated number is within 1 and 6
         if(roll_Number >= 1 && roll_Number <= 6)

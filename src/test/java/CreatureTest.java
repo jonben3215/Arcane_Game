@@ -31,7 +31,7 @@ public class CreatureTest {
         Creature creature1 = new Creature (Name, health);
         //assertTrue(player1.isAlive());
 
-        assertFalse(creature1.isAlive());
+        assertTrue(creature1.isAlive());
     }
 
     @Test

@@ -14,8 +14,9 @@ Our comments are in classes arcane, enum direction, superclass agent
 
 We have our required tests below, check them out
 
-HW 4 coverage:
+HW 4 coverage + UML Diagram:
 <img width="473" alt="Screenshot 2024-02-28 at 11 46 25 PM" src="https://github.com/CSCI-4448-5448-OOAD-Spring2024/homework-2-arcane-setup-jonben3215/assets/63603790/897df2a8-d514-4fb2-9bee-4d776c817b44">
+<img width="450" alt="Screenshot 2024-02-28 at 11 09 28 PM" src="https://github.com/CSCI-4448-5448-OOAD-Spring2024/homework-2-arcane-setup-jonben3215/assets/63603790/f3ef9fd5-576d-4dec-a149-5e67545b6c05">
 
 
 

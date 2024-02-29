@@ -39,7 +39,7 @@ public class Arcane {
     // Below is a great example of dependency injection! Look at how the constructor accepts several dependencies!
     public Arcane (Maze maze, List<Adventurer> initialAdventurers, List<Creature> initialCreatures, List<Food> initialFoods) {
 
-        logger.info("csci.ooad.arcane.Arcane()" + "\n");
+        logger.info("Starting Arcane:" + "\n");
 
         this.maze = maze;
         this.initialAdventurers = initialAdventurers;
@@ -74,17 +74,16 @@ public class Arcane {
 
         logger.info("Starting Play..." + "\n");
 
-        logger.info(gameStateInfo());
-
         while (!checkGameOver()) {
 
             // Prints in a way to make a new line before every gameStateInfo() print.
             // Breaking the line lets the logger lose the color property,
             // allowing for all maze info to log white, like the homework guidelines.
-            logger.info("ARCANE MAZE: ");
-            logger.info("Turn " + this.turnCount + "\n" + gameStateInfo());
+            logger.info("ARCANE MAZE - Turn " + this.turnCount + ":\n" + gameStateInfo());
 
             takeTurn();
+
+            logger.info("\n");
 
         }
 

@@ -369,8 +369,9 @@ gen
 .idea/**/libraries
 
 # I AM ADDDING THIS AND I HOPE IT DOESNT BREAK ANYTHING HAHAHAHAHAHAHAHAHAH
-.gradle/
-.gradle/**
+.gradle
+/build/
+
 
 # Same here, this should be okay i hope!
 *.hprof

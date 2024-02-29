@@ -1,3 +1,4 @@
+import csci.ooad.arcane.*;
 import org.junit.jupiter.api.Test;
 
 
@@ -10,13 +11,13 @@ public class ArcaneTest {
     @Test
     public void TestArcaneCreation() {
 
-        // Create Adventurer List
+        // Create csci.ooad.arcane.Adventurer List
         List<Adventurer> adventurers = new ArrayList<>();
 
         adventurers.add(new Adventurer("Ben_Dover"));
         adventurers.add(new Adventurer("DanTheCreator"));
 
-        // Create Creature List
+        // Create csci.ooad.arcane.Creature List
         List<Creature> creatures = new ArrayList<>();
         creatures.add(new Creature("Kailey"));
         creatures.add(new Creature("Jeffery E."));
@@ -24,7 +25,7 @@ public class ArcaneTest {
         creatures.add(new Creature("BHB"));
         creatures.add(new Creature("Iggy"));
 
-        // Create Food List
+        // Create csci.ooad.arcane.Food List
         List<Food> foods = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             foods.add(new Food()); // Choose random name
@@ -34,9 +35,10 @@ public class ArcaneTest {
         Maze maze = new Maze(3,roomNames3x3);
         Arcane arcane = new Arcane(maze, adventurers, creatures, foods);
 
+        // Play the game
         arcane.play();
 
-        // eventually have Arcane arcane = Arcane.createGame();
+        // eventually have csci.ooad.arcane.Arcane arcane = csci.ooad.arcane.Arcane.createGame();
     }
 
 
@@ -44,7 +46,7 @@ public class ArcaneTest {
     @Test
     public void test_Fight()
     {
-        //Arcane arcane = new Arcane();
+        //csci.ooad.arcane.Arcane arcane = new csci.ooad.arcane.Arcane();
         Creature creature = new Creature("wolf", 10);
         Adventurer player = new Adventurer("Ben", 10);
 

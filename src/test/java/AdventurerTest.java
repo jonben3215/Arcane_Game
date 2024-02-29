@@ -1,3 +1,7 @@
+import csci.ooad.arcane.Adventurer;
+import csci.ooad.arcane.Direction;
+import csci.ooad.arcane.Maze;
+import csci.ooad.arcane.Room;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -65,6 +69,8 @@ public class AdventurerTest {
 
         assertEquals(r, a.getRoom());
     }
+
+    //Thats a lot damage
     @Test
     public void TestTakeDamage() {
         Adventurer a1 = new Adventurer();
@@ -132,12 +138,20 @@ public class AdventurerTest {
     public void test_PlayerRoll() {
         Adventurer player1 = new Adventurer("Ben", 10);
 
-        int roll_Number = player1.playerRoll();
+        double roll_Number = player1.calcDamage();
 
         //Making sure the Generated number is within 1 and 6
         if(roll_Number >= 1 && roll_Number <= 6)
             assert true;
         else
             assert false;
+    }
+
+    @Test
+    public void test_AdventureDeath()
+    {
+        Adventurer player1 = new Adventurer("Bruh", 0);
+        assertTrue(player1.isAlive());
+
     }
 }

@@ -1,3 +1,5 @@
+package csci.ooad.arcane;
+
 import java.util.Random;
 
 public class Food {
@@ -30,7 +32,7 @@ public class Food {
 
     }
 
-    public Food (String name, int healAmount) {
+    public Food (String name, double healAmount) {
         this.name = name;
         this.healAmount = healAmount;
     }
@@ -51,4 +53,7 @@ public class Food {
         this.healAmount = healAmount;
     }
 
+    public String getInfo() {
+        return getName();
+    }
 }

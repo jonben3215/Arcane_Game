@@ -1,3 +1,5 @@
+package csci.ooad.arcane;
+
 import java.util.*;
 
 public class Room {
@@ -51,17 +53,12 @@ public class Room {
 
     // ---------- Helpers ---------- //
 
-    public Adventurer getHealthiestAdventurer()
-    {
+    public Adventurer getHealthiestAdventurer() {
       if(this.adventurers.isEmpty()) return null;
-
       return adventurers.get(0);
-
     }
-    public Creature getHealthiestCreature()
-    {
+    public Creature getHealthiestCreature() {
         if(this.creatures.isEmpty()) return null;
-
         return creatures.get(0);
     }
 
@@ -69,7 +66,6 @@ public class Room {
     {
         return !(this.creatures.isEmpty());
     }
-
 
 
     // TODO make this function get a random description from the description file
@@ -101,7 +97,6 @@ public class Room {
         return this.neighbors.get(direction);
     }
 
-
     public String getName() {
         return this.name;
     }
@@ -122,6 +117,23 @@ public class Room {
     public void addAdventurer(Adventurer a) {
         this.adventurers.add(a);
         this.adventurers.sort(Comparator.comparingDouble(Adventurer::getHealth).reversed());
+    }
+
+    public void removeAgent(Agent agent) {
+        if (agent instanceof Adventurer) {
+            removeAdventurer((Adventurer) agent);
+        }
+        if (agent instanceof  Creature) {
+            removeCreature((Creature) agent);
+        }
+    }
+    public void addAgent(Agent agent) {
+        if (agent instanceof Adventurer) {
+            addAdventurer((Adventurer) agent);
+        }
+        if (agent instanceof Creature) {
+            addCreature((Creature) agent);
+        }
     }
 
     public void removeAdventurer(Adventurer adventurer)
@@ -174,12 +186,11 @@ public class Room {
     /**
      * Get descriptionTextFile
      * WARNING: Will return 'null' if fileName is undefined
-     * (fileName is undefined by default, assign it with Room.setDescriptionTextFile)
+     * (fileName is undefined by default, assign it with csci.ooad.arcane.Room.setDescriptionTextFile)
      */
     public static String getDescriptionFileName() {
         return DESCRIPTION_FILE_NAME;
     }
-
 
     /**
      * Updates filePath for descriptionTextFile.
@@ -198,43 +209,38 @@ public class Room {
         DESCRIPTION_FILE_NAME = filePath;
     }
 
-
     public String getInfo() {
+        return getInfo("");
+    }
 
-        StringBuilder sb = new StringBuilder("\t" + this.name + ":");
+    public String getInfo(String indent) {
 
-        sb.append("\n\t\tAdventurers: ");
+        StringBuilder sb = new StringBuilder();
 
+        sb.append(indent).append(this.name).append(":\n");
+
+        sb.append(indent).append(indent).append("Adventurers: ");
         for (int i = 0; i < this.adventurers.size(); i++) {
             Adventurer a = this.adventurers.get(i);
-            sb.append(a.getInfo());
-            if (i < this.adventurers.size() - 1) {
-                sb.append(", ");
-            }
+            sb.append(a.getInfo()).append((i<this.adventurers.size()-1) ? ", " : "");
         }
+        sb.append("\n");
 
-        sb.append("\n\t\tCreatures: ");
-
+        sb.append(indent).append(indent).append("Creatures: ");
         for (int i = 0; i < this.creatures.size(); i++) {
             Creature c = this.creatures.get(i);
-            sb.append(c.getInfo());
-            if (i < this.creatures.size() - 1) {
-                sb.append(", ");
-            }
+            sb.append(c.getInfo()).append((i<this.creatures.size()-1) ? ", " : "");
         }
+        sb.append("\n");
 
-        sb.append("\n\t\tFood: ");
-
+        sb.append(indent).append(indent).append("Foods: ");
         for (int i = 0; i < this.foods.size(); i++) {
             Food f = this.foods.get(i);
-            sb.append(f.getName());
-            if (i < this.foods.size() - 1) {
-                sb.append(", ");
-            }
+            sb.append(f.getInfo()).append((i<this.foods.size()-1) ? ", " : "");
         }
+        sb.append("\n");
 
         return sb.toString();
     }
-
 }
 

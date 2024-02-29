@@ -1,0 +1,10 @@
+How to update your branch:
+
+* git checkout <branch you want to updated like main>
+* git pull
+* git checkout <your branch you want to update>
+* git merge <branch from the checkout>
+
+How to update homework_4:
+* first update your branch
+* git push origin branch1:branch2

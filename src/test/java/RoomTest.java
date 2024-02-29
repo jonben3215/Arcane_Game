@@ -1,3 +1,4 @@
+import csci.ooad.arcane.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -57,15 +58,15 @@ public class RoomTest
         assertEquals(r.getName(), new_name);
 
         // Primitive Tests (legacy)
-        String room1ExpectedName = "Starting Room";
-        String room2ExpectedName = "Second Room";
-        String room3ExpectedName = "Third Room";
-        String room4ExpectedName = "Last Room";
+        String room1ExpectedName = "Starting csci.ooad.arcane.Room";
+        String room2ExpectedName = "Second csci.ooad.arcane.Room";
+        String room3ExpectedName = "Third csci.ooad.arcane.Room";
+        String room4ExpectedName = "Last csci.ooad.arcane.Room";
 
-        Room room1 = new Room("Starting Room");
-        Room room2 = new Room("Second Room");
-        Room room3 = new Room("Third Room");
-        Room room4 = new Room("Last Room");
+        Room room1 = new Room("Starting csci.ooad.arcane.Room");
+        Room room2 = new Room("Second csci.ooad.arcane.Room");
+        Room room3 = new Room("Third csci.ooad.arcane.Room");
+        Room room4 = new Room("Last csci.ooad.arcane.Room");
 
         assertEquals(room1ExpectedName, room1.getName());
         assertEquals(room2ExpectedName, room2.getName());
@@ -223,7 +224,7 @@ public class RoomTest
     public void TestGetInfo () {
         //String expected = default_room.getName() + ":\n\tAdventurers:\n\tCreatures:\n\tFood:";
         //assertEquals(default_room.getInfo(), expected);
-        //default_room.addFood(new Food());
+        //default_room.addFood(new csci.ooad.arcane.Food());
         System.out.println(default_room.getInfo());
     }
 
@@ -261,12 +262,12 @@ public class RoomTest
         assertEquals(file_name_2, Room.getDescriptionFileName());
 
 //        // Test file_name_3 - Bad File
-//        Room.setDescriptionFileName(file_name_3);
-//        assertNotEquals(file_name_3, Room.getDescriptionFileName());
+//        csci.ooad.arcane.Room.setDescriptionFileName(file_name_3);
+//        assertNotEquals(file_name_3, csci.ooad.arcane.Room.getDescriptionFileName());
 //
 //        // Test file_name_4 - Bad File
-//        Room.setDescriptionFileName(file_name_4);
-//        assertNotEquals(file_name_4, Room.getDescriptionFileName());
+//        csci.ooad.arcane.Room.setDescriptionFileName(file_name_4);
+//        assertNotEquals(file_name_4, csci.ooad.arcane.Room.getDescriptionFileName());
 
         // TODO LowPrio Add file proofing so only valid txt files in the correct format can be used for the description file
     }

@@ -1,0 +1,2610 @@
+Starting Arcane:
+Resetting Game ...
+Starting Play...
+ARCANE MAZE - Turn 0:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers: DanTheCreator(hp: 5.0)
+		Creatures: Shrek(hp: 3.0), Iggy(hp: 3.0)
+		Foods:
+	South:
+		Adventurers: Ben_Dover(hp: 5.0)
+		Creatures:
+		Foods: Poo-Sandwich
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack, Cookie, Cookie
+
+ARCANE MAZE - Turn 1:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers: DanTheCreator(hp: 5.0)
+		Creatures: Iggy(hp: 3.0)
+		Foods:
+	South:
+		Adventurers: Ben_Dover(hp: 6.0)
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack, Cookie, Cookie
+
+ARCANE MAZE - Turn 2:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers: Ben_Dover(hp: 6.0)
+		Creatures: Iggy(hp: 3.0)
+		Foods:
+	South:
+		Adventurers: DanTheCreator(hp: 5.0)
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack, Cookie, Cookie
+
+ARCANE MAZE - Turn 3:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers: DanTheCreator(hp: 5.0)
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers: Ben_Dover(hp: 5.5)
+		Creatures: Iggy(hp: 2.5)
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack, Cookie, Cookie
+
+ARCANE MAZE - Turn 4:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers: Ben_Dover(hp: 0.5)
+		Creatures: Iggy(hp: 2.5)
+		Foods:
+	South:
+		Adventurers: DanTheCreator(hp: 5.0)
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack, Cookie, Cookie
+
+ARCANE MAZE - Turn 5:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers:
+		Creatures: Iggy(hp: 2.5)
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers: DanTheCreator(hp: 5.0)
+		Creatures:
+		Foods: ScoobySnack, Cookie, Cookie
+
+ARCANE MAZE - Turn 6:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers:
+		Creatures: Iggy(hp: 2.5)
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers: DanTheCreator(hp: 6.0)
+		Creatures:
+		Foods: Cookie, Cookie
+
+ARCANE MAZE - Turn 7:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers:
+		Creatures: Iggy(hp: 2.5)
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers: DanTheCreator(hp: 7.0)
+		Creatures:
+		Foods: Cookie
+
+ARCANE MAZE - Turn 8:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers:
+		Creatures: Iggy(hp: 2.5)
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers: DanTheCreator(hp: 8.0)
+		Creatures:
+		Foods:
+
+ARCANE MAZE - Turn 9:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers:
+		Creatures: Iggy(hp: 2.5)
+		Foods:
+	South:
+		Adventurers: DanTheCreator(hp: 8.0)
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+
+ARCANE MAZE - Turn 10:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers: DanTheCreator(hp: 8.0)
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers:
+		Creatures: Iggy(hp: 2.5)
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+
+ARCANE MAZE - Turn 11:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers: DanTheCreator(hp: 8.0)
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers:
+		Creatures: Iggy(hp: 2.5)
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+
+ARCANE MAZE - Turn 12:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack, Cookie
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers: DanTheCreator(hp: 3.0)
+		Creatures: Kailey(hp: 3.0), BHB(hp: 3.0)
+		Foods: Taco, Taco
+	Southwest:
+		Adventurers:
+		Creatures: Iggy(hp: 2.5)
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+
+Creatures number 1 victory royale!!!!
+
+
+
+
+23:58:27,236 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.14
+23:58:27,237 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - No custom configurators were discovered as a service.
+23:58:27,238 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+23:58:27,239 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+23:58:27,242 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+23:58:27,242 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+23:58:27,250 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 3 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+23:58:27,250 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+23:58:27,251 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+23:58:27,251 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+23:58:27,255 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/djhat/OneDrive/Desktop/homework-2-arcane-setup-jonben3215/build/resources/main/logback.xml]
+23:58:27,384 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+23:58:27,384 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:27,393 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:27,429 |-WARN in ch.qos.logback.core.model.processor.AppenderModelHandler - Appender named [Same_As_Println] not referenced. Skipping further processing.
+23:58:27,429 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Trace_Appender]
+23:58:27,429 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:27,432 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:27,433 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Debug_Appender]
+23:58:27,433 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:27,433 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:27,434 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Info_Appender]
+23:58:27,434 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:27,434 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:27,435 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Warn_Appender]
+23:58:27,435 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:27,435 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:27,436 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Game_Status]
+23:58:27,436 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:27,436 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:27,437 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [File_Output]
+23:58:27,437 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
+23:58:27,440 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:27,441 |-INFO in ch.qos.logback.core.FileAppender[File_Output] - File property is set to [arcane.log]
+23:58:27,442 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to ERROR
+23:58:27,445 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+23:58:27,446 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [csci.ooad.arcane] to TRACE
+23:58:27,450 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [csci.ooad.arcane] to false
+23:58:27,450 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Trace_Appender] to Logger[csci.ooad.arcane]
+23:58:27,450 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Debug_Appender] to Logger[csci.ooad.arcane]
+23:58:27,450 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Info_Appender] to Logger[csci.ooad.arcane]
+23:58:27,450 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Warn_Appender] to Logger[csci.ooad.arcane]
+23:58:27,450 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [csci.ooad.arcane.Arcane] to INFO
+23:58:27,450 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [csci.ooad.arcane.Arcane] to false
+23:58:27,450 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Game_Status] to Logger[csci.ooad.arcane.Arcane]
+23:58:27,450 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Warn_Appender] to Logger[csci.ooad.arcane.Arcane]
+23:58:27,450 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [File_Output] to Logger[csci.ooad.arcane.Arcane]
+23:58:27,450 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@10c8f62 - End of configuration.
+23:58:27,451 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@674c583e - Registering current configuration as safe fallback point
+23:58:27,451 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 200 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+Starting Arcane:
+Resetting Game ...
+Starting Play...
+ARCANE MAZE - Turn 0:
+	Northwest:
+		Adventurers: Ben_Dover(hp: 5.0)
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack
+	Center:
+		Adventurers:
+		Creatures: BHB(hp: 3.0)
+		Foods: Orange, Orange
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers: DanTheCreator(hp: 5.0)
+		Creatures: Shrek(hp: 3.0)
+		Foods: Annie's (TM) mac & cheese, Taco
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer Ben_Dover(hp: 5.0) just fought Iggy(hp: 3.0)
+DEBUG: Ben_Dover(hp: 5.0) calculated damage: 4.0
+DEBUG: Iggy(hp: 3.0) calculated damage: 5.0
+DEBUG: Adventurer Ben_Dover lost the fight against Iggy
+Adventurer: Ben_Dover died.
+Adventurer DanTheCreator(hp: 5.0) just fought Shrek(hp: 3.0)
+DEBUG: DanTheCreator(hp: 5.0) calculated damage: 6.0
+DEBUG: Shrek(hp: 3.0) calculated damage: 1.0
+DEBUG: Adventurer DanTheCreator won the fight against Shrek
+Creature: Shrek died.
+
+ARCANE MAZE - Turn 1:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack
+	Center:
+		Adventurers:
+		Creatures: BHB(hp: 3.0)
+		Foods: Orange, Orange
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers: DanTheCreator(hp: 5.0)
+		Creatures:
+		Foods: Annie's (TM) mac & cheese, Taco
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 6.0) just ate Annie's (TM) mac & cheese
+
+ARCANE MAZE - Turn 2:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack
+	Center:
+		Adventurers:
+		Creatures: BHB(hp: 3.0)
+		Foods: Orange, Orange
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers: DanTheCreator(hp: 6.0)
+		Creatures:
+		Foods: Taco
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 7.0) just ate Taco
+
+ARCANE MAZE - Turn 3:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack
+	Center:
+		Adventurers:
+		Creatures: BHB(hp: 3.0)
+		Foods: Orange, Orange
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers: DanTheCreator(hp: 7.0)
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 7.0) moved from Southwest to West
+
+ARCANE MAZE - Turn 4:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers: DanTheCreator(hp: 7.0)
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: ScoobySnack
+	Center:
+		Adventurers:
+		Creatures: BHB(hp: 3.0)
+		Foods: Orange, Orange
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 7.0) just fought Jeffery E.(hp: 3.0)
+DEBUG: DanTheCreator(hp: 7.0) calculated damage: 6.0
+DEBUG: Jeffery E.(hp: 3.0) calculated damage: 5.0
+DEBUG: Adventurer DanTheCreator won the fight against Jeffery E.
+Creature: Jeffery E. died.
+
+ARCANE MAZE - Turn 5:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers: DanTheCreator(hp: 7.0)
+		Creatures:
+		Foods: ScoobySnack
+	Center:
+		Adventurers:
+		Creatures: BHB(hp: 3.0)
+		Foods: Orange, Orange
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 8.0) just ate ScoobySnack
+
+ARCANE MAZE - Turn 6:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers: DanTheCreator(hp: 8.0)
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures: BHB(hp: 3.0)
+		Foods: Orange, Orange
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 8.0) moved from West to Center
+
+ARCANE MAZE - Turn 7:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers: DanTheCreator(hp: 8.0)
+		Creatures: BHB(hp: 3.0)
+		Foods: Orange, Orange
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 8.0) just fought BHB(hp: 3.0)
+DEBUG: DanTheCreator(hp: 8.0) calculated damage: 6.0
+DEBUG: BHB(hp: 3.0) calculated damage: 3.0
+DEBUG: Adventurer DanTheCreator won the fight against BHB
+Creature: BHB died.
+
+ARCANE MAZE - Turn 8:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers: DanTheCreator(hp: 8.0)
+		Creatures:
+		Foods: Orange, Orange
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 9.0) just ate Orange
+
+ARCANE MAZE - Turn 9:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers: DanTheCreator(hp: 9.0)
+		Creatures:
+		Foods: Orange
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 10.0) just ate Orange
+
+ARCANE MAZE - Turn 10:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers: DanTheCreator(hp: 10.0)
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 10.0) moved from Center to East
+
+ARCANE MAZE - Turn 11:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers: DanTheCreator(hp: 10.0)
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 10.0) moved from East to Southeast
+
+ARCANE MAZE - Turn 12:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers: DanTheCreator(hp: 10.0)
+		Creatures:
+		Foods: Apple
+Adventurer DanTheCreator(hp: 11.0) just ate Apple
+
+ARCANE MAZE - Turn 13:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers: DanTheCreator(hp: 11.0)
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 11.0) moved from Southeast to East
+
+ARCANE MAZE - Turn 14:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers: DanTheCreator(hp: 11.0)
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 11.0) moved from East to Southeast
+
+ARCANE MAZE - Turn 15:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers: DanTheCreator(hp: 11.0)
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 11.0) moved from Southeast to East
+
+ARCANE MAZE - Turn 16:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers: DanTheCreator(hp: 11.0)
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 11.0) moved from East to Southeast
+
+ARCANE MAZE - Turn 17:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers: DanTheCreator(hp: 11.0)
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 11.0) moved from Southeast to South
+
+ARCANE MAZE - Turn 18:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers: DanTheCreator(hp: 11.0)
+		Creatures:
+		Foods: Cookie
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) just ate Cookie
+
+ARCANE MAZE - Turn 19:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from South to Southeast
+
+ARCANE MAZE - Turn 20:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from Southeast to East
+
+ARCANE MAZE - Turn 21:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from East to Southeast
+
+ARCANE MAZE - Turn 22:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from Southeast to South
+
+ARCANE MAZE - Turn 23:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from South to Center
+
+ARCANE MAZE - Turn 24:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from Center to North
+
+ARCANE MAZE - Turn 25:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures: Kailey(hp: 3.0)
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) just fought Kailey(hp: 3.0)
+DEBUG: DanTheCreator(hp: 12.0) calculated damage: 5.0
+DEBUG: Kailey(hp: 3.0) calculated damage: 4.0
+DEBUG: Adventurer DanTheCreator won the fight against Kailey
+Creature: Kailey died.
+
+ARCANE MAZE - Turn 26:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from North to Center
+
+ARCANE MAZE - Turn 27:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from Center to North
+
+ARCANE MAZE - Turn 28:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from North to Center
+
+ARCANE MAZE - Turn 29:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from Center to South
+
+ARCANE MAZE - Turn 30:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from South to Southeast
+
+ARCANE MAZE - Turn 31:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from Southeast to South
+
+ARCANE MAZE - Turn 32:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from South to Southeast
+
+ARCANE MAZE - Turn 33:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from Southeast to East
+
+ARCANE MAZE - Turn 34:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 12.0) moved from East to Northeast
+
+ARCANE MAZE - Turn 35:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers: DanTheCreator(hp: 12.0)
+		Creatures:
+		Foods: Apple
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 13.0) just ate Apple
+
+ARCANE MAZE - Turn 36:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers: DanTheCreator(hp: 13.0)
+		Creatures:
+		Foods:
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 13.0) moved from Northeast to East
+
+ARCANE MAZE - Turn 37:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods:
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers: DanTheCreator(hp: 13.0)
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 13.0) moved from East to Center
+
+ARCANE MAZE - Turn 38:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods:
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers: DanTheCreator(hp: 13.0)
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 13.0) moved from Center to North
+
+ARCANE MAZE - Turn 39:
+	Northwest:
+		Adventurers:
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers: DanTheCreator(hp: 13.0)
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods:
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 13.0) moved from North to Northwest
+
+ARCANE MAZE - Turn 40:
+	Northwest:
+		Adventurers: DanTheCreator(hp: 13.0)
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods:
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 13.0) just fought Iggy(hp: 3.0)
+DEBUG: DanTheCreator(hp: 13.0) calculated damage: 1.0
+DEBUG: Iggy(hp: 3.0) calculated damage: 5.0
+DEBUG: Adventurer DanTheCreator lost the fight against Iggy
+
+ARCANE MAZE - Turn 41:
+	Northwest:
+		Adventurers: DanTheCreator(hp: 8.0)
+		Creatures: Iggy(hp: 3.0)
+		Foods: Cookie, Poo-Sandwich
+	North:
+		Adventurers:
+		Creatures:
+		Foods:
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods:
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures:
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures:
+		Foods:
+Adventurer DanTheCreator(hp: 8.0) just fought Iggy(hp: 3.0)
+DEBUG: DanTheCreator(hp: 8.0) calculated damage: 6.0
+DEBUG: Iggy(hp: 3.0) calculated damage: 2.0
+DEBUG: Adventurer DanTheCreator won the fight against Iggy
+Creature: Iggy died.
+
+Adventurers got the dub!
+
+
+
+
+23:58:44,958 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.14
+23:58:44,959 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - No custom configurators were discovered as a service.
+23:58:44,960 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+23:58:44,960 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+23:58:44,963 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+23:58:44,964 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+23:58:44,975 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 4 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+23:58:44,975 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+23:58:44,976 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+23:58:44,976 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+23:58:44,981 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/djhat/OneDrive/Desktop/homework-2-arcane-setup-jonben3215/build/resources/main/logback.xml]
+23:58:45,097 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+23:58:45,097 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:45,105 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:45,143 |-WARN in ch.qos.logback.core.model.processor.AppenderModelHandler - Appender named [Same_As_Println] not referenced. Skipping further processing.
+23:58:45,143 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Trace_Appender]
+23:58:45,143 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:45,145 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:45,145 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Debug_Appender]
+23:58:45,145 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:45,146 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:45,146 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Info_Appender]
+23:58:45,146 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:45,146 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:45,146 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Warn_Appender]
+23:58:45,146 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:45,147 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:45,147 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Game_Status]
+23:58:45,147 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:58:45,147 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:45,148 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [File_Output]
+23:58:45,148 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
+23:58:45,152 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:58:45,152 |-INFO in ch.qos.logback.core.FileAppender[File_Output] - File property is set to [arcane.log]
+23:58:45,153 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to ERROR
+23:58:45,157 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+23:58:45,159 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [csci.ooad.arcane] to TRACE
+23:58:45,162 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [csci.ooad.arcane] to false
+23:58:45,162 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Trace_Appender] to Logger[csci.ooad.arcane]
+23:58:45,162 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Debug_Appender] to Logger[csci.ooad.arcane]
+23:58:45,162 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Info_Appender] to Logger[csci.ooad.arcane]
+23:58:45,162 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Warn_Appender] to Logger[csci.ooad.arcane]
+23:58:45,162 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [csci.ooad.arcane.Arcane] to INFO
+23:58:45,162 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting additivity of logger [csci.ooad.arcane.Arcane] to false
+23:58:45,162 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Game_Status] to Logger[csci.ooad.arcane.Arcane]
+23:58:45,162 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Warn_Appender] to Logger[csci.ooad.arcane.Arcane]
+23:58:45,162 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [File_Output] to Logger[csci.ooad.arcane.Arcane]
+23:58:45,163 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@10c8f62 - End of configuration.
+23:58:45,164 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@674c583e - Registering current configuration as safe fallback point
+23:58:45,164 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5c48c0c0 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 188 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+Starting Arcane:
+Resetting Game ...
+Starting Play...
+ARCANE MAZE - Turn 0:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	North:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: Annie's (TM) mac & cheese, ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Poo-Sandwich, Annie's (TM) mac & cheese
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods: Annie's (TM) mac & cheese, Taco, Annie's (TM) mac & cheese
+	Southwest:
+		Adventurers: Ben_Dover(hp: 5.0)
+		Creatures: BHB(hp: 3.0)
+		Foods: Apple, ScoobySnack
+	South:
+		Adventurers:
+		Creatures: Shrek(hp: 3.0)
+		Foods:
+	Southeast:
+		Adventurers: DanTheCreator(hp: 5.0)
+		Creatures: Kailey(hp: 3.0), Iggy(hp: 3.0)
+		Foods:
+Adventurer Ben_Dover(hp: 5.0) just fought BHB(hp: 3.0)
+DEBUG: Ben_Dover(hp: 5.0) calculated damage: 2.0
+DEBUG: BHB(hp: 3.0) calculated damage: 4.0
+DEBUG: Adventurer Ben_Dover lost the fight against BHB
+Adventurer DanTheCreator(hp: 5.0) just fought Kailey(hp: 3.0)
+DEBUG: DanTheCreator(hp: 5.0) calculated damage: 4.0
+DEBUG: Kailey(hp: 3.0) calculated damage: 6.0
+DEBUG: Adventurer DanTheCreator lost the fight against Kailey
+Adventurer: DanTheCreator died.
+
+ARCANE MAZE - Turn 1:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	North:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: Annie's (TM) mac & cheese, ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Poo-Sandwich, Annie's (TM) mac & cheese
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods: Annie's (TM) mac & cheese, Taco, Annie's (TM) mac & cheese
+	Southwest:
+		Adventurers: Ben_Dover(hp: 1.0)
+		Creatures: BHB(hp: 3.0)
+		Foods: Apple, ScoobySnack
+	South:
+		Adventurers:
+		Creatures: Shrek(hp: 3.0)
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), Iggy(hp: 3.0)
+		Foods:
+Adventurer Ben_Dover(hp: 1.0) just fought BHB(hp: 3.0)
+DEBUG: Ben_Dover(hp: 1.0) calculated damage: 6.0
+DEBUG: BHB(hp: 3.0) calculated damage: 4.0
+DEBUG: Adventurer Ben_Dover won the fight against BHB
+Creature: BHB died.
+
+ARCANE MAZE - Turn 2:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	North:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: Annie's (TM) mac & cheese, ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Poo-Sandwich, Annie's (TM) mac & cheese
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods: Annie's (TM) mac & cheese, Taco, Annie's (TM) mac & cheese
+	Southwest:
+		Adventurers: Ben_Dover(hp: 1.0)
+		Creatures:
+		Foods: Apple, ScoobySnack
+	South:
+		Adventurers:
+		Creatures: Shrek(hp: 3.0)
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), Iggy(hp: 3.0)
+		Foods:
+Adventurer Ben_Dover(hp: 2.0) just ate Apple
+
+ARCANE MAZE - Turn 3:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	North:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: Annie's (TM) mac & cheese, ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Poo-Sandwich, Annie's (TM) mac & cheese
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods: Annie's (TM) mac & cheese, Taco, Annie's (TM) mac & cheese
+	Southwest:
+		Adventurers: Ben_Dover(hp: 2.0)
+		Creatures:
+		Foods: ScoobySnack
+	South:
+		Adventurers:
+		Creatures: Shrek(hp: 3.0)
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), Iggy(hp: 3.0)
+		Foods:
+Adventurer Ben_Dover(hp: 3.0) just ate ScoobySnack
+
+ARCANE MAZE - Turn 4:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	North:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: Annie's (TM) mac & cheese, ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Poo-Sandwich, Annie's (TM) mac & cheese
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods: Annie's (TM) mac & cheese, Taco, Annie's (TM) mac & cheese
+	Southwest:
+		Adventurers: Ben_Dover(hp: 3.0)
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures: Shrek(hp: 3.0)
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), Iggy(hp: 3.0)
+		Foods:
+Adventurer Ben_Dover(hp: 3.0) moved from Southwest to West
+
+ARCANE MAZE - Turn 5:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	North:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: Annie's (TM) mac & cheese, ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Poo-Sandwich, Annie's (TM) mac & cheese
+	West:
+		Adventurers: Ben_Dover(hp: 3.0)
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods: Annie's (TM) mac & cheese, Taco, Annie's (TM) mac & cheese
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures: Shrek(hp: 3.0)
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), Iggy(hp: 3.0)
+		Foods:
+Adventurer Ben_Dover(hp: 3.0) moved from West to Southwest
+
+ARCANE MAZE - Turn 6:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	North:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: Annie's (TM) mac & cheese, ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Poo-Sandwich, Annie's (TM) mac & cheese
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods: Annie's (TM) mac & cheese, Taco, Annie's (TM) mac & cheese
+	Southwest:
+		Adventurers: Ben_Dover(hp: 3.0)
+		Creatures:
+		Foods:
+	South:
+		Adventurers:
+		Creatures: Shrek(hp: 3.0)
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), Iggy(hp: 3.0)
+		Foods:
+Adventurer Ben_Dover(hp: 3.0) moved from Southwest to South
+
+ARCANE MAZE - Turn 7:
+	Northwest:
+		Adventurers:
+		Creatures:
+		Foods: ScoobySnack
+	North:
+		Adventurers:
+		Creatures: Jeffery E.(hp: 3.0)
+		Foods: Annie's (TM) mac & cheese, ScoobySnack
+	Northeast:
+		Adventurers:
+		Creatures:
+		Foods: Poo-Sandwich, Annie's (TM) mac & cheese
+	West:
+		Adventurers:
+		Creatures:
+		Foods:
+	Center:
+		Adventurers:
+		Creatures:
+		Foods:
+	East:
+		Adventurers:
+		Creatures:
+		Foods: Annie's (TM) mac & cheese, Taco, Annie's (TM) mac & cheese
+	Southwest:
+		Adventurers:
+		Creatures:
+		Foods:
+	South:
+		Adventurers: Ben_Dover(hp: 3.0)
+		Creatures: Shrek(hp: 3.0)
+		Foods:
+	Southeast:
+		Adventurers:
+		Creatures: Kailey(hp: 3.0), Iggy(hp: 3.0)
+		Foods:
+Adventurer Ben_Dover(hp: 3.0) just fought Shrek(hp: 3.0)
+DEBUG: Ben_Dover(hp: 3.0) calculated damage: 3.0
+DEBUG: Shrek(hp: 3.0) calculated damage: 6.0
+DEBUG: Adventurer Ben_Dover lost the fight against Shrek
+Adventurer: Ben_Dover died.
+
+Creatures number 1 victory royale!!!!

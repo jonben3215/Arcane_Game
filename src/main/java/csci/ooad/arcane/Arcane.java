@@ -1,13 +1,17 @@
+package csci.ooad.arcane;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 public class Arcane {
 
-    private static final Logger logger = LoggerFactory.getLogger(Arcane.class);
+    public static final Logger logger = LoggerFactory.getLogger(Arcane.class);
+   //  private static final Marker GAME_STATUS = MarkerFactory.getMarker("Game_Status");
 
     // ---------- Member Variables ---------- //
     private Maze maze;
@@ -25,7 +29,7 @@ public class Arcane {
 
     // maze(), creatures, adventurers, foods
 
-    // Maze:
+    // csci.ooad.arcane.Maze:
     // Initial Creatures
     // Initial Adventurers
     // Initial Foods
@@ -35,19 +39,22 @@ public class Arcane {
     // Below is a great example of dependency injection! Look at how the constructor accepts several dependencies!
     public Arcane (Maze maze, List<Adventurer> initialAdventurers, List<Creature> initialCreatures, List<Food> initialFoods) {
 
-        this.maze = maze;
+        logger.info("Starting Arcane:" + "\n");
 
+        this.maze = maze;
         this.initialAdventurers = initialAdventurers;
         this.initialCreatures = initialCreatures;
         this.initialFoods = initialFoods;
 
         resetGame();
-
     }
 
     // Checkout how this reset game function demonstrates information hiding!
     // We abstract away the details of resetting the game and call this happy little function!
     public void resetGame() {
+
+        logger.info("Resetting Game ..." + "\n");
+
         this.adventurers = this.initialAdventurers;
         this.creatures = this.initialCreatures;
         this.foods = this.initialFoods;
@@ -58,50 +65,41 @@ public class Arcane {
         gameOver = false;
         turnCount = 0;
 
-        // Populate Maze:
+        // Populate csci.ooad.arcane.Maze:
         this.maze.populate(this.adventurers, this.creatures, this.foods);
 
     }
 
     public void play() {
 
-        logger.info("Starting Play... Turn 0\n");
+        logger.info("Starting Play..." + "\n");
 
-        logger.info(gameStateInfo());
+        while (!checkGameOver()) {
 
-
-
-        while (!gameOver) {
-
+            // Prints in a way to make a new line before every gameStateInfo() print.
+            // Breaking the line lets the logger lose the color property,
+            // allowing for all maze info to log white, like the homework guidelines.
+            logger.info("ARCANE MAZE - Turn " + this.turnCount + ":\n" + gameStateInfo());
 
             takeTurn();
 
-            logger.info("ARCANE MAZE: Turn " + this.turnCount);
-
-            logger.info(gameStateInfo());
-
-            if (checkGameOver()) break;
+            logger.info("\n");
 
         }
 
         // Log who won
         if (adventurers.isEmpty()) {
-
             // Creatures won
-            logger.info("Creatures number 1 victory royale!!!!");
+            logger.info("Creatures number 1 victory royale!!!!" + "\n");
 
         } else if (creatures.isEmpty()) {
-
             // adventurers won
-            logger.info("Adventurers got the dub!");
+            logger.info("Adventurers got the dub!" + "\n");
 
         } else {
-
-            // this shouln't be reached
-            logger.warn("Error");
-
+            // This probably shouldn't be reached
+            logger.warn("Warning, potential error, neither adventurers nor creatures won." + "\n");
         }
-
     }
 
     public void sortAdventurersByHealth() {
@@ -112,29 +110,13 @@ public class Arcane {
 
         // Add adventurers to flee list to act as delayed update of movement
         // (Prevents double updating positions)
-        List<Adventurer> toMove = new ArrayList<>();
-
-        for (Adventurer adventurer : this.adventurers) {
-            // Case 1.a: (Fight)
-            if (adventurer.isHealthiestInRoom() && adventurer.creaturePresentInRoom()) {
-
-                logger.info("Adventurer " + adventurer.getInfo() + " just fought " + adventurer.getFightableCreature().getInfo());
-
-                fight(adventurer, adventurer.getFightableCreature());
-
-            } // Case 2: (Eat)
-            else if (!(adventurer.creaturePresentInRoom()) && adventurer.foodPresentInRoom()) {
-                adventurer.eat();
-
-            }// Case 1.b and 3: (Move)
-            else {
-                toMove.add(adventurer);
-            }
-        }
+        // This has been removed, will do a better solution with observer pattern next homework
 
         // Delayed movement update to avoid double updating conflicts
-        for (Adventurer adventurer : toMove) {
-            adventurer.flee();
+        // (TODO: Refactor to use observer pattern next homework
+
+        for (Adventurer adventurer : this.adventurers) {
+            adventurer.doAction();
         }
 
         // After all hp updates, make sure adventurers health order is updated
@@ -145,42 +127,39 @@ public class Arcane {
     }
 
     public String gameStateInfo() {
-        return this.maze.getInfo();
+        return this.maze.getInfo("\t");
     }
 
     // ---------- Getters / Setters ---------- //
 
     public void fight(Adventurer adventurer, Creature creature) {
-        double playerNumber = adventurer.playerRoll();
-        double creatureNumber = creature.Creature_Roll();
 
-        if (playerNumber == creatureNumber) {
-            //System.out.println("Its a tie");
-        } else if (playerNumber < creatureNumber) {
-            //System.out.println("Player lost battle.");
-            double playerHealth = adventurer.getHealth() - (creatureNumber - playerNumber);
-            adventurer.setHealth(playerHealth);
-        } else {
-            //System.out.println("Player Won battle.");
-            double creatureHealth = creature.getHealth() - (playerNumber - creatureNumber);
-            creature.setHealth(creatureHealth);
-        }
-
-        adventurer.takeDamage(0.5);
-        creature.takeDamage(0.5);
-
-        // If creature is dead:
-        if (!creature.isAlive()) {
-            creatures.remove(creature);
-        }
-
-        // If adventurer is dead:
-        if (!adventurer.isAlive()) {
-            adventurers.remove(adventurer);
-        }
     }
 
     public boolean checkGameOver() {
+
+        // Remove all dead adventurers
+        List<Adventurer> adventurersToRemove = new ArrayList<>();
+        for (Adventurer adventurer : adventurers) {
+            if (!adventurer.isAlive()) {
+                adventurersToRemove.add(adventurer);
+            }
+        }
+
+        // Remove all dead adventurers from the list
+        this.adventurers.removeAll(adventurersToRemove);
+
+        // Remove all dead creatures
+        List<Creature> creaturesToRemove = new ArrayList<>();
+        for (Creature creature : creatures) {
+            if (!creature.isAlive()) {
+                creaturesToRemove.add(creature);
+            }
+        }
+
+        // Remove all dead creatures from the list
+        this.creatures.removeAll(creaturesToRemove);
+
         this.gameOver = adventurers.isEmpty() || creatures.isEmpty();
         return this.gameOver;
     }

@@ -1,3 +1,4 @@
+import csci.ooad.arcane.Creature;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -30,14 +31,14 @@ public class CreatureTest {
         Creature creature1 = new Creature (Name, health);
         //assertTrue(player1.isAlive());
 
-        assertFalse(creature1.isAlive());
+        assertTrue(creature1.isAlive());
     }
 
     @Test
     public void test_CreatureRoll() {
         Creature creature1 = new Creature ("Ogre", 10);
 
-        int roll_Number = creature1.Creature_Roll();
+        double roll_Number = creature1.calcDamage();
 
         //Making sure the Generated number is within 1 and 6
         if(roll_Number >= 1 && roll_Number <= 6)

@@ -1,3 +1,5 @@
+package csci.ooad.arcane;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -7,13 +9,13 @@ import java.util.Random;
 
 public class Maze {
 
-    // Description: Maze is a square nxn grid of rooms, can be populated by passing in objects.
+    // Description: csci.ooad.arcane.Maze is a square nxn grid of rooms, can be populated by passing in objects.
 
     // ---------- Member Variables ---------- //
-    private static final Logger logger = LoggerFactory.getLogger(Adventurer.class);
+    private static final Logger logger = LoggerFactory.getLogger(Maze.class);
 
     private ArrayList<Room> rooms = new ArrayList<>();
-    private int n = 0; // Maze dimension is nxn
+    private int n = 0; // csci.ooad.arcane.Maze dimension is nxn
     private int numAdventurers = 0;
     private int numCreatures = 0;
     private int numFood = 0;
@@ -21,10 +23,10 @@ public class Maze {
 
     // ---------- Constructors ---------- //
 
-
     // Polymorphism wow look how we have multiple constructors that can all be
     // called with the same name, depending on the parameters, we resolve the different calls
     // on compile. wow!
+
     public Maze() {}
 
     public Maze(int n) {
@@ -43,13 +45,13 @@ public class Maze {
     // TODO: Comment this out
 
     // Creates empty default mazes with smartly named rooms
-//    public static Maze defaultEmpty2x2() {
+//    public static csci.ooad.arcane.Maze defaultEmpty2x2() {
 //        String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
-//        return new Maze(2, roomNames2x2);
+//        return new csci.ooad.arcane.Maze(2, roomNames2x2);
 //    }
-//    public static Maze defaultEmpty3x3() {
+//    public static csci.ooad.arcane.Maze defaultEmpty3x3() {
 //        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
-//        return new Maze(3, roomNames3x3);
+//        return new csci.ooad.arcane.Maze(3, roomNames3x3);
 //    }
 
     // ---------- Getters / Setters ---------- //
@@ -89,10 +91,10 @@ public class Maze {
 
     public void generateNxN(int n) {
 
-        // Reset Maze to Empty
+        // Reset csci.ooad.arcane.Maze to Empty
         rooms.clear();
 
-        // Update Size of Maze
+        // Update Size of csci.ooad.arcane.Maze
         this.n = n;
 
         // Add rooms to maze
@@ -130,7 +132,7 @@ public class Maze {
         populateFood(foods);
     }
 
-    // ---------- Populate Maze Functionality ---------- //
+    // ---------- Populate csci.ooad.arcane.Maze Functionality ---------- //
 
     public void populate(List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
         populateAdventurers(adventurers);
@@ -211,15 +213,24 @@ public class Maze {
     }
 
     // ---------- Display / Info ---------- //
-    public String getInfo() {
-        StringBuilder infoString = new StringBuilder();
 
-        for (Room r : this.rooms) {
-            infoString.append(r.getInfo());
-            infoString.append("\n");
+    public String getInfo(String indent) {
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i=0; i < this.rooms.size(); i++) {
+            Room r = this.rooms.get(i);
+            // Append roomInfo + "\n" unless its the last room
+            // May use this later: .append((i<this.rooms.size()-1) ? "\n" : "")
+            sb.append(r.getInfo(indent));
         }
-        return infoString.toString();
+
+        return sb.toString();
     }
+    public String getInfo() {
+        return getInfo("");
+    }
+    
     public void display2D() {
         // TODO implement for next homework!
         /*
@@ -229,8 +240,8 @@ public class Maze {
 
         for (int r = 0; r < row; r++) {
             for (int c = 0; c < col; c++) {
-                Room room = rooms.get(roomIdx);
-                log ("[Room " + roomIdx + "]"); // Display room ID
+                csci.ooad.arcane.Room room = rooms.get(roomIdx);
+                log ("[csci.ooad.arcane.Room " + roomIdx + "]"); // Display room ID
                 roomIdx++;
 
                 if (c < col - 1) {

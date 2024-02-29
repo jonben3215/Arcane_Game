@@ -109,7 +109,10 @@ public class Room {
         return this.ID;
     }
 
-
+    public void addCreature(Creature c) {
+        this.creatures.add(c);
+        this.creatures.sort(Comparator.comparingDouble(Creature::getHealth).reversed());
+    }
 
     public List<Adventurer> getAdventurers() {
         return this.adventurers;
@@ -119,37 +122,36 @@ public class Room {
         this.adventurers.sort(Comparator.comparingDouble(Adventurer::getHealth).reversed());
     }
 
-    public void removeAgent(Agent agent) {
-        if (agent instanceof Adventurer) {
-            removeAdventurer((Adventurer) agent);
+    public void removeEntity(Entity entity) {
+
+        if (entity instanceof Adventurer) {
+            this.adventurers.remove((Adventurer)entity);
+        } else if (entity instanceof Creature) {
+            this.creatures.remove((Creature) entity);
+        } else if (entity instanceof Food) {
+            this.foods.remove((Food)entity);
+        } else {
+            // Entity list TODO maybe
         }
-        if (agent instanceof  Creature) {
-            removeCreature((Creature) agent);
-        }
+
+        entity.setRoom(null);
     }
-    public void addAgent(Agent agent) {
-        if (agent instanceof Adventurer) {
-            addAdventurer((Adventurer) agent);
+    public void addEntity(Entity entity) {
+
+        if (entity instanceof Adventurer) {
+            this.adventurers.add((Adventurer) entity);
+        } else if (entity instanceof Creature) {
+            this.creatures.add((Creature) entity);
+        } else if (entity instanceof Food) {
+            this.foods.add((Food) entity);
+        } else {
+            // Entity list TODO maybe
         }
-        if (agent instanceof Creature) {
-            addCreature((Creature) agent);
-        }
+
+        entity.setRoom(this);
     }
 
-    public void removeAdventurer(Adventurer adventurer)
-    {
-        this.adventurers.remove(adventurer);
-    }
 
-    public void removeCreature(Creature creature)
-    {
-        this.creatures.remove(creature);
-    }
-
-    public void removeFood(Food food)
-    {
-        this.foods.remove(food);
-    }
 
     public List<Room> getNeighborRooms()
     {
@@ -160,17 +162,14 @@ public class Room {
         return this.creatures;
     }
 
-    public void addCreature(Creature c) {
-        this.creatures.add(c);
-        this.creatures.sort(Comparator.comparingDouble(Creature::getHealth).reversed());
-    }
+
 
     public boolean hasFood() {
         return !(this.foods.isEmpty());
     }
 
     public void addFood(Food food) {
-        this.foods.add(food);
+        food.setRoom(this);
     }
 
     public List<Food> getFoods() {

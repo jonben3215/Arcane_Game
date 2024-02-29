@@ -14,48 +14,24 @@ public class Maze {
     // ---------- Member Variables ---------- //
     private static final Logger logger = LoggerFactory.getLogger(Maze.class);
 
-    private ArrayList<Room> rooms = new ArrayList<>();
+    private final ArrayList<Room> rooms = new ArrayList<>();
     private int n = 0; // csci.ooad.arcane.Maze dimension is nxn
-    private int numAdventurers = 0;
-    private int numCreatures = 0;
-    private int numFood = 0;
+
+
+
+    public static Builder newBuilder() {
+        return new Builder();
+    }
 
 
     // ---------- Constructors ---------- //
-
-    // Polymorphism wow look how we have multiple constructors that can all be
-    // called with the same name, depending on the parameters, we resolve the different calls
-    // on compile. wow!
-
     public Maze() {}
 
-    public Maze(int n) {
-        this.generateNxN(n);
+    public Maze(ArrayList<Room> rooms) {
+        this.rooms = rooms;
     }
-    public Maze(int n, String[] roomNames) {
-        this.generateNxN(n, roomNames);
-    }
-
-    public Maze(int n, String[] roomNames, List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
-        this.generateNxN(n, roomNames, adventurers, creatures, foods);
-    }
-
-    // ---------- Factory Methods for Default 2x2 and 3x3 Mazes ---------- //
-
-    // TODO: Comment this out
-
-    // Creates empty default mazes with smartly named rooms
-//    public static csci.ooad.arcane.Maze defaultEmpty2x2() {
-//        String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
-//        return new csci.ooad.arcane.Maze(2, roomNames2x2);
-//    }
-//    public static csci.ooad.arcane.Maze defaultEmpty3x3() {
-//        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
-//        return new csci.ooad.arcane.Maze(3, roomNames3x3);
-//    }
 
     // ---------- Getters / Setters ---------- //
-    // TODO: Remove rows and cols for better alternative in next hw
 
     public int getNumRooms() {
         return this.rooms.size();
@@ -78,139 +54,179 @@ public class Maze {
         return this.rooms;
     }
 
-    // ---------- Helpers --------- //
+    // TODO: Maze . get contents -> to get num of items and stuff, can be useful maybe in future
 
-    // Usage: Ex: (center, N, north) -> c.N=n, n.S=c
-    public void join(Room r1, Direction d, Room r2) {
-        // Connects Neighbors
-        r1.addNeighbor(d, r2);
-        r2.addNeighbor(d.getOpposite(), r1);
-    }
 
-    // ---------- Generation ---------- //
+    class Builder {
 
-    public void generateNxN(int n) {
+        private final ArrayList<Room> rooms = new ArrayList<>();
+        private boolean doSequentialDistribution = false;
+        private int seqDistIdx = 0;
+        private final Random random = new Random();
 
-        // Reset csci.ooad.arcane.Maze to Empty
-        rooms.clear();
+        // ----------- Builder Constructors ----------- //
+        public Builder() {
 
-        // Update Size of csci.ooad.arcane.Maze
-        this.n = n;
-
-        // Add rooms to maze
-        for (int i = 0; i<(n*n); i++) {
-            this.rooms.add(new Room());
         }
-
-        // Add local neighbor connections between rooms, including direction
-        for (int room_idx = 0; room_idx < rooms.size(); room_idx++) {
-            // Get relevant data
-            Room room = rooms.get(room_idx);
-
-            // Get neighboring indices
-            int north_idx = room_idx - n;
-            int south_idx = room_idx + n;
-            int east_idx = room_idx + 1;
-            int west_idx = room_idx - 1;
-
-            // Add neighbor if valid
-            if (north_idx >= 0) this.join(room, Direction.N, rooms.get(north_idx));
-            if (south_idx <= this.rooms.size() -1) this.join(room, Direction.S, rooms.get(south_idx));
-            if (room_idx%n != 0) this.join(room, Direction.W, rooms.get(west_idx));
-            if (room_idx%n != n-1) this.join(room, Direction.E, rooms.get(east_idx));
-        }
-    }
-    public void generateNxN(int n, String[] roomNames) {
-        generateNxN(n);
-        populateRoomNames(roomNames);
-    }
-    public void generateNxN(int n, String[] roomNames, List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
-        generateNxN(n);
-        populateRoomNames(roomNames);
-        populateAdventurers(adventurers);
-        populateCreatures(creatures);
-        populateFood(foods);
-    }
-
-    // ---------- Populate csci.ooad.arcane.Maze Functionality ---------- //
-
-    public void populate(List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
-        populateAdventurers(adventurers);
-        populateCreatures(creatures);
-        populateFood(foods);
-    }
-
-    public void populateRoomNames(String[] room_names) {
-
-        // Break Conditions:
-        if(this.rooms.isEmpty()) {
-            logger.warn("No rooms to populate room_names");
-            return;
-        }
-        if(room_names.length != this.rooms.size()) {
-            logger.warn("Length of room_names does not match number of rooms");
+        public Builder(AdventurerFactory, CreatureFactory, FoodFactory) {
             return;
         }
 
-        for (int i=0; i<this.getNumRooms(); i++) {
-            this.rooms.get(i).setName(room_names[i]);
-        }
-    }
-    public void populateRoomNames(List<String> room_names) {
-        // Break Conditions:
-        if(this.rooms.isEmpty()) {
-            logger.warn("No rooms to populate room_names");
-            return;
-        }
-        if(room_names.size() != this.rooms.size()) {
-            logger.warn("Length of room_names does not match number of rooms");
-            return;
-        }
-        for (int i=0; i<this.getNumRooms(); i++) {
-            this.rooms.get(i).setName(room_names.get(i));
-        }
-    }
-    public void populateFood(List<Food> foods) {
-        // Break Condition
-        if(this.rooms.isEmpty()) {
-
-            logger.warn("No rooms to populate food");
-            return;
+        public Maze build() {
+            return new Maze(rooms);
         }
 
-        Random random = new Random();
-        for (Food food : foods) {
-            Room randomRoom = rooms.get(random.nextInt(rooms.size()));
-            food.setRoom(randomRoom);
-        }
-    }
 
-    public void populateAdventurers(List<Adventurer> adventurers) {
+        public void doSequentialDistribution() {
+            this.doSequentialDistribution = true;
+        }
+        public void doRandomDistribution() {
+            this.doSequentialDistribution = false;
+        }
 
-        // Break Condition
-        if(this.rooms.isEmpty()) {
-            logger.warn("No rooms to populate adventurers");
-            return;
-        }
-        Random random = new Random();
-        for (Adventurer adventurer : adventurers) {
-            Room randomRoom = rooms.get(random.nextInt(rooms.size()));
-            adventurer.setRoom(randomRoom);
-        }
-    }
+        // Extra Credit (Complete)
+        public Builder makeFullyConnectedGridNxN (int n) {
 
-    public void populateCreatures(List<Creature> creatures) {
-        // Break Condition
-        if(this.rooms.isEmpty()) {
-            logger.warn("No rooms to populate creatures");
-            return;
+            // Reset room list
+            rooms.clear();
+
+            // Add rooms to room list
+            for (int i = 0; i<(n*n); i++) {
+                this.rooms.add(new Room());
+            }
+
+            // Add local neighbor connections between rooms, including direction
+            for (int room_idx = 0; room_idx < rooms.size(); room_idx++) {
+                // Get relevant data
+                Room room = rooms.get(room_idx);
+
+                // Get neighboring indices
+                int north_idx = room_idx - n;
+                int south_idx = room_idx + n;
+                int east_idx = room_idx + 1;
+                int west_idx = room_idx - 1;
+
+                // Add neighbor if valid (Fully connect rooms)
+                if (north_idx >= 0) this.join(room, Direction.N, rooms.get(north_idx));
+                if (south_idx <= this.rooms.size() -1) this.join(room, Direction.S, rooms.get(south_idx));
+                if (room_idx%n != 0) this.join(room, Direction.W, rooms.get(west_idx));
+                if (room_idx%n != n-1) this.join(room, Direction.E, rooms.get(east_idx));
+            }
+
+            return this;
         }
-        Random random = new Random();
-        for (Creature creature : creatures) {
-            Room randomRoom = rooms.get(random.nextInt(rooms.size()));
-            creature.setRoom(randomRoom);
+
+        public void populateEntities (List <Entity> entities) {
+
+            // Break Condition
+            if (this.rooms.isEmpty()) {
+                logger.warn("No rooms to populate.");
+                return;
+            }
+            // Add provided entities to room based on nextRoom algorithm.
+            for (Entity entity : entities) {
+                nextRoom().addEntity(entity);
+            }
         }
-    }
+
+        private Room nextRoom() {
+            Room nextRoom;
+            // Extra Credit - Distribution Modes (Complete)
+            if (doSequentialDistribution) {
+                nextRoom = rooms.get(seqDistIdx++);
+                seqDistIdx = seqDistIdx % rooms.size();
+            } else {
+                nextRoom = rooms.get(random.nextInt(rooms.size()));
+            }
+            return nextRoom;
+        }
+
+        public void populateAdventurers(List <Adventurer> adventurers) {
+            // Break Condition
+            if (this.rooms.isEmpty()) {
+                logger.warn("No rooms to populate.");
+                return;
+            }
+            // Add provided entities to room based on nextRoom algorithm.
+            for (Adventurer adventurer : adventurers) {
+                nextRoom().addEntity(adventurer);
+            }
+        }
+
+        public void populateCreatures(List <Creature> creatures) {
+            // Break Condition
+            if (this.rooms.isEmpty()) {
+                logger.warn("No rooms to populate.");
+                return;
+            }
+            // Add provided entities to room based on nextRoom algorithm.
+            for (Creature creature : creatures) {
+                nextRoom().addEntity(creature);
+            }
+        }
+
+
+        public void populateFoods(List <Food> foods) {
+            // Break Condition
+            if (this.rooms.isEmpty()) {
+                logger.warn("No rooms to populate.");
+                return;
+            }
+            // Add provided entities to room based on nextRoom algorithm.
+            for (Food food : foods) {
+                nextRoom().addEntity(food);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public Builder defaultEmpty2x2() {
+            String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
+            return this;
+        }
+
+        public Builder defaultEmpty3x3() {
+            String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+            return this;
+        }
+
+
+
+
+        public void generateNxN(int n, String[] roomNames, List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
+            generateNxN(n);
+            populateRoomNames(roomNames);
+            populateAdventurers(adventurers);
+            populateCreatures(creatures);
+            populateFood(foods);
+        }
+
+        // Usage: Ex: (center, N, north) -> c.N=n, n.S=c
+        public void join(Room r1, Direction d, Room r2) {
+            // Connects Neighbors
+            r1.addNeighbor(d, r2);
+            r2.addNeighbor(d.getOpposite(), r1);
+        }
+
+        public void populate(List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
+            populateAdventurers(adventurers);
+            populateCreatures(creatures);
+            populateFood(foods);
+        }
+
+
+
+
 
     // ---------- Display / Info ---------- //
 

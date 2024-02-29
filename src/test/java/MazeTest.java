@@ -55,7 +55,7 @@ public class MazeTest {
         }
 
         // Spawn food items at random locations
-        maze.populateFood(foods);
+        maze.populateFoods(foods);
 
         // Display the maze to inspect the distribution of food items
         maze.display2D();

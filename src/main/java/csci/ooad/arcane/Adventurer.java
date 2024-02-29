@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
-public class Adventurer extends Agent{
+public class Adventurer extends Agent {
     private static final Logger logger = LoggerFactory.getLogger(Adventurer.class);
 
     // ---------- Constructors ---------- //

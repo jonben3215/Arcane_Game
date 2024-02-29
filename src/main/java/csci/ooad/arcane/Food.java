@@ -2,14 +2,11 @@ package csci.ooad.arcane;
 
 import java.util.Random;
 
-public class Food {
+public class Food extends Entity {
     public static String[] FOOD_NAMES = {
             "Apple", "Orange", "Poo-Sandwich", "Taco", "Cookie", "ScoobySnack", "Annie's (TM) mac & cheese"
     };
-    private String name = "";
     private double healAmount = 1;
-
-    private Room room = null;
 
     public Food () {
         // If no name specified, make random food name with heal amt = 1
@@ -20,17 +17,6 @@ public class Food {
         this.name = name;
     }
 
-    public Room getRoom() {
-        return this.room;
-    }
-
-    public void setRoom(Room newRoom) {
-
-        if(this.room != null) this.room.removeFood(this);
-        this.room = newRoom;
-        if(newRoom != null) this.room.addFood(this);
-
-    }
 
     public Food (String name, double healAmount) {
         this.name = name;

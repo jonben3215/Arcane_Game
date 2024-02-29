@@ -7,8 +7,4 @@ How to update your branch:
 
 How to update homework_4:
 * first update your branch
-<<<<<<< HEAD
-* git push origin branch1:
-=======
 * git push origin branch1:branch2
->>>>>>> 349d2cbe19344f73f679a6cfe47199587de91ed8

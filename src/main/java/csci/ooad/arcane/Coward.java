@@ -10,7 +10,7 @@ public class Coward extends Adventurer {
     public void doAction() {
         // Always runs from a creature, if it can (it can't run from Demons)
         if (this.getRoom().hasCreature()) {
-            this.fight();
+            this.fight(this.getFightableCreature());
         } else {
             this.flee();
         }

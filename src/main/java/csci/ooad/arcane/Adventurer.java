@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
-public class Adventurer extends Agent{
+public class Adventurer extends Agent {
     private static final Logger logger = LoggerFactory.getLogger(Adventurer.class);
 
     // ---------- Constructors ---------- //
@@ -44,16 +44,26 @@ public class Adventurer extends Agent{
     @Override
     public void doAction() {
 
+        if(this.room == null) {
+            logger.warn("Adventurer " + this.getName() + " has no room");
+            return;
+        }
 
-
-        // If alive
+        // If dead, dont do anything
         if (!isAlive()) return;
 
-
+        // Fight all demons in room
+        ArrayList<Creature> roomCreatures = (ArrayList<Creature>) this.room.getCreatures();
+        for (Creature creature : roomCreatures) {
+            if (creature instanceof Demon) {
+                this.fight(creature);
+                return;
+            }
+        }
 
         // Case 1.a: (Fight)
         if (isHealthiestInRoom() && creaturePresentInRoom()) {
-            fight();
+            fight(this.getFightableCreature());
         } // Case 2: (Eat)
         else if (!(creaturePresentInRoom()) && foodPresentInRoom()) {
             eat();
@@ -65,10 +75,8 @@ public class Adventurer extends Agent{
         }
     }
 
-    public void fight() {
+    public void fight(Creature enemyCreature) {
 
-        // Fight should only be called if this is not null
-        Creature enemyCreature = this.getFightableCreature();
 
         if (enemyCreature == null) {
             logger.warn("Adventurer " + this.getName() + " has no creature to fight");
@@ -129,7 +137,7 @@ public class Adventurer extends Agent{
         }
 
         Food foodToEat = this.room.getFoods().get(0);
-        this.room.removeFood(foodToEat);
+        this.room.removeEntity(foodToEat);
         this.setHealth(this.health+1.0);
 
         logger.info("Adventurer " + this.getInfo() + " just ate " + foodToEat.getName());

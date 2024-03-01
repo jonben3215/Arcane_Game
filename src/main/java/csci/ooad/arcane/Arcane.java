@@ -66,7 +66,8 @@ public class Arcane {
         turnCount = 0;
 
         // Populate csci.ooad.arcane.Maze:
-        this.maze.populate(this.adventurers, this.creatures, this.foods);
+//        this.maze.populate(this.adventurers, this.creatures, this.foods);
+        // TODO IMPORTANT MAKE MAZE CONSTRUCTOR WITH BUILDER
 
     }
 

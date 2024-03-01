@@ -7,13 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class Agent {
+public abstract class Agent extends Entity {
     private static final Logger logger = LoggerFactory.getLogger(Agent.class);
 
     // ---------- Member Variables ---------- //
-    protected String name;
+
     protected double health; // TODO: Implement max health / difference between initial and current hp
-    protected Room room = null;
+
     protected boolean isAlive = true;
     // Default is just roll 6 sided die (min:1, max:6)
     private double minAttack = 1, maxAttack = 6;
@@ -111,21 +111,9 @@ public class Agent {
     }
 
     // ---------- Getters / Setters ---------- //
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public Room getRoom() {
-        return this.room;
-    }
-    public void setRoom(Room newRoom) {
-        if(this.room != null) this.room.removeAgent(this);
-        this.room = newRoom;
-        if(newRoom != null) this.room.addAgent(this);
-    }
+
+
 
     public double getHealth() {
         return health;
@@ -149,6 +137,7 @@ public class Agent {
         logger.info(this.getClass().getSimpleName() + ": " + this.getName() + " died.");
     }
 
+    @Override
     public String getInfo() {
         return this.name + "(" +((isAlive())? "hp: " + this.health : "Dead") + ")";
     }

@@ -10,7 +10,7 @@ public class Glutton extends Adventurer {
     public void doAction() {
         // Always eats if food is available unless a Demon is in the room, then it must fight
         if (this.getRoom().hasCreature()) {
-            this.fight();
+            this.fight(this.getFightableCreature());
         } else if (this.getRoom().hasFood()) {
             this.eat();
         }

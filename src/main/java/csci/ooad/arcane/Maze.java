@@ -13,49 +13,21 @@ public class Maze {
 
     // ---------- Member Variables ---------- //
     private static final Logger logger = LoggerFactory.getLogger(Maze.class);
-
     private ArrayList<Room> rooms = new ArrayList<>();
     private int n = 0; // csci.ooad.arcane.Maze dimension is nxn
-    private int numAdventurers = 0;
-    private int numCreatures = 0;
-    private int numFood = 0;
 
+    public static Builder newBuilder() {
+        return new Builder();
+    }
 
     // ---------- Constructors ---------- //
-
-    // Polymorphism wow look how we have multiple constructors that can all be
-    // called with the same name, depending on the parameters, we resolve the different calls
-    // on compile. wow!
-
     public Maze() {}
 
-    public Maze(int n) {
-        this.generateNxN(n);
+    public Maze(ArrayList<Room> rooms) {
+        this.rooms = rooms;
     }
-    public Maze(int n, String[] roomNames) {
-        this.generateNxN(n, roomNames);
-    }
-
-    public Maze(int n, String[] roomNames, List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
-        this.generateNxN(n, roomNames, adventurers, creatures, foods);
-    }
-
-    // ---------- Factory Methods for Default 2x2 and 3x3 Mazes ---------- //
-
-    // TODO: Comment this out
-
-    // Creates empty default mazes with smartly named rooms
-//    public static csci.ooad.arcane.Maze defaultEmpty2x2() {
-//        String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
-//        return new csci.ooad.arcane.Maze(2, roomNames2x2);
-//    }
-//    public static csci.ooad.arcane.Maze defaultEmpty3x3() {
-//        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
-//        return new csci.ooad.arcane.Maze(3, roomNames3x3);
-//    }
 
     // ---------- Getters / Setters ---------- //
-    // TODO: Remove rows and cols for better alternative in next hw
 
     public int getNumRooms() {
         return this.rooms.size();
@@ -64,9 +36,9 @@ public class Maze {
         return n;
     }
 
-    public Room getRoomByID (int ID) {
+    public Room getRoomByName (String name) {
         for (Room room : this.rooms) {
-            if (room.getID() == ID) {
+            if (room.getName().equals(name)) {
                 return room;
             }
         }
@@ -78,139 +50,281 @@ public class Maze {
         return this.rooms;
     }
 
-    // ---------- Helpers --------- //
+    // TODO: Maze . get contents -> to get num of items and stuff, can be useful maybe in future
 
-    // Usage: Ex: (center, N, north) -> c.N=n, n.S=c
-    public void join(Room r1, Direction d, Room r2) {
-        // Connects Neighbors
-        r1.addNeighbor(d, r2);
-        r2.addNeighbor(d.getOpposite(), r1);
-    }
 
-    // ---------- Generation ---------- //
+    public static class Builder {
+        private final ArrayList<Room> rooms = new ArrayList<>();
+        private boolean doSequentialDistribution = false; // Default Random Distribution
+        private int seqDistIdx = 0;
+        private final Random random = new Random();
 
-    public void generateNxN(int n) {
+        private AdventurerFactory adventurerFactory;
+        private CreatureFactory creatureFactory;
+        private FoodFactory foodFactory;
 
-        // Reset csci.ooad.arcane.Maze to Empty
-        rooms.clear();
-
-        // Update Size of csci.ooad.arcane.Maze
-        this.n = n;
-
-        // Add rooms to maze
-        for (int i = 0; i<(n*n); i++) {
-            this.rooms.add(new Room());
+        // ----------- Builder Constructors ----------- //
+        public Builder() {
+            // This is only here temporarily until next hw when we expand factory! dont judge us ta pls uwu
+            this.adventurerFactory = new AdventurerFactory();
+            this.creatureFactory = new CreatureFactory();
+            this.foodFactory = new FoodFactory();
         }
 
-        // Add local neighbor connections between rooms, including direction
-        for (int room_idx = 0; room_idx < rooms.size(); room_idx++) {
-            // Get relevant data
-            Room room = rooms.get(room_idx);
-
-            // Get neighboring indices
-            int north_idx = room_idx - n;
-            int south_idx = room_idx + n;
-            int east_idx = room_idx + 1;
-            int west_idx = room_idx - 1;
-
-            // Add neighbor if valid
-            if (north_idx >= 0) this.join(room, Direction.N, rooms.get(north_idx));
-            if (south_idx <= this.rooms.size() -1) this.join(room, Direction.S, rooms.get(south_idx));
-            if (room_idx%n != 0) this.join(room, Direction.W, rooms.get(west_idx));
-            if (room_idx%n != n-1) this.join(room, Direction.E, rooms.get(east_idx));
-        }
-    }
-    public void generateNxN(int n, String[] roomNames) {
-        generateNxN(n);
-        populateRoomNames(roomNames);
-    }
-    public void generateNxN(int n, String[] roomNames, List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
-        generateNxN(n);
-        populateRoomNames(roomNames);
-        populateAdventurers(adventurers);
-        populateCreatures(creatures);
-        populateFood(foods);
-    }
-
-    // ---------- Populate csci.ooad.arcane.Maze Functionality ---------- //
-
-    public void populate(List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
-        populateAdventurers(adventurers);
-        populateCreatures(creatures);
-        populateFood(foods);
-    }
-
-    public void populateRoomNames(String[] room_names) {
-
-        // Break Conditions:
-        if(this.rooms.isEmpty()) {
-            logger.warn("No rooms to populate room_names");
-            return;
-        }
-        if(room_names.length != this.rooms.size()) {
-            logger.warn("Length of room_names does not match number of rooms");
+        public Builder(AdventurerFactory adventurerFactory, CreatureFactory creatureFactory, FoodFactory foodFactory) {
+            this.adventurerFactory = adventurerFactory;
+            this.creatureFactory = creatureFactory;
+            this.foodFactory = foodFactory;
             return;
         }
 
-        for (int i=0; i<this.getNumRooms(); i++) {
-            this.rooms.get(i).setName(room_names[i]);
-        }
-    }
-    public void populateRoomNames(List<String> room_names) {
-        // Break Conditions:
-        if(this.rooms.isEmpty()) {
-            logger.warn("No rooms to populate room_names");
-            return;
-        }
-        if(room_names.size() != this.rooms.size()) {
-            logger.warn("Length of room_names does not match number of rooms");
-            return;
-        }
-        for (int i=0; i<this.getNumRooms(); i++) {
-            this.rooms.get(i).setName(room_names.get(i));
-        }
-    }
-    public void populateFood(List<Food> foods) {
-        // Break Condition
-        if(this.rooms.isEmpty()) {
-
-            logger.warn("No rooms to populate food");
-            return;
+        public Maze build() {
+            return new Maze(rooms);
         }
 
-        Random random = new Random();
-        for (Food food : foods) {
-            Room randomRoom = rooms.get(random.nextInt(rooms.size()));
-            food.setRoom(randomRoom);
+
+        public void doSequentialDistribution() {
+            this.doSequentialDistribution = true;
+        }
+
+        public void doRandomDistribution() {
+            this.doSequentialDistribution = false;
+        }
+
+        // Extra Credit (Complete)
+        public Builder makeFullyConnectedGridNxN(int n) {
+
+            // Reset room list
+            rooms.clear();
+
+            // Add rooms to room list
+            for (int i = 0; i < (n * n); i++) {
+                this.rooms.add(new Room());
+            }
+
+            // Add local neighbor connections between rooms, including direction
+            for (int room_idx = 0; room_idx < rooms.size(); room_idx++) {
+                // Get relevant data
+                Room room = rooms.get(room_idx);
+
+                // Get neighboring indices
+                int north_idx = room_idx - n;
+                int south_idx = room_idx + n;
+                int east_idx = room_idx + 1;
+                int west_idx = room_idx - 1;
+
+                // Add neighbor if valid (Fully connect rooms)
+                if (north_idx >= 0) this.join(room, Direction.N, rooms.get(north_idx));
+                if (south_idx <= this.rooms.size() - 1) this.join(room, Direction.S, rooms.get(south_idx));
+                if (room_idx % n != 0) this.join(room, Direction.W, rooms.get(west_idx));
+                if (room_idx % n != n - 1) this.join(room, Direction.E, rooms.get(east_idx));
+            }
+
+            return this;
+        }
+
+        public void populateEntities(List<Entity> entities) {
+
+            // Break Condition
+            if (this.rooms.isEmpty()) {
+                logger.warn("No rooms to populate.");
+                return;
+            }
+            // Add provided entities to room based on nextRoom algorithm.
+            for (Entity entity : entities) {
+                nextRoom().addEntity(entity);
+            }
+        }
+
+        private Room nextRoom() {
+            Room nextRoom;
+            // Extra Credit - Distribution Modes (Complete)
+            if (doSequentialDistribution) {
+                nextRoom = rooms.get(seqDistIdx++);
+                seqDistIdx = seqDistIdx % rooms.size();
+            } else {
+                nextRoom = rooms.get(random.nextInt(rooms.size()));
+            }
+            return nextRoom;
+        }
+
+        public void populateAdventurers(List<Adventurer> adventurers) {
+            // Break Condition
+            if (this.rooms.isEmpty()) {
+                logger.warn("No rooms to populate.");
+                return;
+            }
+            // Add provided entities to room based on nextRoom algorithm.
+            for (Adventurer adventurer : adventurers) {
+                nextRoom().addEntity(adventurer);
+            }
+        }
+
+        public void populateCreatures(List<Creature> creatures) {
+            // Break Condition
+            if (this.rooms.isEmpty()) {
+                logger.warn("No rooms to populate.");
+                return;
+            }
+            // Add provided entities to room based on nextRoom algorithm.
+            for (Creature creature : creatures) {
+                nextRoom().addEntity(creature);
+            }
+        }
+
+
+        public void populateFoods(List<Food> foods) {
+            // Break Condition
+            if (this.rooms.isEmpty()) {
+                logger.warn("No rooms to populate.");
+                return;
+            }
+            // Add provided entities to room based on nextRoom algorithm.
+            for (Food food : foods) {
+                nextRoom().addEntity(food);
+            }
+        }
+
+        public Builder defaultEmpty2x2() {
+            String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
+            return this.makeFullyConnectedGridNxN(2).nameRooms(roomNames2x2);
+        }
+
+        public Builder defaultEmpty3x3() {
+            String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+            return this.makeFullyConnectedGridNxN(3).nameRooms(roomNames3x3);
+        }
+
+        // Usage: Ex: (center, N, north) -> c.N=n, n.S=c
+        public void join(Room r1, Direction d, Room r2) {
+            // Connects Neighbors
+            r1.addNeighbor(d, r2);
+            r2.addNeighbor(d.getOpposite(), r1);
+        }
+
+        public Builder populate(List<Adventurer> adventurers, List<Creature> creatures, List<Food> foods) {
+
+            populateAdventurers(adventurers);
+            populateCreatures(creatures);
+            populateFoods(foods);
+
+            return this;
+        }
+
+        public Builder nameRooms (String[] roomNames) {
+
+            if (roomNames.length != rooms.size()) {
+                logger.warn("Room names provided do not match number of rooms.");
+                return this;
+            }
+
+            for (int i = 0; i < rooms.size(); i++) {
+                rooms.get(i).setName(roomNames[i]);
+            }
+
+            return this;
+        }
+        public Builder numberRooms () {
+            for (int i = 0; i < rooms.size(); i++) {
+                rooms.get(i).setName("Room " + Integer.toString(i+1));
+            }
+            return this;
+        }
+
+        public Builder createAddAdventurers (String[] adventurerNames) {
+            for (String adventurerName : adventurerNames) {
+                createAddAdventurer(adventurerName);
+            }
+            return this;
+        }
+
+        public Builder createAddAdventurer (String adventurerName) {
+            Adventurer adventurer = this.adventurerFactory.createAdventurer(adventurerName);
+            nextRoom().addEntity(adventurer);
+            return this;
+        }
+
+        public Builder createAddGlutton (String gluttonName) {
+            Adventurer glutton = this.adventurerFactory.createGlutton(gluttonName);
+            nextRoom().addEntity(glutton);
+            return this;
+        }
+
+        public Builder createAddGluttons (String[] gluttonNames) {
+            for (String gluttonName : gluttonNames) {
+                createAddGlutton(gluttonName);
+            }
+            return this;
+        }
+
+        public Builder createAddCoward (String cowardName) {
+            Adventurer coward = this.adventurerFactory.createCoward(cowardName);
+            nextRoom().addEntity(coward);
+            return this;
+        }
+
+        public Builder createAddCowards (String[] cowardNames) {
+            for (String cowardName : cowardNames) {
+                createAddCoward(cowardName);
+            }
+            return this;
+        }
+
+        public Builder createAddKnight (String knightName) {
+            Adventurer knight = this.adventurerFactory.createKnight(knightName);
+            nextRoom().addEntity(knight);
+            return this;
+        }
+
+        public Builder createAddKnights (String[] knightNames) {
+            for (String knightName : knightNames) {
+                createAddKnight(knightName);
+            }
+            return this;
+        }
+
+        public Builder createAddCreature(String creatureName) {
+            Creature creature = this.creatureFactory.createCreature(creatureName);
+            nextRoom().addEntity(creature);
+            return this;
+        }
+        public Builder createAddCreatures(String[] creatureNames) {
+            for (String creatureName : creatureNames) {
+                createAddCreature(creatureName);
+            }
+            return this;
+        }
+
+        public Builder createAddFood(String foodName) {
+            Food food = this.foodFactory.createFood(foodName);
+            nextRoom().addEntity(food);
+            return this;
+        }
+
+        public Builder createAddFoods(String[] foodNames) {
+            for (String foodName : foodNames) {
+                createAddFood(foodName);
+            }
+            return this;
+        }
+
+        public Builder createAddDemon(String demonName) {
+            Creature demon = this.creatureFactory.createDemon(demonName);
+            nextRoom().addEntity(demon);
+            return this;
+        }
+
+        public Builder createAddDemons(String[] demonNames) {
+            for (String demonName : demonNames) {
+                createAddDemon(demonName);
+            }
+            return this;
         }
     }
 
-    public void populateAdventurers(List<Adventurer> adventurers) {
 
-        // Break Condition
-        if(this.rooms.isEmpty()) {
-            logger.warn("No rooms to populate adventurers");
-            return;
-        }
-        Random random = new Random();
-        for (Adventurer adventurer : adventurers) {
-            Room randomRoom = rooms.get(random.nextInt(rooms.size()));
-            adventurer.setRoom(randomRoom);
-        }
-    }
 
-    public void populateCreatures(List<Creature> creatures) {
-        // Break Condition
-        if(this.rooms.isEmpty()) {
-            logger.warn("No rooms to populate creatures");
-            return;
-        }
-        Random random = new Random();
-        for (Creature creature : creatures) {
-            Room randomRoom = rooms.get(random.nextInt(rooms.size()));
-            creature.setRoom(randomRoom);
-        }
-    }
+
 
     // ---------- Display / Info ---------- //
 

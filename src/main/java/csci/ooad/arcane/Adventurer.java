@@ -44,11 +44,8 @@ public class Adventurer extends Agent {
     @Override
     public void doAction() {
 
-
-
         // If dead, dont do anything
         if (!isAlive()) return;
-
 
         // Fight all demons in room
         ArrayList<Creature> roomCreatures = (ArrayList<Creature>) this.room.getCreatures();
@@ -58,7 +55,6 @@ public class Adventurer extends Agent {
                 return;
             }
         }
-
 
         // Case 1.a: (Fight)
         if (isHealthiestInRoom() && creaturePresentInRoom()) {

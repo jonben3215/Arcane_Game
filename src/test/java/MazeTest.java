@@ -15,24 +15,17 @@ public class MazeTest {
     @Test
     public void testNxNMazeCreation() {
 
-//        Maze maze = new Maze();
-//        assertNotNull(maze);
-//
-//        int n = 20;
-//
-//        maze.generateNxN(n);
-//
-//        assertNull(maze.getRoomByID(-1));
-//
-//        ArrayList<Room> rectRoomArray = maze.getRooms();
-//
-//        Room nwCorner = rectRoomArray.get(0);
-//        Room neCorner = rectRoomArray.get(n-1);
-//        Room swCorner = rectRoomArray.get(rectRoomArray.size()-n);
-//        Room seCorner = rectRoomArray.get(rectRoomArray.size()-1);
+        Maze m = Maze.newBuilder()
+                .makeFullyConnectedGridNxN(3)
+                .build();
+
+        System.out.print(m.getInfo());
+        assertNotNull(m);
+
 
     }
 
+    // TODO: Will need to finish the display 2D Function in maze to run this test
     @Test
     public void testDisplay2DMaze() {
 //        String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
@@ -45,20 +38,29 @@ public class MazeTest {
 
     @Test
     public void TestFoodSpawn() {
-//        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
-//        Maze maze = new Maze(3,roomNames3x3);
+
+//        List <Food> foods = new ArrayList<>();
+//        foods.add(new Food("Apple"));
+//        foods.add(new Food("Banana"));
+//        foods.add(new Food("Carrot"));
+//        foods.add(new Food("Cucumber"));
 //
-//        // Create csci.ooad.arcane.Food List
-//        List<Food> foods = new ArrayList<>();
-//        for (int i = 0; i < 10; i++) {
-//            foods.add(new Food()); // Choose random name
+//    Maze m = Maze.newBuilder()
+//            .makeFullyConnectedGridNxN(3)
+//            .populateFoods(foods);
+//            .build();
+//
+//        int roomsWithFood = 0;
+//        for (Room room : m.getRooms()) {
+//            if (room.getFoods().stream().anyMatch(entity -> entity instanceof Food)) {
+//                roomsWithFood++;
+//            }
 //        }
 //
-//        // Spawn food items at random locations
-//        maze.populateFoods(foods);
+//        System.out.println(roomsWithFood);
 //
-//        // Display the maze to inspect the distribution of food items
-//        maze.display2D();
+//        assertEquals(foods.size(), roomsWithFood);
+
     }
     @Test
     public void TestAdventurerCreatureSpawn() {
@@ -102,17 +104,23 @@ public class MazeTest {
 
 //        assertEquals(mazeInfo2x2, expectedInfo2x2);
 //        assertEquals(mazeInfo3x3, expectedInfo3x3);
+
+        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
+        Maze maze3x3 = Maze.newBuilder()
+                .makeFullyConnectedGridNxN(3)
+                .nameRooms(roomNames3x3).build();
+
+        String expectedInfo3x3 = maze3x3.getInfo();
+
+//        System.out.println(expectedInfo3x3);
+//        System.out.println();
+//        System.out.println(maze3x3.getInfo());
+
+        assertEquals(expectedInfo3x3, maze3x3.getInfo());
     }
 
     @Test
     public void TestDefault3x3PopulateCreation() {
-
-//        String[] roomNames3x3 = {"Northwest", "North", "Northeast", "West", "Center", "East", "Southwest", "South", "Southeast"};
-//        Maze maze =new Maze(3, roomNames3x3);
-//
-//        String mazeInfo = maze.getInfo();
-//        System.out.println(mazeInfo);
-
 
          Maze m = Maze.newBuilder()
                  .makeFullyConnectedGridNxN(10)

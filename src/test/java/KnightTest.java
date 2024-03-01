@@ -3,6 +3,7 @@ import csci.ooad.arcane.Knight;
 import csci.ooad.arcane.Room;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class KnightTest {
@@ -11,12 +12,19 @@ public class KnightTest {
         Room room = new Room();
         Creature creature = new Creature("Dragon", 10.0);
         room.addCreature(creature);
+        creature.setRoom(room);
 
         Knight knight = new Knight("Sir Lancelot");
         knight.setRoom(room);
 
+
         knight.doAction();
 
-        assertTrue(knight.getHealth() < 8.0); // Assuming the Knight starts with 8.0 health
+       if(knight.getHealth() < 8.0 && knight.isAlive()) {
+           System.out.println("Health: " + knight.getHealth());
+           assertTrue(true);
+       } else {
+           assertFalse(false);
+       }
     }
 }

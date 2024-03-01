@@ -250,7 +250,7 @@ public class RoomTest
 
         String file_name_2 = "/todo/todo/actual_to_be_used_path_name.txt";  // Should Work
         String file_name_1 = "description_file_name.txt";                   // Should Work
-        String file_name_3 = "ewoijwofepqwjief";                            // Bad File
+        String file_name_3 = "ewoijwofepqwjiefp";                            // Bad File
         String file_name_4 = "file.poop";                                   // Bad File
 
         // Test file_name_1 - Good File
@@ -261,7 +261,7 @@ public class RoomTest
         Room.setDescriptionFileName(file_name_2);
         assertEquals(file_name_2, Room.getDescriptionFileName());
 
-//        // Test file_name_3 - Bad File
+        // Test file_name_3 - Bad File
 //        csci.ooad.arcane.Room.setDescriptionFileName(file_name_3);
 //        assertNotEquals(file_name_3, csci.ooad.arcane.Room.getDescriptionFileName());
 //

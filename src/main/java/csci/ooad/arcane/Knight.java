@@ -18,6 +18,6 @@ public class Knight extends Adventurer {
             logger.warn("Curious Error: No fightable creature in room, but there is at least one creature in room");
             return;
         }
-        this.fight();
+        this.fight(enemy);
     }
 }

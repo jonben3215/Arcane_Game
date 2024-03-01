@@ -7,7 +7,7 @@ public class FoodTest {
 
     @Test
     public void TestFoodDefaultConstructor () {
-        Food f1 = new Food();
+        Food f1 = new Food("Apple");
         assertEquals(f1.getHealAmount(), 1);
         boolean food_found = false;
         for (String food : FoodFactory.FOOD_NAMES) {
@@ -23,8 +23,8 @@ public class FoodTest {
     public void TestDefaultConstructorRandomFood () {
         boolean different_name = false;
         for (int i = 0; i<10; i++) {
-            Food f1 = new Food();
-            Food f2 = new Food();
+            Food f1 = new Food("Cheese");
+            Food f2 = new Food("banana");
             // If the foods are different, make different name = true
             if (!(f1.getName().equals(f2.getName()))) {
                 different_name = true;

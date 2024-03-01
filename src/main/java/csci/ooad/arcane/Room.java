@@ -123,18 +123,21 @@ public class Room {
     }
 
     public void removeEntity(Entity entity) {
+        if (entity == null) {
+            return;
+        }
 
         if (entity instanceof Adventurer) {
-            this.adventurers.remove((Adventurer)entity);
+            this.adventurers.remove((Adventurer) entity);
         } else if (entity instanceof Creature) {
             this.creatures.remove((Creature) entity);
         } else if (entity instanceof Food) {
-            this.foods.remove((Food)entity);
+            this.foods.remove((Food) entity);
         } else {
-            // Entity list TODO maybe
+            // Handle other types of entities
         }
 
-        entity.setRoom(null);
+        entity.setRoom(null);  // M
     }
     public void addEntity(Entity entity) {
 

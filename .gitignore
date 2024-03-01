@@ -373,6 +373,7 @@ gen
 .gradle/
 .gradle/8.4
 .gradle/8.4/**
+.gradle/**
 /build/
 
 

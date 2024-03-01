@@ -44,7 +44,10 @@ public class Adventurer extends Agent {
     @Override
     public void doAction() {
 
-
+        if(this.room == null) {
+            logger.warn("Adventurer " + this.getName() + " has no room");
+            return;
+        }
 
         // If dead, dont do anything
         if (!isAlive()) return;

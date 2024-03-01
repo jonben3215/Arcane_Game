@@ -59,11 +59,22 @@ public class Maze {
         private int seqDistIdx = 0;
         private final Random random = new Random();
 
+        private AdventurerFactory adventurerFactory;
+        private CreatureFactory creatureFactory;
+        private FoodFactory foodFactory;
+
         // ----------- Builder Constructors ----------- //
         public Builder() {
+            // This is only here temporarily until next hw when we expand factory! dont judge us ta pls uwu
+            this.adventurerFactory = new AdventurerFactory();
+            this.creatureFactory = new CreatureFactory();
+            this.foodFactory = new FoodFactory();
         }
 
         public Builder(AdventurerFactory adventurerFactory, CreatureFactory creatureFactory, FoodFactory foodFactory) {
+            this.adventurerFactory = adventurerFactory;
+            this.creatureFactory = creatureFactory;
+            this.foodFactory = foodFactory;
             return;
         }
 
@@ -174,7 +185,6 @@ public class Maze {
             }
         }
 
-
         public Builder defaultEmpty2x2() {
             String[] roomNames2x2 = {"Northwest", "Northeast", "Southwest", "Southeast"};
             return this.makeFullyConnectedGridNxN(2).nameRooms(roomNames2x2);
@@ -217,6 +227,96 @@ public class Maze {
         public Builder numberRooms () {
             for (int i = 0; i < rooms.size(); i++) {
                 rooms.get(i).setName("Room " + Integer.toString(i+1));
+            }
+            return this;
+        }
+
+        public Builder createAddAdventurers (String[] adventurerNames) {
+            for (String adventurerName : adventurerNames) {
+                createAddAdventurer(adventurerName);
+            }
+            return this;
+        }
+
+        public Builder createAddAdventurer (String adventurerName) {
+            Adventurer adventurer = this.adventurerFactory.createAdventurer(adventurerName);
+            nextRoom().addEntity(adventurer);
+            return this;
+        }
+
+        public Builder createAddGlutton (String gluttonName) {
+            Adventurer glutton = this.adventurerFactory.createGlutton(gluttonName);
+            nextRoom().addEntity(glutton);
+            return this;
+        }
+
+        public Builder createAddGluttons (String[] gluttonNames) {
+            for (String gluttonName : gluttonNames) {
+                createAddGlutton(gluttonName);
+            }
+            return this;
+        }
+
+        public Builder createAddCoward (String cowardName) {
+            Adventurer coward = this.adventurerFactory.createCoward(cowardName);
+            nextRoom().addEntity(coward);
+            return this;
+        }
+
+        public Builder createAddCowards (String[] cowardNames) {
+            for (String cowardName : cowardNames) {
+                createAddCoward(cowardName);
+            }
+            return this;
+        }
+
+        public Builder createAddKnight (String knightName) {
+            Adventurer knight = this.adventurerFactory.createKnight(knightName);
+            nextRoom().addEntity(knight);
+            return this;
+        }
+
+        public Builder createAddKnights (String[] knightNames) {
+            for (String knightName : knightNames) {
+                createAddKnight(knightName);
+            }
+            return this;
+        }
+
+        public Builder createAddCreature(String creatureName) {
+            Creature creature = this.creatureFactory.createCreature(creatureName);
+            nextRoom().addEntity(creature);
+            return this;
+        }
+        public Builder createAddCreatures(String[] creatureNames) {
+            for (String creatureName : creatureNames) {
+                createAddCreature(creatureName);
+            }
+            return this;
+        }
+
+        public Builder createAddFood(String foodName) {
+            Food food = this.foodFactory.createFood(foodName);
+            nextRoom().addEntity(food);
+            return this;
+        }
+
+        public Builder createAddFoods(String[] foodNames) {
+            for (String foodName : foodNames) {
+                createAddFood(foodName);
+            }
+            return this;
+        }
+
+        public Builder createAddDemon(String demonName) {
+            Creature demon = this.creatureFactory.createDemon(demonName);
+            nextRoom().addEntity(demon);
+            return this;
+        }
+
+        public Builder createAddDemons(String[] demonNames) {
+            for (String demonName : demonNames) {
+                createAddDemon(demonName);
             }
             return this;
         }

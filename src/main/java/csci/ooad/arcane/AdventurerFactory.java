@@ -1,7 +1,22 @@
 package csci.ooad.arcane;
 
+import java.util.Random;
+
 public class AdventurerFactory {
 
+    public Adventurer createAdventurer(String name, String type) {
+
+        if (type == "Coward") {
+            return createCoward(name);
+        } else if (type == "Glutton") {
+            return createGlutton(name);
+        } else if (type == "Knight") {
+            return createKnight(name);
+        } else {
+            return createAdventurer(name);
+        }
+
+    }
 
     public Adventurer createAdventurer(String name) {
         return new Adventurer(name);

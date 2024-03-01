@@ -13,7 +13,7 @@ public abstract class Entity {
         return this.room;
     }
 
-    // TODO: IMPORTANT Sltn. not decoupled enough
+    // TODO: IMPORTANT Solution not decoupled enough
     // TODO:need an elegant solution for room and entity bidirectional pointing
     public void setRoom(Room newRoom) {
         if(this.room == newRoom) return; // This single line of code prevents infinite recursion

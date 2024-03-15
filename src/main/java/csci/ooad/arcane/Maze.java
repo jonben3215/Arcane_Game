@@ -102,9 +102,11 @@ public class Maze {
             // Reset room list
             rooms.clear();
 
-            // Add rooms to room list
+            // Add rooms to room list with sequential names
             for (int i = 0; i < (n * n); i++) {
-                this.rooms.add(new Room());
+                Room room = new Room();
+                room.setName(Integer.toString(i)); // Assign sequential names
+                this.rooms.add(room);
             }
 
             // Add local neighbor connections between rooms, including direction

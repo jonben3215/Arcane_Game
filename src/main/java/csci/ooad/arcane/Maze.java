@@ -79,6 +79,11 @@ public class Maze {
         }
 
         public Maze build() {
+            if(this.rooms.isEmpty()) {
+                logger.warn("No rooms to build maze with.");
+                return null;
+            }
+
             return new Maze(rooms);
         }
 

@@ -351,34 +351,5 @@ public class Maze {
     public String getInfo() {
         return getInfo("");
     }
-    
-    public void display2D() {
-        // TODO implement for next homework!
-        /*
-        int roomIdx = 0;
-
-        log ("    --------- MAP ---------  ");
-
-        for (int r = 0; r < row; r++) {
-            for (int c = 0; c < col; c++) {
-                csci.ooad.arcane.Room room = rooms.get(roomIdx);
-                log ("[csci.ooad.arcane.Room " + roomIdx + "]"); // Display room ID
-                roomIdx++;
-
-                if (c < col - 1) {
-                    kig ("---");
-                }
-            }
-
-            log \n
-
-            if (r < row - 1) { // Check if it's not the last row
-                for (int c = 0; c < col; c++) {
-                    log ("     |    ");
-                }
-            }
-            log \n;
-        } */
-    }
 
 }

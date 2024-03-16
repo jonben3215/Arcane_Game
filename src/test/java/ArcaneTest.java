@@ -1,9 +1,13 @@
 import csci.ooad.arcane.*;
+import csci.ooad.layout.IMazeObserver;
+import csci.ooad.layout.MazeObserver;
 import org.junit.jupiter.api.Test;
 
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static csci.ooad.arcane.Adventurer.SECONDS_TO_PAUSE_BETWEEN_TURNS;
 
 public class ArcaneTest {
 
@@ -30,6 +34,11 @@ public class ArcaneTest {
         for (int i = 0; i < 10; i++) {
             foods.add(new Food()); // Choose random name
         }
+
+        IMazeObserver mazeObserver = MazeObserver.getNewBuilder("Arcane Game")
+                .useRadialLayoutStrategy()
+                .setDelayInSecondsAfterUpdate(SECONDS_TO_PAUSE_BETWEEN_TURNS)
+                .build();
 
         Maze maze = Maze.newBuilder()
                 .makeFullyConnectedGridNxN(3) // Assuming a 3x3 maze for simplicity

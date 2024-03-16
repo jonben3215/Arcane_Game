@@ -15,7 +15,8 @@ Our comments are in classes arcane, enum direction, superclass agent
 We have our required tests below, check them out
 
 
-Homework_5: <img width="373" alt="Screenshot 2024-03-15 at 10 20 11 PM" src="https://github.com/CSCI-4448-5448-OOAD-Spring2024/homework-2-arcane-setup-jonben3215/assets/63603790/2cb0b2d9-d419-43d2-bfd4-a7d20ca25461">
+Homework_5: Diagram + Coverage
+<img width="373" alt="Screenshot 2024-03-15 at 10 20 11 PM" src="https://github.com/CSCI-4448-5448-OOAD-Spring2024/homework-2-arcane-setup-jonben3215/assets/63603790/2cb0b2d9-d419-43d2-bfd4-a7d20ca25461">
 
 ![Diagram](https://github.com/CSCI-4448-5448-OOAD-Spring2024/homework-2-arcane-setup-jonben3215/assets/63603790/cf80a4ea-08f7-4d9a-ab07-e5169bb3f560)
 

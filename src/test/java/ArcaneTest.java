@@ -31,7 +31,11 @@ public class ArcaneTest {
             foods.add(new Food()); // Choose random name
         }
 
-        Maze maze = Maze.newBuilder().defaultEmpty3x3().build();
+        Maze maze = Maze.newBuilder()
+                .makeFullyConnectedGridNxN(3) // Assuming a 3x3 maze for simplicity
+                .populate(adventurers, creatures, foods)
+                .build();
+
         Arcane arcane = new Arcane(maze, adventurers, creatures, foods);
 
         // Play the game

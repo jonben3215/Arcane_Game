@@ -1,11 +1,12 @@
 package csci.ooad.arcane;
 
+import csci.ooad.layout.IMaze;
+import csci.ooad.layout.IMazeSubject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
 
 public class Arcane {
@@ -25,6 +26,11 @@ public class Arcane {
 
     private int turnCount = 0;
 
+
+    //TODO: Implement maze adapter class after return maze adapter class
+
+    //    @Override
+    //    public IMaze getMaze() { } // getMaze
     // ---------- Constructors ---------- //
 
     // maze(), creatures, adventurers, foods

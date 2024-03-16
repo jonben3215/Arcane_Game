@@ -84,6 +84,8 @@ public class Adventurer extends Agent {
         }
 
         logger.info("Adventurer " + getInfo() + " just fought " + getFightableCreature().getInfo());
+        EventBus.getInstance().postMessage(EventType.FightOutcome, "Adventurer " + this.getName() + " just fought " + enemyCreature.getName());
+
 
         double playerAttack = this.calcDamage();
         double creatureAttack = enemyCreature.calcDamage();
@@ -141,6 +143,8 @@ public class Adventurer extends Agent {
         this.setHealth(this.health+1.0);
 
         logger.info("Adventurer " + this.getInfo() + " just ate " + foodToEat.getName());
+        EventBus.getInstance().postMessage(EventType.AteSomething, "Adventurer " + this.getName() + " just ate " + foodToEat.getName() + " and their health is now " + this.getHealth());
+
     }
 
 

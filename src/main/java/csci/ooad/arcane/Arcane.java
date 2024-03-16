@@ -1,6 +1,8 @@
 package csci.ooad.arcane;
 
+import csci.ooad.arcane.MazeAdapter;
 import csci.ooad.layout.IMaze;
+import csci.ooad.layout.IMazeObserver;
 import csci.ooad.layout.IMazeSubject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Arcane {
+public class Arcane implements IMazeSubject {
 
     public static final Logger logger = LoggerFactory.getLogger(Arcane.class);
    //  private static final Marker GAME_STATUS = MarkerFactory.getMarker("Game_Status");
@@ -23,6 +25,8 @@ public class Arcane {
     private List<Food> foods = new ArrayList<>();
     private List<Food> initialFoods = new ArrayList<>();
     private boolean gameOver = false;
+
+    private final MazeAdapter mazeAdapter;
 
     private int turnCount = 0;
 
@@ -51,6 +55,8 @@ public class Arcane {
         this.initialAdventurers = initialAdventurers;
         this.initialCreatures = initialCreatures;
         this.initialFoods = initialFoods;
+
+        this.mazeAdapter = new MazeAdapter(this.maze);
 
         resetGame();
     }
@@ -169,6 +175,23 @@ public class Arcane {
 
         this.gameOver = adventurers.isEmpty() || creatures.isEmpty();
         return this.gameOver;
+    }
+
+    @Override
+    public void attach(IMazeObserver observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void notifyObservers(String statusMessage) {
+        for (IMazeObserver observer : observers) {
+            observer.update(getMaze(), statusMessage);
+        }
+    }
+
+    @Override
+    public IMaze getMaze() {
+        return this.mazeAdapter;
     }
 
 }

@@ -6,6 +6,9 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 
 public class Adventurer extends Agent {
+
+    public static final int SECONDS_TO_PAUSE_BETWEEN_TURNS = 5; // Example value
+
     private static final Logger logger = LoggerFactory.getLogger(Adventurer.class);
 
     // ---------- Constructors ---------- //

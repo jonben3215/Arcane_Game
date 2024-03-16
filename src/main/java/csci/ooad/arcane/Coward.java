@@ -1,19 +1,19 @@
-package csci.ooad.arcane;
+    package csci.ooad.arcane;
 
-public class Coward extends Adventurer {
+    public class Coward extends Adventurer {
 
-    public Coward(String name) {
-        super(name, 5.0);
-    }
-
-    @Override
-    public void doAction() {
-        // Always runs from a creature, if it can (it can't run from Demons)
-        if (this.getRoom().hasCreature()) {
-            this.fight(this.getFightableCreature());
-        } else {
-            this.flee();
+        public Coward(String name) {
+            super(name, 5.0);
         }
-        this.takeDamage(0.5);
+
+        @Override
+        public void doAction() {
+            // Always runs from a creature, if it can (it can't run from Demons)
+            if (this.getRoom().hasCreature()) {
+                this.fight(this.getFightableCreature());
+            } else {
+                this.flee();
+            }
+            this.takeDamage(0.5);
+        }
     }
-}

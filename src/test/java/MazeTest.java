@@ -95,6 +95,53 @@ public class MazeTest {
         }
     }
 
+    @Test
+    public void testEntityAdditionToSpecificRoom() {
+        Maze maze = Maze.newBuilder()
+                .makeFullyConnectedGridNxN(3)
+                .numberRooms()
+                .build();
+
+        // Assuming you have methods to add entities directly to Rooms
+        Room targetRoom = maze.getRoomByName("Room 5");
+        Adventurer adventurer = new Adventurer("Hero");
+        Creature creature = new Creature("Goblin");
+        Food food = new Food("Apple");
+
+        targetRoom.addAdventurer(adventurer);
+        targetRoom.addCreature(creature);
+        targetRoom.addFood(food);
+
+        assertTrue(targetRoom.getAdventurers().contains(adventurer));
+        assertTrue(targetRoom.getCreatures().contains(creature));
+        assertTrue(targetRoom.getFoods().contains(food));
+    }
+
+    @Test
+    public void testMazeInfoStringConsistency() {
+        Maze maze = Maze.newBuilder()
+                .makeFullyConnectedGridNxN(2) // Simpler 2x2 maze for this test
+                .numberRooms()
+                .build();
+
+        // The expected info string will depend on how you've implemented getInfo()
+        // For simplicity, assuming getInfo() returns a string with room names
+        String info = maze.getInfo();
+        assertTrue(info.contains("Room 1"));
+        assertTrue(info.contains("Room 2"));
+        assertTrue(info.contains("Room 3"));
+        assertTrue(info.contains("Room 4"));
+        // Add checks for specific formatting or contents as needed
+    }
+
+    @Test
+    public void testBehaviorWithNoRooms() {
+        Maze emptyMaze = new Maze(new ArrayList<>()); // Explicitly creating an empty maze
+
+        assertNull(emptyMaze.getRoomByName("Any Room"), "Expected null when fetching a room from an empty maze.");
+        assertTrue(emptyMaze.getRooms().isEmpty(), "Expected no rooms in an empty maze.");
+    }
+
 
 
 

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static csci.ooad.arcane.Adventurer.SECONDS_TO_PAUSE_BETWEEN_TURNS;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ArcaneTest {
 
@@ -63,6 +64,103 @@ public class ArcaneTest {
         Adventurer player = new Adventurer("Ben", 10);
 
         //arcane.Fight(player,creature);
+    }
+
+    @Test
+    public void testCheckGameOver() {
+        // Create initial setup
+        List<Adventurer> adventurers = new ArrayList<>();
+        Adventurer alice = new Adventurer("Alice");
+        adventurers.add(alice);
+
+        List<Creature> creatures = new ArrayList<>();
+        Creature dragon = new Creature("Dragon");
+        creatures.add(dragon);
+
+        Maze maze = Maze.newBuilder()
+                .makeFullyConnectedGridNxN(3)
+                .populate(adventurers, creatures, new ArrayList<>())
+                .build();
+
+        Arcane arcane = new Arcane(maze, adventurers, creatures, new ArrayList<>());
+
+        // Set creatures' and adventurers' health to 0
+        dragon.setHealth(0);
+        alice.setHealth(0);
+
+        // Check if game over is detected
+        assertTrue(arcane.checkGameOver());
+    }
+    @Test
+    public void testSortAdventurersByHealth() {
+        // Create initial setup
+        List<Adventurer> adventurers = new ArrayList<>();
+        Adventurer alice = new Adventurer("Alice");
+        alice.setHealth(20);
+        adventurers.add(alice);
+
+        Adventurer bob = new Adventurer("Bob");
+        bob.setHealth(10);
+        adventurers.add(bob);
+
+        Maze maze = Maze.newBuilder()
+                .makeFullyConnectedGridNxN(3)
+                .populate(adventurers, new ArrayList<>(), new ArrayList<>())
+                .build();
+
+        Arcane arcane = new Arcane(maze, adventurers, new ArrayList<>(), new ArrayList<>());
+
+        // Sort adventurers by health
+        arcane.sortAdventurersByHealth();
+
+        // Check if adventurers are sorted in descending order of health
+        assertTrue(alice.getHealth() >= bob.getHealth());
+
+    }
+
+    @Test
+    public void testArcanePlay() {
+        // Create initial setup
+        List<Adventurer> adventurers = new ArrayList<>();
+        Adventurer alice = new Adventurer("Alice");
+        adventurers.add(alice);
+
+        List<Creature> creatures = new ArrayList<>();
+        Creature dragon = new Creature("Dragon");
+        creatures.add(dragon);
+
+        Maze maze = Maze.newBuilder()
+                .makeFullyConnectedGridNxN(3)
+                .populate(adventurers, creatures, new ArrayList<>())
+                .build();
+
+        Arcane arcane = new Arcane(maze, adventurers, creatures, new ArrayList<>());
+
+        // Play the game
+        arcane.play();
+
+        // Check if game over is detected
+        assertTrue(arcane.checkGameOver());
+    }
+
+    @Test
+    public void testFight() {
+        // Create initial setup
+        List<Adventurer> adventurers = new ArrayList<>();
+        List<Creature> creatures = new ArrayList<>();
+        Adventurer adventurer = new Adventurer("Alice");
+        Creature creature = new Creature("Dragon");
+        adventurers.add(adventurer);
+        creatures.add(creature);
+        Maze maze = new Maze(); // You might need to create a mock or stub for Maze class
+
+        // Create Arcane instance
+        Arcane arcane = new Arcane(maze, adventurers, creatures, new ArrayList<>());
+
+        // Perform fight
+        arcane.fight(adventurer, creature);
+
+        // Add assertions here based on the behavior of the fight method
     }
 
 

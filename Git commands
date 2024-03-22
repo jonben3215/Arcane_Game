@@ -1,4 +1,4 @@
-How to update your branch:
+How to update your branch from the any branch:
 
 * git checkout <branch you want to updated like main>
 * git pull
